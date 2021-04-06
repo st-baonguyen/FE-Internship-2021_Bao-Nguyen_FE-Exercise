@@ -1,1 +1,2 @@
-# FE-Internship-2021_Bao-Nguyen_FE-Exercise
+> Name: Nguyen Hoang Thai Bao
+> Age: 23
