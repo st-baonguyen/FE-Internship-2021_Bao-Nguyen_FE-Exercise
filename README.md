@@ -1,2 +1,3 @@
-> Name: Nguyen Hoang Thai Bao
-> Age: 23
+Name: Nguyen Hoang Thai Bao
+Phone: 0347859494
+Age: 23
