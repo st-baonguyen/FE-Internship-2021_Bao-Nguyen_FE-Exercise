@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- header -->
-    <header class="header">
-      <div class="header__content">
-        <div class="header__content__left">
-          <div class="logo">
-            <img src="./asset/images/logo.svg" alt="" />              
-          </div>        
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header__content">
+      <div class="header__content__left">
+        <h1 class="logo">
+          <a href="#">
+            <img src="./asset/images/logo.svg" alt="Shopka - The best quality for everyone" />
+          </a>
+        </h1>
+      </div>
+      <div class="header__content__search">
+        <div class="icon menu-icon">
+          <img src="./asset/images/menu.svg" alt="menu-icon" />
         </div>
-        <div class="header__content__search">
-          <div class="icon menu-icon">
-            <img src="./asset/images/menu.svg" />
-          </div>
-          <img src="./asset/images/search.svg" alt="" />
+        <div class="search">
+          <img src="./asset/images/search.svg" alt="search-icon" />
           <input placeholder="Search" />
         </div>
-        <div class="header__content__right">
-          <div class="cart">
-            <img class="cart-icon" src="./asset/images/cart.svg" >               
-            <div class="amount">
-              <span>1</span>
-            </div>
-            </div>
-          <button class="btn sign-in">Sign in</button>
-          <button class="btn sign-up">Sign up</button>
+      </div>
+      <div class="header__content__right">
+        <div class="cart">
+          <img class="cart-icon" src="./asset/images/cart.svg" alt="cart-icon">
+          <div class="amount">
+            <span>1</span>
+          </div>
         </div>
+        <a href="#" class="btn btn-primary">Sign in</a>
+        <a href="#" class="btn btn-flat-primary">Sign in</a>
       </div>
-    </header>
-    <!-- end header -->
-    <!-- baner -->
-    <section class="section baner">
-      <div class="baner-content">
-        <img class="img baner-img" src="./asset/images/baner.png" />
-      </div>
-    </section>
-    <!-- end baner -->
-    <!-- action -->
-    <section class="section action">
+    </div>
+  </header>
+  <!-- end header -->
+  <!-- baner -->
+  <section class="section banner">
+    <div class="banner__content">
+      <img class="img banner-img" src="./asset/images/banner.png" alt="banner-img" />
+    </div>
+  </section>
+  <!-- end baner -->
+  <!-- section main -->
+  <section class="section main">
+    <div class="action">
       <div class="action__content">
         <div class="action__content__filter">
           <!-- <fieldset>
-          <legend>Useless first</legend>
-        </fieldset> -->
+            <legend>Useless first</legend>
+          </fieldset> -->
           <div>
             <span>Sort by</span>
             <select class="filter__useless-first">
               <option value="uselessFirst">Useless first</option>
             </select>
           </div>
-
           <select class="filter__condition">
             <option value="condition">Condition</option>
           </select>
@@ -65,244 +71,215 @@
         </div>
         <div class="action__content__button">
           <ul class="action__content__show">
-            <li class="show-all">Show all</li>
-            <li class="auction">Auction</li>
-            <li class="buy-now">Buy now</li>
-          </div>
+            <li class="filter-payment">Show all</li>
+            <li class="filter-payment active">Auction</li>
+            <li class="filter-payment">Buy now</li>
+          </ul>
           <ul class="action__content__grid">
             <li class="view-list">
-              <img src="./asset/images/viewlist.svg" alt="" />
+              <img src="./asset/images/viewlist.svg" alt="view-list-icon" />
             </li>
             <li class="grid-view">
-              <img src="./asset/images/viewgrid.svg" alt="" />
+              <img src="./asset/images/viewgrid.svg" alt="grid-view-icon" />
             </li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
     <!-- end action -->
     <!-- produc-list -->
-    <section class="section product">
+    <div class="product">
       <ul class="product-list">
         <li class="product-item">
           <a href="#">
-            <figure>
-              <img class="img img-product" src="./asset/images/product-1.png" />
-              <figcaption>Vintage Typewriter to post awesome stories about UI design and webdev.</figcaption>
-            </figure>
-          </a>          
+            <img class="img img-product" src="./asset/images/product-1.png" alt="product-1" />
+            <h4>Vintage Typewriter to post awesome stories about UI design and webdev.</h4>
+          </a>
           <div class="product-item__price-row">
-          <p class="product-item__price-row__price">$49.50</p>
-            <span class="product-item__price-row__status"></span>
+            <span class="product-item__price-row__price">$49.50</span>
           </div>
           <p class="product-item__price-row__note">
             Eligible for Shipping To Mars or somewhere else
           </p>
-          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn btn-outline-primary">Add to cart</button>
         </li>
         <!--  -->
         <li class="product-item">
           <a href="#">
-            <figure>
-              <img class="img img-product" src="./asset/images/product-2.png" />
-              <figcaption>Lee Pucker design. Leather botinki for handsome designers. Free shipping.</figcaption>
-            </figure>
-          </a>          
+            <img class="img img-product" src="./asset/images/product-2.png" alt="product-2" />
+            <h4>Lee Pucker design. Leather botinki for handsome designers. Free shipping.</h4>
+          </a>
           <div class="product-item__price-row">
-          <p class="product-item__price-row__price">$13.95</p>
-            <span class="product-item__price-row__status"></span>
+            <span class="product-item__price-row__price">$13.95</span>
           </div>
           <p class="product-item__price-row__note">
             1258 bids, 359 watchers
             $5.95 for shipping
           </p>
-          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn btn-outline-primary">Add to cart</button>
         </li>
         <!--  -->
         <li class="product-item">
           <a href="#">
-            <figure>
-              <img class="img img-product" src="./asset/images/product-3.png" />
-              <figcaption>Timesaving kitten to save months on development. Playful, cute, cheap!</figcaption>
-            </figure>
-          </a>          
+            <img class="img img-product" src="./asset/images/product-3.png" alt="product-3" />
+            <h4>Timesaving kitten to save months on development. Playful, cute, cheap!</h4>
+          </a>
           <div class="product-item__price-row">
-          <p class="product-item__price-row__price">$128.99</p>
-            <span class="product-item__price-row__status"></span>
+            <span class="product-item__price-row__price">$128.99</span>
           </div>
           <p class="product-item__price-row__note">
             Eligible for nothing :(
           </p>
-          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn btn-outline-primary">Add to cart</button>
         </li>
         <!--  -->
         <li class="product-item">
           <a href="#">
-            <figure>
-              <img class="img img-product" src="./asset/images/product-4.png" />
-              <figcaption>Plastic useless plugs and tubes for high-fidelity prototyping. Fit & Eat!</figcaption>
-            </figure>
-          </a>          
+            <img class="img img-product" src="./asset/images/product-4.png" alt="product-4" />
+            <h4>Plastic useless plugs and tubes for high-fidelity prototyping. Fit & Eat!</h4>
+          </a>
           <div class="product-item__price-row">
-          <p class="product-item__price-row__price">$12.48</p>
+            <span class="product-item__price-row__price">$12.48</span>
             <span class="product-item__price-row__status">50% OFF</span>
           </div>
           <p class="product-item__price-row__note">
             Wordwide shitting available
             Buyers protection possible!
           </p>
-          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn btn-outline-primary">Add to cart</button>
         </li>
         <!--  -->
         <li class="product-item">
           <a href="#">
-            <figure>
-              <img class="img img-product" src="./asset/images/product-5.png" />
-              <figcaption>Creativity stimulating lotion. Drink every morning to generate better ideas!</figcaption>
-            </figure>
-          </a>          
+            <img class="img img-product" src="./asset/images/product-5.png" alt="product-5" />
+            <h4>Creativity stimulating lotion. Drink every morning to generate better ideas!</h4>
+          </a>
           <div class="product-item__price-row">
-          <p class="product-item__price-row__price">$12.48</p>
-            <span class="product-item__price-row__status"></span>
+            <span class="product-item__price-row__price">$12.48</span>
           </div>
           <p class="product-item__price-row__note">
             Wordwide shifting available Buyers protection possible!
           </p>
-          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn btn-outline-primary">Add to cart</button>
         </li>
         <!--  -->
         <li class="product-item">
           <a href="#">
-            <figure>
-              <img class="img img-product" src="./asset/images/product-6.png" />
-              <figcaption>Prototyping items to create a lot if useless things...</figcaption>
-            </figure>
-          </a>          
+            <img class="img img-product" src="./asset/images/product-6.png" alt="product-6" />
+            <h4>Prototyping items to create a lot if useless things...</h4>
+          </a>
           <div class="product-item__price-row">
-          <p class="product-item__price-row__price">$128.99</p>
-            <span class="product-item__price-row__status"></span>
+            <span class="product-item__price-row__price">$128.99</span>
           </div>
           <p class="product-item__price-row__note">
             Showcasing onHovered state
           </p>
-          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn btn-outline-primary">Add to cart</button>
         </li>
         <!--  -->
         <li class="product-item">
           <a href="#">
-            <figure>
-              <img class="img img-product" src="./asset/images/product-7.png" />
-              <figcaption>John Von Ebalkin SPRING </figcaption>
-            </figure>
-          </a>          
+            <img class="img img-product" src="./asset/images/product-7.png" alt="product-7" />
+            <h4>John Von Ebalkin SPRING </h4>
+          </a>
           <div class="product-item__price-row">
-          <p class="product-item__price-row__price">$13.95</p>
-            <span class="product-item__price-row__status"></span>
+            <span class="product-item__price-row__price">$13.95</span>
           </div>
           <p class="product-item__price-row__note">
             1258 bids, 359 watchers $5.95 for shipping
           </p>
-          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn btn-outline-primary">Add to cart</button>
         </li>
         <!--  -->
         <li class="product-item">
           <a href="#">
-            <figure>
-              <img class="img img-product" src="./asset/images/product-8.png" />
-              <figcaption>Envelope, Stripes, Pencil and etc. Purchase this kit today and feel OKAY</figcaption>
-            </figure>
-          </a>          
+            <img class="img img-product" src="./asset/images/product-8.png" alt="product-8" />
+            <h4>Envelope, Stripes, Pencil and etc. Purchase this kit today and feel OKAY</h4>
+          </a>
           <div class="product-item__price-row">
-          <p class="product-item__price-row__price">$9.50</p>
-            <span class="product-item__price-row__status"></span>
+            <span class="product-item__price-row__price">$9.50</span>
           </div>
           <p class="product-item__price-row__note">
             Eligible for Shipping To Mars or somewhere else
           </p>
-          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn btn-outline-primary">Add to cart</button>
         </li>
         <!--  -->
         <li class="product-item">
           <a href="#">
-            <figure>
-              <img class="img img-product" src="./asset/images/product-9.png" />
-              <figcaption>Professional teadrinking set for every designer and developer</figcaption>
-            </figure>
-          </a>          
+            <img class="img img-product" src="./asset/images/product-9.png" alt="product-9" />
+            <h4>Professional teadrinking set for every designer and developer</h4>
+          </a>
           <div class="product-item__price-row">
-          <p class="product-item__price-row__price">$128.99</p>
-            <span class="product-item__price-row__status"></span>
+            <span class="product-item__price-row__price">$128.99</span>
           </div>
           <p class="product-item__price-row__note">
             Eligible for Shipping To Mars or somewhere else
           </p>
-          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn btn-outline-primary">Add to cart</button>
         </li>
         <!--  -->
         <li class="product-item">
           <a href="#">
-            <figure>
-              <img class="img img-product" src="./asset/images/product-10.png" />
-              <figcaption>One string Bonsai description</figcaption>
-            </figure>
-          </a>          
+            <img class="img img-product" src="./asset/images/product-10.png" alt="product-10" />
+            <h4>One string Bonsai description</h4>
+          </a>
           <div class="product-item__price-row">
-          <p class="product-item__price-row__price">$11.68</p>
-            <span class="product-item__price-row__status"></span>
+            <span class="product-item__price-row__price">$11.68</span>
           </div>
           <p class="product-item__price-row__note">
             Eligible for Shipping To Mars or somewhere else
           </p>
-          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn btn-outline-primary">Add to cart</button>
         </li>
         <!--  -->
         <li class="product-item">
           <a href="#">
-            <figure>
-              <img class="img img-product" src="./asset/images/product-11.png" />
-              <figcaption>Simply best item in town to shine bright with your Nine Inch Nails</figcaption>
-            </figure>
-          </a>          
+            <img class="img img-product" src="./asset/images/product-11.png" alt="product-11" />
+            <h4>Simply best item in town to shine bright with your Nine Inch Nails</h4>
+          </a>
           <div class="product-item__price-row">
-          <p class="product-item__price-row__price">$1.25</p>
+            <span class="product-item__price-row__price">$1.25</span>
             <span class="product-item__price-row__status">Cool deal!</span>
           </div>
           <p class="product-item__price-row__note">
             Eligible for Shipping To Mars or somewhere else
           </p>
-          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn btn-outline-primary">Add to cart</button>
         </li>
         <!--  -->
         <li class="product-item">
           <a href="#">
-            <figure>
-              <img class="img img-product" src="./asset/images/product-12.png" />
-              <figcaption>KISTOCHKI & KRASIBO. Top cosmetics brand from Chelyabinsk is here!</figcaption>
-            </figure>
-          </a>          
+            <img class="img img-product" src="./asset/images/product-12.png" alt="product-12" />
+            <h4>KISTOCHKI & KRASIBO. Top cosmetics brand from Chelyabinsk is here!</h4>
+          </a>
           <div class="product-item__price-row">
-          <p class="product-item__price-row__price">$23.25</p>
-            <span class="product-item__price-row__status"></span>
+            <span class="product-item__price-row__price">$23.25</span>
           </div>
           <p class="product-item__price-row__note">
             1258 bids, 359 watchers $5.95 for shipping
           </p>
-          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn btn-outline-primary">Add to cart</button>
         </li>
         <!--  -->
+    </div>
+  </section>
+  <!-- end section main -->
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__question">
+        <p>Are you ready?</p>
       </div>
-    </section>
-    <!-- end product-list -->
-    <!-- footer -->
-    <footer class="footer">
-      <div class="footer__content">
-        <div class="footer__question"><p>Are you ready?</p></div>
-        <div class="footer__answer"><p>Let’s get started</p></div>
-        <div class="copyright">
-          <p>Copyright © 2020. LogoIpsum. All rights reserved.</p>
-        </div>
+      <div class="footer__answer">
+        <h3>Let’s get started</h3>
       </div>
-    </footer>
-    <!-- end footer -->
-  </body>
+      <div class="copyright">
+        <p>Copyright © 2020. LogoIpsum. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+</body>
+
 </html>
