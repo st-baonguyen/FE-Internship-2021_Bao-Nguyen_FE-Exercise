@@ -12,11 +12,8 @@
       <div class="header__content">
         <div class="header__content__left">
           <div class="logo">
-            <img src="./asset/images/logo.svg" alt="" />
-          </div>
-          <div class="name">
-            <span>Shopka</span>
-          </div>
+            <img src="./asset/images/logo.svg" alt="" />              
+          </div>        
         </div>
         <div class="header__content__search">
           <div class="icon menu-icon">
@@ -26,7 +23,12 @@
           <input placeholder="Search" />
         </div>
         <div class="header__content__right">
-          <img class="cart-icon" src="./asset/images/cart.svg" />
+          <div class="cart">
+            <img class="cart-icon" src="./asset/images/cart.svg" >               
+            <div class="amount">
+              <span>1</span>
+            </div>
+            </div>
           <button class="btn sign-in">Sign in</button>
           <button class="btn sign-up">Sign up</button>
         </div>
@@ -61,18 +63,20 @@
             <option value="delivery">Delivery option</option>
           </select>
         </div>
-        <div class="action__content__show">
-          <button class="btn show-all-btn">Show all</button>
-          <button class="btn auction-btn">Auction</button>
-          <button class="btn buy-now-btn">Buy now</button>
-        </div>
-        <div class="action__content__grid">
-          <button class="view-list">
-            <img src="./asset/images/viewlist.svg" alt="" />
-          </button>
-          <button class="grid-view">
-            <img src="./asset/images/viewgrid.svg" alt="" />
-          </button>
+        <div class="action__content__button">
+          <div class="action__content__show">
+            <button class="btn show-all-btn">Show all</button>
+            <button class="btn auction-btn">Auction</button>
+            <button class="btn buy-now-btn">Buy now</button>
+          </div>
+          <div class="action__content__grid">
+            <button class="view-list">
+              <img src="./asset/images/viewlist.svg" alt="" />
+            </button>
+            <button class="grid-view">
+              <img src="./asset/images/viewgrid.svg" alt="" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
