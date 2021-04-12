@@ -11,6 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 </head>
@@ -18,7 +21,7 @@
 <body>
   <!-- header -->
   <header class="header">
-    <div class="header__content">
+    <div class="header__content flex-between">
       <div class="header__content__left">
         <h1 class="logo">
           <a href="#">
@@ -26,7 +29,7 @@
           </a>
         </h1>
       </div>
-      <div class="header__content__search">
+      <div class="header__content__search flex-between">
         <div class="icon menu-icon" onclick="menuDropDown()">
           <img src="./asset/images/icons/menu.svg" alt="menu-icon" />
         </div>
@@ -36,7 +39,7 @@
           <img src="./asset/images/icons/close.svg" class="delete-icon" alt="delete-icon">
         </div>
       </div>
-      <div class="header__content__right">
+      <div class="header__content__right flex-between">
         <div class="cart">
           <a href="#"><img class="cart-icon" src="./asset/images/icons/cart.svg" alt="cart-icon"></a>
           <div class="amount">
@@ -94,7 +97,7 @@
   <!-- section main -->
   <section class="section main">
     <div class="action">
-      <div class="action__content">
+      <div class="action__content flex-between">
         <div class="action__content__filter">
           <!-- <fieldset>
             <legend>Useless first</legend>
@@ -112,7 +115,7 @@
             <option value="delivery">Delivery option</option>
           </select>
         </div>
-        <div class="action__content__button">
+        <div class="action__content__button flex-between">
           <ul class="action-show">
             <li class="filter-payment">Show all</li>
             <li class="filter-payment active">Auction</li>
@@ -137,7 +140,7 @@
           <a href="#">
             <img class="img img-product" src="./asset/images/sample/product-1.png" alt="product-1" />
             <h4>Vintage Typewriter to post awesome stories about UI design and webdev.</h4>
-            <div class="product-item__price-row">
+            <div class="product-item__price-row flex-between">
               <span class="product-item__price-row__price">$49.50</span>
             </div>
             <p class="product-item__price-row__note">
@@ -311,13 +314,13 @@
   <!-- footer -->
   <footer class="footer">
     <div class="footer__content">
-      <div class="footer__question">
+      <div>
         <p>Are you ready?</p>
       </div>
       <div class="footer__answer">
         <h3>Let’s get started</h3>
       </div>
-      <div class="copyright">
+      <div>
         <p>Copyright © 2020. LogoIpsum. All rights reserved.</p>
       </div>
     </div>
