@@ -27,7 +27,7 @@
         </h1>
       </div>
       <div class="header__content__search">
-        <div class="icon menu-icon">
+        <div class="icon menu-icon" onclick="menuDropDown()">
           <img src="./asset/images/icons/menu.svg" alt="menu-icon" />
         </div>
         <div class="search">
@@ -47,10 +47,10 @@
         <a href="#" class="btn btn-flat-primary active">Sign up</a>
       </div>
     </div>
-    <div class="menu">
+    <div class="menu" id="menu-bar">
       <ul>
         <li>
-          <a href="#" class="menu-active">
+          <a href="#" class="menu-item-active">
             <img src="./asset/images/icons/hanger.svg" class="img-menu img-active" alt="">
             <p>Clothing & Shoes</p>
           </a>
@@ -322,8 +322,12 @@
       </div>
     </div>
   </footer>
-
   <!-- end footer -->
+  <script>
+    function menuDropDown() {
+      document.getElementById("menu-bar").classList.toggle("menu-active");
+    }
+  </script>
 </body>
 
 </html>
