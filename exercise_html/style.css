@@ -10,6 +10,7 @@ html {
 
 a {
   text-decoration: none;
+  color: #787885;
 }
 
 a:visited {
@@ -298,10 +299,25 @@ li {
 }
 
 select {
+  width: max-content;
   padding: 6px 12px;
-
+  box-sizing: border-box;
   border: 1px solid #b4b4bb;
   border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 143%;
+  /* or 20px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.018em;
+
+  /* Gray / 50 */
+
+  color: #787885;
 }
 
 .action__content__button {
@@ -346,6 +362,11 @@ select {
   padding: 10px;
 }
 
+.filter-payment-active {
+  color: #2264d1;
+  background-color: #fff;
+}
+
 .grid-view-icon {
   width: 18px;
   height: 18px;
@@ -368,6 +389,31 @@ select {
 
 .filter__sort-by {
   position: relative;
+}
+
+.filter__condition {
+  width: 118px;
+}
+
+.filter__delivery {
+  width: 158px;
+}
+
+.select-active {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  /* or 20px */
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.018em;
+
+  /* Gray / 100 */
+
+  color: #19191d;
 }
 
 .filter__sort-by > span {
@@ -516,7 +562,7 @@ h4 {
 }
 
 .product-item:hover {
-  box-shadow: 0px 4px 8px rgba(90, 91, 106, 0.2);
+  box-shadow: 0px 4px 8px rgba(90, 91, 106, 0.2) !important;
 }
 
 /* -------------------------------- product ------------------------------*/
@@ -571,3 +617,6 @@ h4 {
 }
 
 /* ---------------------------------footer ------------------------------ */
+
+@media only screen and (max-width: ) {
+}
