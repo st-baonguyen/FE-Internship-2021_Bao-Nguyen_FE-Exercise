@@ -50,7 +50,8 @@ li {
   height: 80px;
   margin: auto;
   align-items: center;
-  /* position: fixed; */
+  z-index: 1;
+  position: relative;
 }
 
 .header__content {
@@ -141,6 +142,7 @@ li {
 }
 
 .menu {
+  position: absolute;
   z-index: 1;
 }
 
@@ -149,12 +151,24 @@ li {
 .section {
   max-width: 1120px;
   margin: 20px auto;
+  z-index: -1;
 }
 
 .banner-img {
   width: 100%;
+  z-index: -1;
+}
+.banner {
+  z-index: -1;
 }
 
+.banner__content {
+  z-index: -1;
+}
+
+.banner__content > img {
+  z-index: -1;
+}
 .action {
   width: 100%;
   align-content: flex-end;
