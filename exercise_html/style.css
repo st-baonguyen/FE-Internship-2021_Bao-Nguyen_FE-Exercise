@@ -483,7 +483,7 @@ h4 {
 
 /* ------------end  footer ---------- */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 992px) {
   .header__right {
     display: none;
   }
@@ -503,7 +503,7 @@ h4 {
   }
 }
 
-@media only screen and (max-width: 885px) {
+@media only screen and (max-width: 768px) {
   .action {
     display: flex;
   }
@@ -519,7 +519,7 @@ h4 {
   }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 576px) {
   .filter__sort,
   select {
     margin: 10px;
