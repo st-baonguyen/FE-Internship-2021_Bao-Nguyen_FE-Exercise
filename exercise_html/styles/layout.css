@@ -9,6 +9,11 @@
   justify-content: space-between;
 }
 
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .btn {
   text-align: center;
   padding: 8px 12px;
@@ -19,7 +24,6 @@
 
 .btn-primary,
 .btn-flat-primary {
-  margin-left: 10px;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
   font-size: 20px;
@@ -41,4 +45,14 @@
 .btn-outline-primary:hover {
   color: #fff !important;
   background-color: #2264d1;
+}
+
+.container {
+  max-width: 1120px;
+  margin: auto;
+}
+
+.section {
+  margin: 20px auto;
+  z-index: -1;
 }
