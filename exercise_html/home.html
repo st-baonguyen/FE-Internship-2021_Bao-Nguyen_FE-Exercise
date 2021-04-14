@@ -21,8 +21,8 @@
 <body>
   <!-- header -->
   <header class="header">
-    <div class="header__content flex-between">
-      <div class="header__left">
+    <div class="container flex-between">
+      <div class="header-left">
         <h1 class="logo">
           <a href="#">
             <img src="./asset/images/main/Logo.svg" alt="Shopka - The best quality for everyone" />
@@ -65,7 +65,7 @@
         </ul>
       </div>
       <!-- end menu -->
-      <div class="header__search flex-between">
+      <div class="header-search flex-between">
         <div class="icon menu-icon" onclick="menuDropDown()">
           <img src="./asset/images/icons/menu.svg" alt="menu-icon" />
         </div>
@@ -75,12 +75,12 @@
           <img src="./asset/images/icons/close.svg" class="delete-icon" alt="delete-icon">
         </div>
       </div>
-      <div class="header__right flex-between">
-        <div class="cart">
-          <a href="#"><img class="cart-icon" src="./asset/images/icons/cart.svg" alt="cart-icon"></a>
-          <div class="amount">
+      <div class="header-right flex-between">
+        <div class="cart" data-cart="1">
+          <a href="#"><img class="cart-icon" src="./asset/images/icons/cart.svg" alt="cart-icon" ></a>
+          <!-- <div class="amount">
             <span>1</span>
-          </div>
+          </div> -->
         </div>
         <a href="#" class="btn btn-primary">Sign in</a>
         <a href="#" class="btn btn-flat-primary">Sign up</a>
@@ -93,7 +93,7 @@
   <!-- baner -->
   <main class="container">
     <section class="section banner">
-      <div class="banner__content">
+      <div class="banner-content">
         <img class="img banner-img" src="./asset/images/main/banner.png" alt="banner-img" />
       </div>
     </section>

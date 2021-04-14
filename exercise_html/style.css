@@ -79,12 +79,7 @@ li {
   border-bottom: 1px solid #2264d1;
 }
 
-.header__content {
-  max-width: 1120px;
-  margin: auto;
-}
-
-.header__left {
+.header-left {
   height: 80px;
 }
 
@@ -92,7 +87,7 @@ li {
   margin: 0;
 }
 
-.header__search {
+.header-search {
   position: relative;
   align-items: center;
   width: 40%;
@@ -140,7 +135,7 @@ li {
   color: #434343;
 }
 
-.header__right {
+.header-right {
   padding-left: 20px;
   align-items: center;
   font-weight: bold;
@@ -148,21 +143,20 @@ li {
 }
 
 .cart {
-  display: flex;
+  position: relative;
 }
 
-.amount {
-  background-color: #f00;
-  border-radius: 50%;
-  font-size: 10px;
+.cart::after {
+  position: absolute;
+  content: attr(data-cart);
   width: 12px;
   height: 12px;
+  right: -10px;
+  font-size: 10px;
   text-align: center;
   color: #fff;
-}
-
-.amount > span {
-  width: 100%;
+  background-color: #f00;
+  border-radius: 50%;
 }
 
 .menu {
@@ -211,8 +205,12 @@ li {
 }
 
 /*  --------end header---------- */
-.section {
+.container {
   max-width: 1120px;
+  margin: auto;
+}
+
+.section {
   margin: 20px auto;
   z-index: -1;
 }
@@ -484,11 +482,11 @@ h4 {
 /* ------------end  footer ---------- */
 
 @media only screen and (max-width: 992px) {
-  .header__right {
+  .header-right {
     display: none;
   }
 
-  .header__content__search {
+  .header-search {
     margin-left: 5%;
     width: 100%;
     flex-direction: row-reverse;
@@ -508,39 +506,39 @@ h4 {
     display: flex;
   }
 
-  .action__content {
+  .action-content {
     display: inline-block;
     flex-direction: column;
     margin: auto;
   }
 
-  .action__content__filter {
+  .tool-action {
     margin-bottom: 10px;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  .filter__sort,
+  .filter-sort,
   select {
     margin: 10px;
   }
 
-  .action__content {
+  .tool-action {
     display: inline-block;
     flex-direction: column;
     margin: auto;
   }
 
-  .action__content__button {
+  .tool-filter {
     flex-direction: column;
     align-items: center;
   }
 
-  .action__content__button > ul {
+  .tool-filter > ul {
     margin: auto;
   }
 
-  .action__content__button > ul {
+  .tool-filter > ul {
     margin: 10px 0;
   }
 }
