@@ -149,9 +149,12 @@ li {
 .cart::after {
   position: absolute;
   content: attr(data-cart);
-  width: 12px;
-  height: 12px;
+  /* width: 12px;
+  height: 12px; */
+  margin: 0;
+  padding: 2px 5px;
   right: -10px;
+  top: -5px;
   font-size: 10px;
   text-align: center;
   color: #fff;
