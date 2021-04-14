@@ -1,213 +1,3 @@
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  letter-spacing: 0.018em;
-  font-weight: 500;
-}
-
-html {
-  font-size: 16px;
-}
-
-a {
-  text-decoration: none;
-  color: #787885;
-}
-
-ul,
-li {
-  list-style: none;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-.btn {
-  text-align: center;
-  padding: 8px 12px;
-  color: #fff;
-  border-radius: 4px;
-  color: #2264d1;
-}
-
-.btn-primary,
-.btn-flat-primary {
-  margin-left: 10px;
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
-  letter-spacing: 0.0075em;
-  color: #2264d1;
-}
-
-.btn-outline-primary {
-  background-color: #fff;
-  border: 1px solid #9dc2ff;
-  font-weight: 500;
-  font-size: 14px;
-  color: #2264d1;
-}
-
-.btn:hover,
-.btn-outline-primary:hover {
-  color: #fff !important;
-  background-color: #2264d1;
-}
-
-.header {
-  width: 100%;
-  height: 80px;
-  margin: auto;
-  align-items: center;
-  z-index: 1;
-  position: relative;
-  border-bottom: 1px solid #2264d1;
-}
-
-.header-left {
-  height: 80px;
-}
-
-.logo {
-  margin: 0;
-}
-
-.header-search {
-  position: relative;
-  align-items: center;
-  width: 40%;
-  margin: auto;
-}
-
-.menu-icon {
-  width: 32px;
-  height: 32px;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.search {
-  position: relative;
-  width: 100%;
-  height: 48px;
-  display: flex;
-  align-items: center;
-}
-
-.search-icon {
-  position: absolute;
-  left: 15px;
-  width: 15px;
-  height: 15px;
-}
-
-.delete-icon {
-  position: absolute;
-  right: 20px;
-}
-
-.search > input {
-  width: 100%;
-  height: 40px;
-  border-radius: 50px;
-  padding-left: 40px;
-  background-color: #fff;
-  border: 1px solid #ededf0;
-  outline: none;
-  font-size: 18px;
-  line-height: 1.5;
-  letter-spacing: 0.0275em;
-  color: #434343;
-}
-
-.header-right {
-  padding-left: 20px;
-  align-items: center;
-  font-weight: bold;
-  color: #2264d1;
-}
-
-.cart {
-  position: relative;
-}
-
-.cart::after {
-  position: absolute;
-  content: attr(data-cart);
-  /* width: 12px;
-  height: 12px; */
-  margin: 0;
-  padding: 2px 5px;
-  right: -10px;
-  top: -5px;
-  font-size: 10px;
-  text-align: center;
-  color: #fff;
-  background-color: #f00;
-  border-radius: 50%;
-}
-
-.menu {
-  position: absolute;
-  width: 320px;
-  height: 327px;
-  top: 80px;
-  opacity: 0;
-  background-color: #fff;
-  border: 1px solid #2264d1;
-  border-top: none;
-  z-index: 1;
-}
-
-.menu > ul > li > a {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.menu p:hover,
-.menu img:hover {
-  color: #2264d1;
-}
-
-.menu > ul > li {
-  width: 197px;
-  height: 20px;
-  padding-left: 32px;
-  padding-top: 24px;
-  padding-bottom: 31px;
-}
-
-.menu p {
-  padding-left: 24px;
-  font-size: 14px;
-  color: #787885;
-}
-
-.img-menu {
-  width: 20px;
-  height: 17px;
-}
-
-.menu-active {
-  opacity: 1;
-}
-
-/*  --------end header---------- */
 .container {
   max-width: 1120px;
   margin: auto;
@@ -216,6 +6,10 @@ li {
 .section {
   margin: 20px auto;
   z-index: -1;
+}
+
+.main {
+  margin-bottom: 108px;
 }
 
 .banner-img {
@@ -347,12 +141,6 @@ select {
   width: 158px;
 }
 
-.main {
-  margin-bottom: 108px;
-}
-
-/* ---------- -end product ---------------*/
-
 .product {
   padding: 16px;
 }
@@ -449,40 +237,6 @@ h4 {
 .product-item:hover {
   box-shadow: 0px 4px 8px rgba(90, 91, 106, 0.2);
 }
-
-/* -------------end product --------------/
-
-/* ------------start footer ------------ */
-.footer {
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  background-color: #2264d1;
-}
-
-.footer > h3 {
-  margin: 15px 0;
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 1.5;
-}
-
-.footer > p {
-  font-weight: normal;
-  font-size: 14px;
-  font-size: 14px;
-  opacity: 0.5;
-}
-
-.footer > p:first-child {
-  padding-top: 64px;
-}
-
-.footer > p:last-child {
-  padding-bottom: 64px;
-}
-
-/* ------------end  footer ---------- */
 
 @media only screen and (max-width: 992px) {
   .header-right {

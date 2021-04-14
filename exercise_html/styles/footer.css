@@ -1,0 +1,28 @@
+.footer {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: #2264d1;
+}
+
+.footer > h3 {
+  margin: 15px 0;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.footer > p {
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.footer > p:first-child {
+  padding-top: 64px;
+}
+
+.footer > p:last-child {
+  padding-bottom: 64px;
+}
