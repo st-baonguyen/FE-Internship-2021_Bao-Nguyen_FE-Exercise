@@ -1,0 +1,81 @@
+
+.footer{
+    color: map-get($map: $color, $key: white-a);
+    background-color: map-get($map: $color, $key: nav-h);
+    & a{
+        color:map-get($map: $color, $key: white-a);;
+    }
+
+    .footer-info {        
+        padding: 40px 0 32px;
+        .footer-left{
+            max-width: 543px;
+            padding-right: 169px
+        }
+    
+        .footer-right {
+            max-width: 686px;
+            font-size: 14px;
+            line-height: 150%;
+            // padding-left: 85px
+        }
+    }
+}
+
+.footer-left {
+    .footer-content {
+        padding: 24px 0 62px 0;
+        font-size: 14px;
+        line-height: 21px;
+        color: map-get($map: $color, $key: white-a);
+    }
+    
+    .footer-network {
+        max-width: 203px;
+    }
+}
+
+
+.footer-right {   
+    .genenal-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 52px;
+        padding: 0;
+        .shopping-online {
+            padding-right: 35px;
+        }
+
+        & .info-item, & .info-link {
+            font-size: 14px;
+            line-height: 1.50;
+            font-weight: 400;
+        }
+
+        .contact-group {
+            padding-right: 8px;
+            li {
+                color: map-get($map: $color, $key: white-a);
+                padding-bottom: 19px;
+            }
+        }
+
+        & .contact-title {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 24px;
+            padding-bottom: 19px;
+            color: map-get($map: $color, $key: white-a);
+        }
+    }
+
+    
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    border-top: 1px solid map-get($map: $color, $key: white-a);
+    padding: 24px 0;
+}

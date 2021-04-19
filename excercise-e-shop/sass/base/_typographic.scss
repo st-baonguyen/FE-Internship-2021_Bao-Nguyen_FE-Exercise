@@ -1,0 +1,28 @@
+.container {
+  max-width: 1152px;
+  margin: auto;
+}
+
+.flex-r {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-e {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-s {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-w {
+  display: flex;
+  flex-wrap: wrap;
+}
