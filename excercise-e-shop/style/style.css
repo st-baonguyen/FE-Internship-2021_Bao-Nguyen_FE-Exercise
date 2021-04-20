@@ -356,18 +356,21 @@ button {
     left: 50%;
     transform: translate(-50%, -50%); }
 
-.benefit-item .benefit-title {
+.benefit-item .item-title {
   padding-bottom: 16px;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px; }
-  .benefit-item .benefit-title.hover {
+  .benefit-item .item-title.hover {
     color: #fbb03b; }
 
-.benefit-item .benefit-des {
+.benefit-item .item-des {
   font-size: 14px;
   line-height: 21px;
   color: #808080; }
+
+.benefit-item:hover .item-title, .benefit-item:hover .benefit-icon {
+  color: #fbb03b; }
 
 .subscribe-section {
   position: relative;
