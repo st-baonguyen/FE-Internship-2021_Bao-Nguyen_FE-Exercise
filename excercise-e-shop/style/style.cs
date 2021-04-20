@@ -231,7 +231,7 @@ button {
         line-height: 36px;
         color: #fff; }
 
-.collection-group .item .btn-show {
+.item .btn-show {
   position: absolute;
   left: 40px;
   bottom: 53px;
@@ -239,13 +239,13 @@ button {
   margin-left: 0 0 53px 40px;
   background-color: #fff;
   border-radius: 24px; }
-  .collection-group .item .btn-show :first-child {
+  .item .btn-show :first-child {
     font-weight: bold;
     font-size: 13px;
     line-height: 19px;
     color: #333333; }
 
-.collection-group .item.sell-off::before {
+.item.sell-off::before {
   position: absolute;
   content: attr(data-off);
   top: 129px;
@@ -255,7 +255,7 @@ button {
   color: #fff;
   background-color: #f00; }
 
-.collection-group .item::after {
+.item::after {
   position: absolute;
   content: "";
   top: 0;

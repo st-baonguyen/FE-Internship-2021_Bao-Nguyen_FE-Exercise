@@ -31,66 +31,72 @@
           </nav>
         </div>
         <div class="header-right">
-          <div class="person flex-e">
-            <ul class="person-list flex-r">
-              <li>
+            <ul class="list-group flex-r">
+              <li class="list-item">
                 <img src="./asset/icons/search.svg"
                   alt="search"
                   class="search-icon"/>
               </li>
-              <li>
-                <a href="#">
-                  <img src="./asset/icons/cart.svg" alt="cart-icon"/>
-                </a>
+              <li class="list-item">
+                <i class="icon">
+                  <a href="#" class="option-link">
+                    <img src="./asset/icons/cart.svg" alt="cart-icon"/>
+                  </a>
+                </i>
               </li>
-              <li>
-                <a href="#">
-                  <i>
+              <li class="list-item">
+                <a href="#" class="option-link">
+                  <i class="icon">
                     <img src="./asset/icons/person.svg" alt="person"/>
                   </i>
                 </a>
               </li>
             </ul>
-          </div>
         </div>
       </div>
     </header>
     <main>
       <section class="banner">
-        <div class="banner-content">
-          <div class="banner-title">
-            Sale of the <span class="highlight-txt">summer</span> collection
-          </div>
-          <div class="banner-buy">
+        <div class="section-content">
+          <h1 class="title">
+            Sale of the <span class="highlight">summer</span> collection
+          </h1>
+          <div class="shop-now-group">
             <a href="#" class="flex-s">
-              <img src="./asset/icons/arrow-shop-now.svg" alt="shop-now" class="buy-icon"/>
-              <span class="buy-now">SHOP NOW</span>
+              <i class="icon">
+                <img src="./asset/icons/arrow-shop-now.svg" alt="shop-now" class="shop-now-icon"/>
+              </i>
+              <span class="shop-now-link">SHOP NOW</span>
             </a>
           </div>
         </div>
-        <div class="banner-footer">
-          <ul class="banner-footer-bg flex-r">
-            <li class="footer-bg flex-s">
-              <img src="./asset/icons/car.svg" alt="free-shipping" class="footer-bg-icon"/>
-              <div class="bg-left-content">
-                <p class="bg-title">Free Shipping</p>
-                <p class="description">On purchases over $199</p>
-              </div>
+        <div class="section-footer">
+          <ul class="footer-bg-group flex-r">
+            <li class="footer-bg-item flex-s">
+                <i class="icon">
+                  <img src="./asset/icons/car.svg" alt="free-shipping" class="footer-bg-icon"/>
+                </i>  
+                <div class="item-content">
+                <p class="item-title">Free Shipping</p>
+                <p class="item-des">On purchases over $199</p>
+              </div>  
             </li>
-            <li class="footer-bg flex-s">
-                <img src="./asset/icons/smile.svg" alt="satisfield" class="footer-bg-icon"/>
-                <div class="bg-middle-content">
-                  <p class="bg-title">Free Shipping</p>
-                  <p class="description">
+            <li class="footer-bg-item flex-s">
+                <i class="icon">
+                  <img src="./asset/icons/smile.svg" alt="satisfield" class="footer-bg-icon"/>
+                </i>
+                <div class="item-content">
+                  <p class="item-title">Free Shipping</p>
+                  <p class="item-des">
                     Our clients' opinions speak for themselves
                   </p>
               </div>                
             </li>
-            <li class="footer-bg flex-s">
+            <li class="footer-bg-item flex-s">
                 <img src="./asset/icons/money.svg" alt="Originality" class="footer-bg-icon"/>
-                <div class="bg-right-content">
-                  <p class="bg-title">Originality Guaranteed</p>
-                  <p class="description">
+                <div class="item-content">
+                  <p class="item-title">Originality Guaranteed</p>
+                  <p class="item-des">
                     30 days warranty for each product from our store
                   </p>
                 </div>
@@ -100,23 +106,23 @@
       </section>
       <section class="collection-section">
         <div class="container">
-          <ul class="collection-item">
+          <ul class="collection-group">
             <li class="item">
               <div class="new-arr">
-                <p>New arrivalsare now in!</p>
+                <p class="collection-title">New arrivalsare now in!</p>
                 <div class="btn btn-show">
                   <a href="#">SHOW COLLECTION</a>
                 </div>
               </div>                
             </li>
             <li class="item more-detail">
-                <p>Basic t-shirts $29,99</p>
+                <p class="collection-title">Basic t-shirts $29,99</p>
                 <div class="btn btn-show">
                   <a href="#">MORE DETAILS</a>
                 </div>
             </li>
             <li class="item sell-off" data-off="-50%">
-                <p>Sale this summer</p>
+                <p class="collection-title" >Sale this summer</p>
                 <div class="btn btn-show">
                   <a href="#">VIEW ALL</a>
                 </div>
@@ -130,28 +136,36 @@
           <ul class="product-group flex-w">
             <li class="product-item tag tag-danger" sell-off="-30%">
               <a href="#">
-                <img src="./asset/sample/product4.png" class="item-img" alt="product-1" />
-                <h4 class="item-name">T-Shirt Summer Vibes</h4>
+                <i class="icon">
+                  <img src="./asset/sample/product4.png" class="item-img" alt="T-Shirt Summer Vibes" />
+                </i>
+                  <h4 class="item-name">T-Shirt Summer Vibes</h4>
                 <p class="item-price price-off tag" real-price="$119.99">$89.99</p>
               </a>
             </li>
             <li class="product-item">
               <a href="#">
-                <img src="./asset/sample/product5.png" class="item-img" alt="product-2" />
+                <i class="icon">
+                  <img src="./asset/sample/product5.png" class="item-img" alt="Loose Knit 3/4 Sleeve" />
+                </i>
                 <h4 class="item-name">Loose Knit 3/4 Sleeve</h4>
                 <p class="item-price">$119.99</p>
               </a>
             </li>
             <li class="product-item">
               <a href="#">
-                <img src="./asset/sample/product7.png" class="item-img" alt="product-3" />
+                <i class="icon">
+                  <img src="./asset/sample/product7.png" class="item-img" alt="Basic Slim Fit T-Shirt" />
+                </i>
                 <h4 class="item-name">Basic Slim Fit T-Shirt</h4>
                 <p class="item-price tag">$79.99</p>
               </a>
             </li>
             <li class="product-item">
               <a href="#">
-                <img src="./asset/sample/product8.png" class="item-img" alt="product-4" />
+                <i class="icon">
+                  <img src="./asset/sample/product8.png" class="item-img" alt="Loose Textured T-Shirt" />
+                </i>
                 <h4 class="item-name">Loose Textured T-Shirt</h4>
                 <p class="item-price">$119.99</p>
               </a>
@@ -163,42 +177,58 @@
         <div class="container benefit">
           <p class="benefit-title">Why should you choose us?</p>
           <ul class="benefit-content flex-r">
-            <li class="payment">
-              <div class="payment-img">
-                <img src="./asset/icons/car-footer.svg" class="payment-icon" alt="free shipping" />                
-              </div>
-              <p class="payment-title">Free Shipping</p>
-              <p class="payment-des">
+            <li class="benefit-item">
+              <div class="item">
+                <div class="item-img">
+                  <i class="icon">
+                    <img src="./asset/icons/car-footer.svg" class="benefit-icon" alt="free shipping" />
+                  </i>
+                </div>          
+                <p class="benefit-title">Free Shipping</p>    
+              </div>             
+              <p class="benefit-des">
                 All purchases over $199 are eligible forfree shipping via USPS
                 First Class Mail.
               </p>
             </li>
-            <li class="payment">
-              <div class="payment-img">
-                <img src="./asset/icons/pay-footer.svg" class="payment-icon" alt="free shipping" />
-              </div>
-              <p class="payment-title hover">Easy Payments</p>
-              <p class="payment-des">
+            <li class="benefit-item">
+              <div class="item">
+                <div class="item-img">
+                  <i class="icon">
+                    <img src="./asset/icons/pay-footer.svg" class="benefit-icon" alt="Easy Payments" />
+                  </i>
+                </div>          
+                <p class="benefit-title">Easy Payments</p>    
+              </div>     
+              <p class="benefit-des">
                 All payments are processed instantlyover a secure payment
                 protocol.
               </p>
             </li>
-            <li class="payment">
-              <div class="payment-img">
-                <img src="./asset/icons/money-footer.svg" class="payment-icon" alt="free shipping" />
-              </div>
-              <p class="payment-title">Money-Back Guarantee</p>
-              <p class="payment-des">
+            <li class="benefit-item">
+              <div class="item">
+                <div class="item-img">
+                  <i class="icon">
+                    <img src="./asset/icons/car-footer.svg" class="benefit-icon" alt="Money-Back Guarantee" />
+                  </i>
+                </div>          
+                <p class="benefit-title">Money-Back Guarantee</p>    
+              </div>     
+              <p class="benefit-des">
                 If an item arrived damaged or you'vechanged your mind, you can
                 send itback for a full refund.
               </p>
             </li>
-            <li class="payment">
-              <div class="payment-img">
-                <img src="./asset/icons/road-footer.svg" class="payment-icon" alt="free shipping" />
-              </div>
-              <p class="payment-title">Finest Quality</p>
-              <p class="payment-des">
+            <li class="benefit-item">
+              <div class="item">
+                <div class="item-img">
+                  <i class="icon">
+                    <img src="./asset/icons/car-footer.svg" class="benefit-icon" alt="Finest Quality" />
+                  </i>
+                </div>          
+                <p class="benefit-title">Finest Quality</p>    
+              </div>     
+              <p class="benefit-des">
                 Designed to last, each of our products hasbeen crafted with the
                 finest materials.
               </p>
@@ -208,33 +238,41 @@
       </section>
       <section class="product-section">
         <div class="container product-today">
-          <p class="product-list-title">Products in today</p>
+          <p class="product-today-title">Products in today</p>
           <ul class="product-group flex-w">
             <li class="product-item tag tag-danger" sell-off="-30%">
               <a href="#">
-                <img src="./asset/sample/product4.png" class="item-img" alt="product-1" />
+                <i class="icon">
+                  <img src="./asset/sample/product4.png" class="item-img" alt="T-Shirt Summer Vibes" />
+                </i>
                 <h4 class="item-name">T-Shirt Summer Vibes</h4>
                 <p class="item-price price-off tag" real-price="$119.99">$89.99</p>
               </a>
             </li>
             <li class="product-item">
               <a href="#">
-                <img src="./asset/sample/product5.png" class="item-img" alt="product-2" />
+                <i class="icon">
+                  <img src="./asset/sample/product5.png" class="item-img" alt="Loose Knit 3/4 Sleeve" />
+                </i>
                 <h4 class="item-name">Loose Knit 3/4 Sleeve</h4>
                 <p class="item-price">$119.99</p>
               </a>
             </li>
             <li class="product-item">
               <a href="#">
-                <img src="./asset/sample/product7.png" class="item-img" alt="product-3" />
+                <i class="icon">
+                  <img src="./asset/sample/product7.png" class="item-img" alt="Basic Slim Fit T-Shirt" />
+                </i>
                 <h4 class="item-name">Basic Slim Fit T-Shirt</h4>
                 <p class="item-price tag">$79.99</p>
               </a>
             </li>
             <li class="product-item">
               <a href="#">
-                <img src="./asset/sample/product8.png" class="item-img" alt="product-4" />
-                <h4 class="item-name">Loose Textured T-Shirt</h4>
+                <i class="icon">
+                  <img src="./asset/sample/product8.png" class="item-img" alt="Loose Textured T-Shirt" />
+                </i>
+                 <h4 class="item-name">Loose Textured T-Shirt</h4>
                 <p class="item-price">$119.99</p>
               </a>
             </li>
@@ -260,38 +298,49 @@
         <div class="footer-info container flex-r">
           <div class="footer-left">
             <div class="footer-logo">
-              <img src="./asset/main/logo-footer.png" alt="E-shop" />
+              <i class="icon">
+                <img src="./asset/main/logo-footer.png" alt="E-shop" />
+              </i>
             </div>
             <p class="footer-content">
               House My Brand designs clothing for the young, the old &everyone in
               between – but most importantly, for the fashionable
             </p>
             <div class="footer-network">
-              <ul class="flex-r">
-                <li>
-                  <a href="#"
-                    ><img src="./asset/icons/fb.svg" alt="facebook"
-                  /></a>
+              <ul class="network-group flex-r">
+                <li class="network-item">
+                  <a href="#" class="network-link">
+                    <i class="icon">
+                      <img src="./asset/icons/fb.svg" alt="facebook"/></a>
+                    </i>
                 </li>
-                <li>
-                  <a href="#"
-                    ><img src="./asset/icons/twitter.svg" alt="twitter"
-                  /></a>
+                <li class="network-item">
+                  <a href="#" class="network-link">
+                    <i class="icon">
+                      <img src="./asset/icons/twitter.svg" alt="twitter"/>
+                    </i>
+                  </a>
                 </li>
-                <li>
-                  <a href="#"
-                    ><img src="./asset/icons/linkedin.svg" alt="linkedin"
-                  /></a>
+                <li class="network-item">
+                  <a href="#" class="network-link">
+                    <i class="icon">
+                      <img src="./asset/icons/linkedin.svg" alt="linkedin"/>
+                    </i>
+                  </a>
                 </li>
-                <li>
-                  <a href="#"
-                    ><img src="./asset/icons/instagram.svg" alt="instagram"
-                  /></a>
+                <li class="network-item">
+                  <a href="#" class="network-link">
+                    <i class="icon">
+                      <img src="./asset/icons/instagram.svg" alt="instagram"/>
+                    </i>
+                  </a>
                 </li>
-                <li>
-                  <a href="#"
-                    ><img src="./asset/icons/youtube.svg" alt="youtube"
-                  /></a>
+                <li class="network-item">
+                  <a href="#" class="network-link">
+                    <i class="icon">
+                      <img src="./asset/icons/youtube.svg" alt="youtube"/>
+                    </i>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -299,37 +348,37 @@
           <div class="footer-right flex-e">
             <ul class="genenal-info flex">
               <li class="footer-general shopping-online">  
-                <p class="contact-title">Shopping online</p>
-                <ul class="contact-group">
-                  <li><a href="#">Order Status</a></li>
-                  <li><a href="#">Shipping and Delivery</a></li>
-                  <li><a href="#">Returns</a></li>
-                  <li><a href="#">Payment Options</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                <p class="info-title">Shopping online</p>
+                <ul class="info-group">
+                  <li class="info-item"><a href="#" class="info-link">Order Status</a></li>
+                  <li class="info-item"><a href="#" class="info-link">Shipping and Delivery</a></li>
+                  <li class="info-item"><a href="#" class="info-link">Returns</a></li>
+                  <li class="info-item"><a href="#" class="info-link">Payment Options</a></li>
+                  <li class="info-item"><a href="#" class="info-link">Contact Us</a></li>
                 </ul>
               </li>
               <li class="footer-general information">
-                <p class="contact-title">Information</p>
-                <ul class="contact-group">                  
-                  <li><a href="#">Gift Cards</a></li>
-                  <li><a href="#">Find a store</a></li>
-                  <li><a href="#">Newsletter</a></li>
-                  <li><a href="#">Become a member</a></li>
-                  <li><a href="#">Site feedback</a></li>
+                <p class="info-title">Information</p>
+                <ul class="info-group">                  
+                  <li class="info-item"><a href="#" class="info-link">Gift Cards</a></li>
+                  <li class="info-item"><a href="#" class="info-link">Find a store</a></li>
+                  <li class="info-item"><a href="#" class="info-link">Newsletter</a></li>
+                  <li class="info-item"><a href="#" class="info-link">Become a member</a></li>
+                  <li class="info-item"><a href="#" class="info-link">Site feedback</a></li>
                 </ul>
               </li>
               <li class="footer-general contact">
-                <p class="contact-title">Contact</p>
-                <ul class="contact-group">
-                  <li class="general-item">store@uikit.com</li>
-                  <li>Hotline: +1 131 138 138</li>
+                <p class="info-title">Contact</p>
+                <ul class="info-group">
+                  <li class="info-item">store@uikit.com</li>
+                  <li class="info-item">Hotline: +1 131 138 138</li>
                 </ul>
               </li>
             </ul>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>DESIGN BY ICEO.CO - © 2019. ALL RIGHTS RESERVED.</p>
+        <div class="ft-bottom">
+          <p class="ft-bottom-title">DESIGN BY ICEO.CO - © 2019. ALL RIGHTS RESERVED.</p>
         </div>
       </div>
     </footer>

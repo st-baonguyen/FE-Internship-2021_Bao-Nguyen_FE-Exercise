@@ -16,16 +16,16 @@
     }
 }
 
-.payment {
-    width: 25%;
-    .payment-img {
+.benefit-item {
+    // width: 25%;
+    .item-img {
         position: relative;
         width: 68px;
         height: 68px;
         margin-bottom: 46px;
         background-color: map-get($map: $color, $key: white-a);
         border-radius: 10px;
-        .payment-icon {
+        .benefit-icon {
             position: absolute;
             width: 37px;
             height: 37px;
@@ -34,7 +34,7 @@
             transform: translate(-50%, -50%);
         }
     }
-    .payment-title {
+    .benefit-title {
         padding-bottom: 16px;
         font-weight: bold;
         font-size: 16px;
@@ -45,17 +45,12 @@
         }
     }
 
-    .payment-des {
+    .benefit-des {
         font-size: 14px;
         line-height: 21px;
         color: #808080;
     }
 }
 
-.product-today {
-    .product-title {
-        text-align: center;
-    }
-}
 
 

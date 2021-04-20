@@ -17,7 +17,6 @@
             max-width: 686px;
             font-size: 14px;
             line-height: 150%;
-            // padding-left: 85px
         }
     }
 }
@@ -52,7 +51,7 @@
             font-weight: 400;
         }
 
-        .contact-group {
+        .info-group {
             padding-right: 8px;
             li {
                 color: map-get($map: $color, $key: white-a);
@@ -60,7 +59,7 @@
             }
         }
 
-        & .contact-title {
+        & .info-title {
             font-size: 16px;
             font-weight: bold;
             line-height: 24px;
@@ -72,10 +71,13 @@
     
 }
 
-.footer-bottom {
-    text-align: center;
-    font-size: 12px;
-    line-height: 18px;
-    border-top: 1px solid map-get($map: $color, $key: white-a);
-    padding: 24px 0;
+.ft-bottom {
+    .ft-bottom-title {
+        text-align: center;
+        font-size: 12px;
+        line-height: 18px;
+        padding: 24px 0;
+        color: map-get($map: $color, $key: white-a);
+        border-top: 1px solid map-get($map: $color, $key: white-a);
+    }    
 }

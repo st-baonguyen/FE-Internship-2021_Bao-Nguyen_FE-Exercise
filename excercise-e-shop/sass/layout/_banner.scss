@@ -2,7 +2,6 @@
     position: relative;
     width: 100%;
     height: 800px;
-    // min-height: 100%;
     background-image: url('../asset/main/background-header.png');
     background-size: cover;
     z-index: 0;
@@ -18,28 +17,28 @@
         z-index: -10;
     }
 
-    .banner-content {
+    .section-content {
         max-width: 403px;
         padding: 222px 0 248px 0;
         margin-left: 240px;
         z-index: 10;
-        .banner-title {
+        .title {
             padding-bottom: 24px;
             font-weight: bold;
             font-size: 72px;
             line-height: 1.015;
             color: map-get($map: $color, $key: white-a);
 
-            .highlight-txt {              
-                @extend .banner-title; 
+            .highlight {              
+                @extend .title; 
                 color: map-get($map: $color, $key: nav-h);
             }
         }
-        .banner-buy {
-            .buy-icon {
+        .shop-now-group {
+            .shop-now-icon {
                 padding-right: 21px;
             }
-            .buy-now {
+            .shop-now-link {
                 font-weight: bold;
                 font-size: 24px;
                 line-height: 36px;
@@ -49,7 +48,7 @@
         }
     }
 
-    .banner-footer {
+    .section-footer {
         position: absolute;
         left: 0;
         bottom: 0;
@@ -57,33 +56,33 @@
         background-color: map-get($map: $color, $key: white-a);
         border-top-right-radius: 70px;
 
-        .banner-footer-bg{
-            // padding: 38px 64px 24px 216px;
+        .footer-bg-group{
             padding: 38px 88px 24px 240px;
         }
     }
 }
 
-.banner-footer-bg {
-    .footer-bg {
+.footer-bg-group {
+    .footer-bg-item {
         margin: 0 24px;
         min-width: 202px;
         align-items:start;
         .footer-bg-icon {
             // width: 36px;
-            // height: 36px;
             margin-right: 20px;
         }
-        .bg-title {
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 21px;
-            color: map-get($map: $color, $key: black-a)
-        }
-        .description {
-            font-size: 12px;
-            line-height: 18px;
-            color: #A8A8A8;
+        .item-content {
+            .item-title {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 21px;
+                color: map-get($map: $color, $key: black-a)
+            }
+            .item-des {
+                font-size: 12px;
+                line-height: 18px;
+                color: #A8A8A8;
+            }
         }
     }
 }

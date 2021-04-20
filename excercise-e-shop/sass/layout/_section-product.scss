@@ -17,11 +17,22 @@
         }
     }
 
+    .product-today {
+        .product-title {
+            text-align: center;
+        }
+    }
+ 
     .product-list-title {
         padding-bottom: 39px;
         font-weight: 300;
         font-size: 32px;
         line-height: 48px;
+    }
+
+    .product-today-title {
+        @extend .product-list-title;
+        text-align: center;
     }
 
     .product-group {
