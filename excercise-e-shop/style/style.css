@@ -229,6 +229,8 @@ button {
 
 .product-section {
   padding: 48px 0; }
+  .product-section .row {
+    margin: 0 -10px; }
   .product-section .title-ex, .product-section .product .title, .product-section .product .banner .section-content .title .highlight, .banner .section-content .title .product-section .product .highlight, .product-section .product-today-title {
     padding-bottom: 39px;
     font-weight: 300;
@@ -242,13 +244,12 @@ button {
     text-align: center; }
   .product-section .product-today-title {
     text-align: center; }
-  .product-section .product-group {
-    gap: 20px; }
-    .product-section .product-group .product-item .item-img {
-      padding-bottom: 15px; }
+  .product-section .product-group .product-item {
+    padding: 0 10px; }
 
 .product-item {
-  position: relative; }
+  position: relative;
+  padding: 0 10px; }
   .product-item .item-img {
     padding-bottom: 15px; }
   .product-item .item-name {

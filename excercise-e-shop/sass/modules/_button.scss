@@ -1,0 +1,10 @@
+.btn  {
+    padding: 14px 30px;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 19px;
+    background-color: map-get($map: $color, $key: white-a);
+    border: 1px solid #C4C4C4;
+    border-radius: 39px;
+}   

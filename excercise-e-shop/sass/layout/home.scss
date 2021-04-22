@@ -1,0 +1,674 @@
+.header {
+    position: absolute;
+    width: 100%;
+    padding: 48px 0;
+    z-index: 50;
+  
+  .header-left,
+  .header-right {
+    width: 10%;
+  }
+  
+  .header-center {
+    width: 30%;
+    .nav-link {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      color: map-get($map: $color, $key: nav-h);
+    }
+  }
+  
+  .header-right {
+    .person-group {
+      width: 100%;
+    }
+    .search {
+      position: relative;
+      .search-txt {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    z-index: 0;
+
+    .background-img {
+        position: absolute;
+        width: 100%;
+        height: fit-content;
+        z-index: -10;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: map-get($map: $background-overlay, $key: overlay-bn);
+        opacity: 0.7;
+        z-index: -10;
+    }
+
+    .section-content {
+        padding: 222px 0 0 96px;
+        z-index: 10;
+        .title {
+            max-width: 403px;
+            padding-bottom: 24px;
+            font-weight: bold;
+            font-size: 72px;
+            line-height: 1.015;
+            color: map-get($map: $color, $key: white-a);
+
+            .highlight {              
+                @extend .title; 
+                color: map-get($map: $color, $key: nav-h);
+            }
+        }
+        .shop-now-group {
+            .shop-now-icon {
+                padding-right: 21px;
+            }
+            .shop-now-link {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 36px;
+                text-decoration-line: underline;
+                color: map-get($map: $color, $key: white-a);
+            }
+        }
+    }
+
+    .section-footer {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        
+        .footer-bg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 125px;
+            width: calc(100% - 23.6%);
+            background-color: map-get($map: $color, $key: white-a);
+            border-top-right-radius: 70px;
+            z-index: -5;
+        }
+
+        .footer-bg-group{
+            padding: 38px 284px 24px 96px;            
+            left: 0;
+            bottom: 0;
+            padding: auto 0;
+            border-top-right-radius: 70px;
+        }
+    }
+    
+}
+
+.footer-bg-group {
+    .footer-bg-item {
+        width: 33.33%;
+        align-items:start;
+        .footer-bg-icon {
+            margin-right: 20px;
+        }
+        .item-content {
+            .item-title {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 21px;
+                color: map-get($map: $color, $key: black-a)
+            }
+            .item-des {
+                font-size: 12px;
+                line-height: 18px;
+                color: #A8A8A8;
+            }
+        }
+    }
+}
+
+.collection-section {
+    padding: 48px 0;
+
+    .collection-group {
+        display: flex;
+        grid-gap: 20px;
+
+        .item:nth-child(1) {
+            flex: 2;
+        }
+    
+        .item:nth-child(2) {
+            flex: 1;
+        }
+    
+       .item:nth-child(3) {
+            flex: 1;
+        }
+
+        .item {
+            position: relative;
+            height: 359px;
+            z-index: 0;
+            p {
+                padding: 173px 40px 0 40px;
+                font-size: 24px;
+                line-height: 36px;
+                color: map-get($map: $color, $key: white-a);
+            }
+        }
+    }    
+}
+
+.collection-group {
+    .item {
+        .collect-bg {
+            position: absolute;
+            z-index: -10;
+        }
+
+        .btn-show {
+            position: absolute;
+            left: 40px;
+            bottom: 53px;
+            padding: 14px 18px;  
+            margin-left: 0 0 53px 40px;
+            border: 0;      
+            border-radius: 24px;
+    
+            :first-child {
+                font-weight: bold;            
+                font-size: 13px;
+                line-height: 19px;
+                color: map-get($map:$color, $key: black-a);
+            }
+        }
+        &.sell-off::before {
+            position: absolute;
+            content: attr(data-off);
+            top: 129px;
+            left: 40px;
+            padding: 6px 13px;
+            border-radius: 20px;        
+            color: map-get($map: $color, $key: white-a);
+            background-color: map-get($map: $color, $key: bg-sell-off);
+        }
+    
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: map-get($map: $color, $key: black-a);
+            opacity: 0.5;
+            z-index: -1;
+        }
+    }
+}
+// 
+.product-section {
+    padding: 48px 0;
+    .row {
+      // padding: 0 10px;
+      margin: 0 -10px;
+    }
+    
+    .title-ex {
+        padding-bottom: 39px;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 48px;
+    }
+    .product {
+        position: relative;
+        .title {
+            @extend .title-ex;
+        }
+        .btn-more {
+            height: fit-content;
+        }
+    }
+
+    .product-today {
+        .product-title {
+            text-align: center;
+        }
+    }
+
+    .product-today-title {
+        @extend .title-ex;
+        text-align: center;
+    }
+
+    .product-group {
+        // gap: 20px;
+        .product-item {
+          padding: 0 10px;
+            // .item-img {
+            //     padding-bottom: 15px;
+            // }
+        }
+    }
+   
+}
+
+.product-item {
+    position: relative;
+    padding: 0 10px;
+    .item-img {
+        padding-bottom: 15px;
+    }
+
+    .item-name {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .item-price {
+        position: relative;
+        font-size: 20px;
+        line-height: 30px;        
+        
+        &.price-off {
+            color: map-get($map: $color, $key: bg-sell-off)
+        }
+
+        &.tag::after {
+            position: absolute;
+            content: attr(real-price);
+            right:0;
+            top: 0;
+            font-size: 20px;
+            line-height: 30px;
+            color: #CECECE;
+        }       
+    }
+
+    &.tag::before {
+        position: absolute;
+        content: attr(sell-off);
+        top: 30px;
+        left: 27px;
+        padding: 6px 9px;
+        color: map-get($map: $color, $key: white-a);
+        background-color: map-get($map: $color, $key: bg-sell-off);
+        border-radius: 20px;
+    }
+}
+
+
+
+
+.benefit-section {
+    background-color:#F7F7F7;
+    .benefit {
+        padding: 48px 0 54px 0;
+    }
+    .benefit-title {
+        padding-bottom: 50px;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 48px;
+        text-align: center;
+    }
+
+    .benefit-content {
+        grid-gap: 49px;        
+    }
+}
+
+.benefit-item {
+    // width: 25%;
+    .item-img {
+        position: relative;
+        width: 68px;
+        height: 68px;
+        margin-bottom: 46px;
+        background-color: map-get($map: $color, $key: white-a);
+        border-radius: 10px;
+        .benefit-icon {
+            position: absolute;
+            width: 37px;
+            height: 37px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .item-title {
+        padding-bottom: 16px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+
+        &.hover {
+            color: map-get($map: $color, $key: nav-h);
+        }
+    }
+
+    .item-des {
+        font-size: 14px;
+        line-height: 21px;
+        color: #808080;
+    }
+
+    &:hover {
+        .item-title, .benefit-icon {
+            color: map-get($map: $color, $key: nav-h);      
+        }  
+    }
+}
+// 
+.subscribe-section {
+    position: relative;
+    z-index: 0;
+
+    .background-ft {
+        position: absolute;
+        width: 100%;
+        height: min-content;
+        z-index: -10;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: map-get($map: $background-overlay, $key: overlay-ft);
+        top: 0;
+        left: 0;
+        opacity: 0.7;
+        z-index: -10;
+    }
+    .sub-info {
+        width: 50%;
+        // max-width: 493px;
+        padding: 85px 0;
+        font-size: 24px;
+        line-height: 36px;
+        color: map-get($map: $color, $key: white-a)
+    }
+
+    .sub-email {
+        width: 50%;
+        padding: 99px 0 95px 0;
+        
+        .your-mail {
+            border-radius: 61px;
+            background-color: #fff;
+            width: 100%;
+            align-items: center;
+            padding: 14px 24px;
+            .mail {
+                width: 100%;
+                height: 20px;
+                border: none;
+                outline: none;
+                font-size: 13px;
+                line-height: 19px;
+                color: #ABABAB;
+            }
+        }
+
+        .button {       
+            background-color: map-get($map: $color, $key: nav-h);
+            border-radius: 56px;         
+            padding: 14px 52px;
+            margin-left: 40px;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 19px;
+            text-align: center;
+        }
+        
+    }
+}
+
+.subscribe-section {
+    position: relative;
+    z-index: 0;
+
+    .background-ft {
+        position: absolute;
+        width: 100%;
+        height: min-content;
+        z-index: -10;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: map-get($map: $background-overlay, $key: overlay-ft);
+        top: 0;
+        left: 0;
+        opacity: 0.7;
+        z-index: -10;
+    }
+    .sub-info {
+        width: 50%;
+        // max-width: 493px;
+        padding: 85px 0;
+        font-size: 24px;
+        line-height: 36px;
+        color: map-get($map: $color, $key: white-a)
+    }
+
+    .sub-email {
+        width: 50%;
+        padding: 99px 0 95px 0;
+        
+        .your-mail {
+            border-radius: 61px;
+            background-color: #fff;
+            width: 100%;
+            align-items: center;
+            padding: 14px 24px;
+            .mail {
+                width: 100%;
+                height: 20px;
+                border: none;
+                outline: none;
+                font-size: 13px;
+                line-height: 19px;
+                color: #ABABAB;
+            }
+        }
+
+        .button {       
+            background-color: map-get($map: $color, $key: nav-h);
+            border-radius: 56px;         
+            padding: 14px 52px;
+            margin-left: 40px;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 19px;
+            text-align: center;
+        }        
+    }
+}
+
+
+.footer{
+  color: map-get($map: $color, $key: white-a);
+  background-color: map-get($map: $color, $key: nav-h);
+  & a{
+      color:map-get($map: $color, $key: white-a);;
+  }
+
+  .footer-info {        
+      padding: 40px 0 32px;
+      .footer-left{
+          max-width: 543px;
+          padding-right: 169px
+      }
+  
+      .footer-right {
+          max-width: 686px;
+          font-size: 14px;
+          line-height: 150%;
+      }
+  }
+}
+
+.footer-left {
+  .footer-content {
+      padding: 24px 0 62px 0;
+      font-size: 14px;
+      line-height: 21px;
+      color: map-get($map: $color, $key: white-a);
+  }
+  
+  .footer-network {
+      max-width: 203px;
+  }
+}
+
+
+.footer-right {   
+  .genenal-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 52px;
+      padding: 0;
+      .shopping-online {
+          padding-right: 35px;
+      }
+
+      & .info-item, & .info-link {
+          font-size: 14px;
+          line-height: 1.50;
+          font-weight: 400;
+      }
+
+      .info-group {
+          padding-right: 8px;
+          li {
+              color: map-get($map: $color, $key: white-a);
+              padding-bottom: 19px;
+          }
+      }
+
+      & .info-title {
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 24px;
+          padding-bottom: 19px;
+          color: map-get($map: $color, $key: white-a);
+      }
+  }
+
+  
+}
+
+.ft-bottom {
+  .ft-bottom-title {
+      text-align: center;
+      font-size: 12px;
+      line-height: 18px;
+      padding: 24px 0;
+      color: map-get($map: $color, $key: white-a);
+      border-top: 1px solid map-get($map: $color, $key: white-a);
+  }    
+}
+
+
+.footer{
+  color: map-get($map: $color, $key: white-a);
+  background-color: map-get($map: $color, $key: nav-h);
+  & a{
+      color:map-get($map: $color, $key: white-a);;
+  }
+
+  .footer-info {        
+      padding: 40px 0 32px;
+      .footer-left{
+          max-width: 543px;
+          padding-right: 169px
+      }
+  
+      .footer-right {
+          max-width: 686px;
+          font-size: 14px;
+          line-height: 150%;
+      }
+  }
+}
+
+.footer-left {
+  .footer-content {
+      padding: 24px 0 62px 0;
+      font-size: 14px;
+      line-height: 21px;
+      color: map-get($map: $color, $key: white-a);
+  }
+  
+  .footer-network {
+      max-width: 203px;
+  }
+}
+
+
+.footer-right {   
+  .genenal-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 52px;
+      padding: 0;
+      .shopping-online {
+          padding-right: 35px;
+      }
+
+      & .info-item, & .info-link {
+          font-size: 14px;
+          line-height: 1.50;
+          font-weight: 400;
+      }
+
+      .info-group {
+          padding-right: 8px;
+          li {
+              color: map-get($map: $color, $key: white-a);
+              padding-bottom: 19px;
+          }
+      }
+
+      & .info-title {
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 24px;
+          padding-bottom: 19px;
+          color: map-get($map: $color, $key: white-a);
+      }
+  }    
+}
+
+.ft-bottom {
+  .ft-bottom-title {
+      text-align: center;
+      font-size: 12px;
+      line-height: 18px;
+      padding: 24px 0;
+      color: map-get($map: $color, $key: white-a);
+      border-top: 1px solid map-get($map: $color, $key: white-a);
+  }    
+}
