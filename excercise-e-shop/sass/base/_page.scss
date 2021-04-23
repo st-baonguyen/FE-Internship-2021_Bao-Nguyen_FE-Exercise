@@ -1,0 +1,50 @@
+.container {
+  max-width: 1152px;
+  margin: auto;
+}
+
+.flex-center-x {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-center-y {
+  display: flex;
+  align-items: center;;
+}
+
+.flex-end-x {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-start-y {
+  display: flex;
+  align-items: start;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-end-x {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-start-x {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-w {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+      max-width: 327px;
+      margin: auto;
+    }
+}

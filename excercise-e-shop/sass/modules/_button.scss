@@ -1,10 +1,53 @@
-.btn  {
+.btn-show  {
+    padding: 14px 18px;
+    border: 0;      
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 19px;
+    color: map-get($map: $color, $key: black-a);
+    background-color: map-get($map: $color, $key: white-a);
+    border-radius: 39px;
+   
+}   
+
+.btn-sell-off {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    padding: 6px 12px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: map-get($map: $color, $key: white-a);
+    background-color: map-get($map: $color, $key: bg-sell-off);
+    border: 0;    
+    border-radius: 20px;
+}
+
+.btn-more {
+    padding: 14px 18px;  
+    margin-left: 0 0 53px 40px;
     padding: 14px 30px;
     font-weight: bold;
     font-size: 13px;
     text-transform: uppercase;
     line-height: 19px;
-    background-color: map-get($map: $color, $key: white-a);
+    color: map-get($map: $color, $key: black-a);
     border: 1px solid #C4C4C4;
     border-radius: 39px;
-}   
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 375px) {
+    .btn-sell-off {
+        top: 0px;
+        left: 0px;
+        font-size: 8px;
+        line-height: 12px;
+        padding: 2px 6px;
+        
+    }    
+}

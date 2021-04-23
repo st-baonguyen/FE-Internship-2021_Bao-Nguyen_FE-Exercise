@@ -1,0 +1,9 @@
+@mixin build-grid ($grid-col) {
+    @for $i from 1 through $grid-col {
+        .col-#{n} {
+            width: percentage($i/$grid-col);
+            padding: $padding;
+        }
+    }    
+}
+
