@@ -1,0 +1,110 @@
+.product-section {
+  padding: 48px 0;      
+  .section-header {
+    position: relative;
+    .section-title {
+      padding-bottom: 39px;
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 48px;
+    }        
+  }
+  .txt-center {
+    text-align: center;
+  }
+  .section-body {
+    position: relative;
+    .section-link {
+      position: absolute;
+      height: fit-content;
+      right: 0;
+      top: -87px;
+      line-height: 15px;
+    }
+  }
+  .product-item {
+    position: relative;       
+  }
+  .product {
+    .btn-sell-off {
+      top: 24px;
+      left: 28px;
+    }  
+    .product-img {
+      padding-bottom: 15px;
+      width: 100%;
+    }  
+    .product-name {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+    }  
+    .product-price {
+      position: relative;
+      font-size: 20px;
+      line-height: 30px;  
+      &.price-off {
+        color: map-get($map: $color, $key: bg-sell-off)
+      }
+      &.tag::after {
+        position: absolute;
+        content: attr(real-price);
+        right:0;
+        top: 0;
+        font-size: 20px;
+        line-height: 30px;
+        color: #CECECE;
+      }       
+    }
+  } 
+}
+
+@media only screen and (max-width: 375px) {
+  .product-section {
+    .section-header {
+      .section-title {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px
+      }
+      .txt-center {
+        text-align: left;
+        padding-bottom: 16px;
+      }
+    }
+
+    .section-body {
+      .section-link {  
+        right: 0;
+        top: -60px;
+        align-self: flex-end;
+        font-size: 10px;
+        padding: 0;
+        border: 0;
+      }      
+    }
+    .product-item {
+      padding-bottom: 12px;
+      .btn-sell-off {
+        top: 12px;
+        left: 9px;
+      }
+      .product-img {
+        padding-bottom: 0;
+      }
+      .product-name {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 18px;
+      }      
+      .product-price {
+        font-size: 10px;
+        line-height: 15px;
+        &.tag::after {
+          font-size: 10px;
+          line-height: 15px
+        }
+      }
+    }
+  }    
+}
