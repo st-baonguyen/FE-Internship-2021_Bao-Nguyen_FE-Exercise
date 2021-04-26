@@ -1,3 +1,4 @@
+// -----banner-section -----
 .banner {
   position: relative;
   z-index: 0;
@@ -109,6 +110,8 @@
   }
 }
 
+// -----collection-section -----
+
 .collection-section {
   @include to-rem-two(padding, 48, 0);
   .collection-group {
@@ -176,6 +179,8 @@
     border-radius: to-rem(39);
   }
 }
+
+// -----product-section -----
 
 .prd-section {
   @include to-rem-two(padding, 48, 0);
@@ -257,6 +262,8 @@
   }
 }
 
+// -----subscribe-section -----
+
 .subscribe-section {
   position: relative;
   z-index: 0;
@@ -310,7 +317,10 @@
   }
 }
 
+// -----media query -----
+
 @media only screen and (max-width: 375px) {
+  // -----banner-section -----
   .banner {
     height: to-rem(740);
     .bg-img {
@@ -335,6 +345,8 @@
       display: none;
     }
   }
+
+  // -----collection-section -----
 
   .collection-section {
     @include to-rem-four(padding, 24, 0, 0, 0);
@@ -380,6 +392,9 @@
       }
     }
   }
+
+  // -----product-section -----
+
   .prd-section {
     .section-header {
       .section-title {
@@ -433,6 +448,8 @@
       }
     }
   }
+
+  // -----subscribe-section -----
 
   .subscribe-section {
     .background-ft {
