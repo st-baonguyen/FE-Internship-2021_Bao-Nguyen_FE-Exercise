@@ -14,14 +14,11 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header-pc">
       <div class="container flex-center-x flex-center-y">
         <div class="header-left">          
           <a href="#">
             <img src="./asset/main/Logo.png" class="large-logo" alt="E-shop"/>
-          </a>
-          <a href="#">
-            <img src="./asset/main/logo-ip.png" class="small-logo" alt="E-shop"/>
           </a>
         </div>
         <div class="header-center">
@@ -36,7 +33,9 @@
         <div class="header-right">
           <ul class="option-group option-lg flex-center-x flex-center-y">
             <li class="option-item">
-              <img src="./asset/icons/search.svg" alt="search" class="search-icon"/>
+              <a href="#" class="option-link">
+                <img src="./asset/icons/search.svg" alt="search" class="search-icon"/>
+              </a>
             </li>
             <li class="option-item">
               <a href="#" class="option-link">
@@ -49,9 +48,22 @@
               </a>
             </li>
           </ul>
+        </div>
+      </div>
+    </header>
+    <header class="header-mb">
+      <div class="container header-body flex-center-x flex-center-y">
+        <div class="header-left">          
+          <a href="#">
+            <img src="./asset/main/logo-ip.png" class="large-logo" alt="E-shop"/>
+          </a>
+        </div>
+        <div class="header-right">          
           <ul class="option-group option-sm flex-center-x flex-center-y">
             <li class="option-item">
-              <img src="./asset/icons/cart-ip.svg" alt="search" class="cart-icon"/>
+              <a href="#" class="option-link">
+                <img src="./asset/icons/cart-ip.svg" alt="search" class="cart-icon"/>
+              </a>
             </li>
             <li class="option-item">
               <a href="#" class="option-link">
@@ -75,12 +87,12 @@
           <h1 class="title">
             Sale of the <span class="highlight">summer</span> collection
           </h1>
-          <div class="shop-now-group">
-            <a href="#" class="flex-start-x flex-center-y">
-              <img src="./asset/icons/arrow-shop-now.svg" alt="shop-now" class="shop-now-icon"/>
-              <span class="shop-now-link">SHOP NOW</span>
-            </a>
-          </div>
+          <!-- <div class="shop-now-group"> -->
+          <a href="#" class="shop-now-group flex-start-x flex-center-y">
+            <img src="./asset/icons/arrow-shop-now.svg" alt="shop-now" class="shop-now-icon"/>
+            <span class="shop-now-link">SHOP NOW</span>
+          </a>
+          <!-- </div> -->
         </div>
         <div class="section-footer">
           <ul class="benefit-group flex-end-x flex-start-y">
@@ -128,8 +140,8 @@
                 <img src="./asset/sample/product-1.png" class="collect-bg" alt="new arrivalsare now in">
                 <div class="collection-content"> 
                   <div class="detail">
-                    <p class="collection-title">New arrivalsare now in!</p>
-                    <a href="#" class="collection-link btn-show">SHOW COLLECTION</a>
+                    <h4 class="collection-title">New arrivalsare now in!</h4>
+                    <a href="#" class="collection-link btn-default">SHOW COLLECTION</a>
                   </div>
                 </div> 
               </div>              
@@ -139,20 +151,20 @@
                 <img src="./asset/sample/product-2.png" class="collect-bg" alt="Basic t-shirts $29,99">
                 <div class="collection-content">
                   <div class="detail">
-                    <p class="collection-title">Basic t-shirts $29,99</p>
-                    <a href="#" class="collection-link btn-show">MORE DETAILS</a>
+                    <h4 class="collection-title">Basic t-shirts $29,99</h4>
+                    <a href="#" class="collection-link btn-default">MORE DETAILS</a>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="collection-item col-lg-3 col-sm-6" data-off="-50%">
+            <li class="collection-item col-lg-3 col-sm-6">
               <div class="collection">
                 <img src="./asset/sample/product-3.png" class="collect-bg" alt="Sale this summer">
                 <div class="collection-content">
-                  <span class="discount btn-sell-off">-50%</span>
+                  <span class="discount badge-sell-off">-50%</span>
                   <div class="detail">
-                    <p class="collection-title">Sale this summer</p>
-                    <a href="#" class="collection-link btn-show">VIEW ALL</a>
+                    <h4 class="collection-title">Sale this summer</h4>
+                    <a href="#" class="collection-link btn-default">VIEW ALL</a>
                   </div>
                 </div>
               </div>
@@ -160,57 +172,57 @@
           </ul>
       </div>
       </section>
-      <section class="product-section">
-        <div class="container product" data="show more">
+      <section class="prd-section">
+        <div class="container prd">
           <div class="section-header flex-start-x flex-center-y">
             <h3 class="section-title">Selected just for you</h3>
           </div>
           <div class="section-body">
-            <a href="#" class="section-link btn-more">SHOW MORE</a>
-            <ul class="product-group row flex-w">
-              <li class="product-item col-lg-3 col-sm-6" sell-off="-30%">
-                <div class="product">
-                  <span class="btn-sell-off">-30%</span>
+            <a href="#" class="section-link btn-default-outline">SHOW MORE</a>
+            <ul class="prd-group row flex-wrap">
+              <li class="prd-item col-lg-3 col-sm-6">
+                <div class="prd">
+                  <span class="badge-sell-off">-30%</span>
                   <a href="#">
-                    <img src="./asset/sample/product4.png" class="product-img" alt="T-Shirt Summer Vibes" />
+                    <img src="./asset/sample/product4.png" class="prd-img" alt="T-Shirt Summer Vibes" />
                   </a>    
                   <a href="#"> 
-                    <h4 class="product-name">T-Shirt Summer Vibes</h4>
+                    <h4 class="prd-name">T-Shirt Summer Vibes</h4>
                   </a> 
-                  <p class="product-price price-off tag" real-price="$119.99">$89.99</p>
+                  <p class="prd-price price-off tag" real-price="$119.99">$89.99</p>
                 </div>
               </li>
-              <li class="product-item col-lg-3 col-sm-6">
-                <div class="product">
+              <li class="prd-item col-lg-3 col-sm-6">
+                <div class="prd">
                   <a href="#">
-                    <img src="./asset/sample/product5.png" class="product-img" alt="Loose Knit 3/4 Sleeve" />
+                    <img src="./asset/sample/product5.png" class="prd-img" alt="Loose Knit 3/4 Sleeve" />
                   </a>    
                   <a href="#"> 
-                    <h4 class="product-name">Loose Knit 3/4 Sleeve</h4>
+                    <h4 class="prd-name">Loose Knit 3/4 Sleeve</h4>
                   </a> 
-                  <p class="product-price">$119.99</p>
+                  <p class="prd-price">$119.99</p>
                 </div>
               </li>
-              <li class="product-item col-lg-3 col-sm-6">
-                <div class="product">
+              <li class="prd-item col-lg-3 col-sm-6">
+                <div class="prd">
                   <a href="#">
-                    <img src="./asset/sample/product7.png" class="product-img" alt="Basic Slim Fit T-Shirt" />
+                    <img src="./asset/sample/product7.png" class="prd-img" alt="Basic Slim Fit T-Shirt" />
                   </a>    
                   <a href="#"> 
-                    <h4 class="product-name">Basic Slim Fit T-Shirt</h4>
+                    <h4 class="prd-name">Basic Slim Fit T-Shirt</h4>
                   </a> 
-                  <p class="product-price tag">$79.99</p>
+                  <p class="prd-price tag">$79.99</p>
                 </div>               
               </li>
-              <li class="product-item col-lg-3 col-sm-6">
-                <div class="product">
+              <li class="prd-item col-lg-3 col-sm-6">
+                <div class="prd">
                   <a href="#">
-                    <img src="./asset/sample/product8.png" class="product-img" alt="Loose Textured T-Shirt" />
+                    <img src="./asset/sample/product8.png" class="prd-img" alt="Loose Textured T-Shirt" />
                   </a>    
                   <a href="#"> 
-                    <h4 class="product-name">Loose Textured T-Shirt</h4>
+                    <h4 class="prd-name">Loose Textured T-Shirt</h4>
                   </a> 
-                  <p class="product-price">$119.99</p>
+                  <p class="prd-price">$119.99</p>
                 </div>                  
               </li>
             </ul>
@@ -285,56 +297,56 @@
           </div>
         </div>
       </section>
-      <section class="product-section">
+      <section class="prd-section">
         <div class="container">      
           <div class="section-header">          
             <h3 class="section-title txt-center">Products in today</h3>
           </div>    
           <div class="section-body">
-            <ul class="product-group row flex-w">
-              <li class="product-item col-lg-3 col-sm-6" sell-off="-30%">
-                <div class="product">
-                  <span class="btn-sell-off">-30%</span>
+            <ul class="prd-group row flex-wrap">
+              <li class="prd-item col-lg-3 col-sm-6">
+                <div class="prd">
+                  <span class="badge-sell-off">-30%</span>
                   <a href="#">
-                    <img src="./asset/sample/product4.png" class="product-img" alt="T-Shirt Summer Vibes" />
+                    <img src="./asset/sample/product4.png" class="prd-img" alt="T-Shirt Summer Vibes" />
                   </a>    
                   <a href="#"> 
-                    <h4 class="product-name">T-Shirt Summer Vibes</h4>
+                    <h4 class="prd-name">T-Shirt Summer Vibes</h4>
                   </a> 
-                  <p class="product-price price-off tag" real-price="$119.99">$89.99</p>
+                  <p class="prd-price price-off tag" real-price="$119.99">$89.99</p>
                 </div>
               </li>
-              <li class="product-item col-lg-3 col-sm-6">
-                <div class="product">
+              <li class="prd-item col-lg-3 col-sm-6">
+                <div class="prd">
                   <a href="#">
-                    <img src="./asset/sample/product5.png" class="product-img" alt="Loose Knit 3/4 Sleeve" />
+                    <img src="./asset/sample/product5.png" class="prd-img" alt="Loose Knit 3/4 Sleeve" />
                   </a>    
                   <a href="#"> 
-                    <h4 class="product-name">Loose Knit 3/4 Sleeve</h4>
+                    <h4 class="prd-name">Loose Knit 3/4 Sleeve</h4>
                   </a> 
-                  <p class="product-price">$119.99</p>
+                  <p class="prd-price">$119.99</p>
                 </div>
               </li>
-              <li class="product-item col-lg-3 col-sm-6">
-                <div class="product">
+              <li class="prd-item col-lg-3 col-sm-6">
+                <div class="prd">
                   <a href="#">
-                    <img src="./asset/sample/product7.png" class="product-img" alt="Basic Slim Fit T-Shirt" />
+                    <img src="./asset/sample/product7.png" class="prd-img" alt="Basic Slim Fit T-Shirt" />
                   </a>    
                   <a href="#"> 
-                    <h4 class="product-name">Basic Slim Fit T-Shirt</h4>
+                    <h4 class="prd-name">Basic Slim Fit T-Shirt</h4>
                   </a> 
-                  <p class="product-price tag">$79.99</p>
+                  <p class="prd-price tag">$79.99</p>
                 </div>               
               </li>
-              <li class="product-item col-lg-3 col-sm-6">
-                <div class="product">
+              <li class="prd-item col-lg-3 col-sm-6">
+                <div class="prd">
                   <a href="#">
-                    <img src="./asset/sample/product8.png" class="product-img" alt="Loose Textured T-Shirt" />
+                    <img src="./asset/sample/product8.png" class="prd-img" alt="Loose Textured T-Shirt" />
                   </a>    
                   <a href="#"> 
-                    <h4 class="product-name">Loose Textured T-Shirt</h4>
+                    <h4 class="prd-name">Loose Textured T-Shirt</h4>
                   </a> 
-                  <p class="product-price">$119.99</p>
+                  <p class="prd-price">$119.99</p>
                 </div>                  
               </li>
             </ul>
@@ -343,21 +355,22 @@
       </section>
       <section class="subscribe-section">
         <img src="./asset/main/background-footer.png" class="background-ft" alt="e-shop">
+        <img src="./asset/main/bg-ft-ip.png" class="background-ft-ip" alt="e-shop">
         <div class="container flex-center-x flex-center-y sub-content">
           <p class="sub-info">
             Subscribe to our newsletter andreceive exclusive offers every week
           </p>
           <form class="sub-email flex-center-x flex-center-y">
             <input type="text" class="mail" placeholder="Enter your email" />
-            <button class="button btn-subscribe" type="submit">SUBSCRIBE</button>
+            <button class="button btn-submit" type="submit">SUBSCRIBE</button>
           </form>
         </div>
       </section>
     </main>
     <footer>
       <div class="footer">
-        <div class="top-section container flex-center-x flex-center-y">
-          <div class="footer-left">
+        <div class="top-section container flex-center-x">
+          <div class="footer-left">          
             <div class="footer-logo">
               <a href="#">
                 <img src="./asset/main/logo-footer.png" alt="E-shop" />

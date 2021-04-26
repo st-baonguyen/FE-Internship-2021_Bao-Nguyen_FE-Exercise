@@ -1,227 +1,241 @@
 .banner {
   position: relative;
-  width: 100%;
-  height: 800px;
   z-index: 0;
+  width: 100%;
+  height: to-rem(800);
 
   .title {
-    max-width: 403px;
-    padding-bottom: 24px;
-    font-weight: bold;
-    font-size: 72px;
-    line-height: 1.015;
     color: map-get($map: $color, $key: white-a);
+    max-width: to-rem(400);
+    padding-bottom: to-rem(24);
+    font-weight: bold;
+    font-size: to-rem(72);
+    line-height: 1.015;
   }
 
   .bg-img {
     position: absolute;
+    z-index: -10;
     width: 100%;
     height: fit-content;
-    z-index: -10;
   }
 
   .bg-iphone {
     position: absolute;
-    display: none;
     z-index: -10;
+    display: none;
   }
 
   &::after {
+    background-image: map-get($map: $background-overlay, $key: overlay-bn);
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
     content: "";
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
     opacity: 0.7;
-    z-index: -5;
-    background-image: map-get($map: $background-overlay, $key: overlay-bn);
   }
 
   .section-body {
-    padding: 222px 0 0 96px;
-    z-index: 10;  
-    .highlight {              
-      @extend .title; 
+    @include to-rem-four(padding, 222, 0, 0, 96);
+    z-index: 10;
+    .highlight {
+      @extend .title;
       color: map-get($map: $color, $key: nav-h);
     }
     .shop-now-group {
       .shop-now-icon {
-        padding-right: 21px;
+        padding-right: to-rem(21);
       }
       .shop-now-link {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 36px;
-        text-decoration-line: underline;
         color: map-get($map: $color, $key: white-a);
+        font-weight: bold;
+        font-size: to-rem(24);
+        line-height: to-rem(36);
+        text-decoration-line: underline;
       }
     }
   }
   .section-footer {
     position: absolute;
+    bottom: 0;
+    right: calc(50% - #{to-rem(576)} + #{to-rem(196)});
     width: 100%;
-    height: 125px;
-    bottom: 0;        
-    right: calc(100% - (100% - (100% - 1152px)/2 - 196px));
+    height: to-rem(125);
     display: flex;
-    flex-direction:row-reverse;        
+    flex-direction: row-reverse;
 
     .benefit-group {
+      background-color: map-get($map: $color, $key: white-a);
       width: 100%;
-      padding: 38px 64px 24px 0;         
-      bottom: 0;
-      border-top-right-radius: 70px;
-      background-color: #fff;
+      @include to-rem-four(padding, 38, 64, 24, 0);
+      border-top-right-radius: to-rem(70);
     }
   }
   .benefit-group {
-    height: 125px;
-    .benefit-item {      
-      width: 236px;
-      align-items:start;
-      margin-left: 48px;
+    height: to-rem(125);
+    .benefit-item {
+      width: to-rem(236);
+      align-items: start;
+      margin-left: to-rem(48);
       .benefit {
         padding: 0;
       }
       .benefit-icon {
-        margin-right: 15px;
+        margin-right: to-rem(15);
       }
       .benefit-content {
         .benefit-title {
+          color: map-get($map: $color, $key: black-a);
           padding: 0;
-          margin-bottom: 4px;
+          margin-bottom: to-rem(4);
           font-weight: bold;
-          font-size: 14px;
-          line-height: 21px;
-          color: map-get($map: $color, $key: black-a)
+          font-size: to-rem(14);
+          line-height: to-rem(21);
         }
         .benefit-des {
-          font-size: 12px;
-          line-height: 18px;
-          color: #A8A8A8;
+          color: map-get($map: $color, $key: banner-des);
+          font-size: to-rem(12);
+          line-height: to-rem(18);
         }
       }
       .benefit-horizontal {
         display: flex;
         justify-content: space-between;
       }
-    }     
-  }   
+    }
+  }
 }
 
 .collection-section {
-  padding: 48px 0;
+  @include to-rem-two(padding, 48, 0);
   .collection-group {
     .collection {
       position: relative;
+      z-index: 0;
       width: 100%;
-      height: 359px;
-      z-index: 0;      
+      height: to-rem(359);
       .collect-bg {
         position: absolute;
+        z-index: -10;
         width: 100%;
         height: 100%;
-        z-index: -10;
       }
       .collection-content {
-        padding: 0 40px 53px 40px;          
+        @include to-rem-four(padding, 0, 40, 53, 40);
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
       }
       &::after {
+        background-color: map-get($map: $color, $key: black-a);
         position: absolute;
-        content: "";
-        padding: 0 20px;
         top: 0;
         left: 0;
+        z-index: -1;
+        content: "";
+        @include to-rem-two(padding, 0, 20);
         width: 100%;
         height: 100%;
         opacity: 0.5;
-        z-index: -1;
-        background-color: map-get($map: $color, $key: black-a);
-      }          
-    }   
-  } 
+      }
+    }
+  }
   .detail {
-    min-height: 140px;
+    min-height: to-rem(140);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }  
+  }
   .discount {
     align-self: flex-start;
     position: static;
-    padding: 6px 9px;
-    margin-bottom: 8px;
+    @include to-rem-two(padding, 6, 9);
+    margin-bottom: to-rem(8);
   }
   .collection-title {
-    font-size: 24px;
-    line-height: 30px;
-    margin-bottom: 32px;
     color: map-get($map: $color, $key: white-a);
+    font-size: to-rem(24);
+    line-height: to-rem(30);
+    margin-bottom: to-rem(32);
   }
 
   .collection-link {
-    align-self: flex-start;
-    padding: 14px 18px;  
-    border-radius: 24px;
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 19px;
-    text-transform: uppercase;
-    border: 0;      
-    border-radius: 39px;
     color: map-get($map: $color, $key: black-a);
     background-color: map-get($map: $color, $key: white-a);
+    align-self: flex-start;
+    @include to-rem-two(padding, 14, 18);
+    font-weight: bold;
+    font-size: to-rem(13);
+    line-height: to-rem(19);
+    text-transform: uppercase;
+    border: 0;
+    border-radius: to-rem(39);
+  }
+}
+
+.prd-section {
+  @include to-rem-two(padding, 48, 0);
+  .section-header {
+    position: relative;
+    .section-title {
+      padding-bottom: to-rem(39);
+      font-weight: 300;
+      font-size: to-rem(32);
+      line-height: to-rem(48);
+    }
+  }
+  .txt-center {
+    text-align: center;
   }
 }
 
 .benefit-section {
-  background-color:#F7F7F7;
+  background-color: #f7f7f7;
   .section-header {
     .section-title {
-      padding:48px 0 50px 0;
-      font-weight: 300;
-      font-size: 32px;
-      line-height: 48px;
+      @include to-rem-four(padding, 48, 0, 50, 0);
       text-align: center;
+      font-weight: 300;
+      font-size: to-rem(32);
+      line-height: to-rem(48);
     }
   }
   .section-body {
-    padding-bottom:54px;
+    padding-bottom: to-rem(54);
     .benefit-group {
-      margin: 0 -23px;
+      @include to-rem-two(margin, 0, -23);
       .col-lg-3 {
         width: 25%;
-        padding: 0 23px;
+        @include to-rem-two(padding, 0, -23);
       }
     }
-  }   
+  }
   .benefit {
     .benefit-img {
-      position: relative;
-      width: 68px;
-      height: 68px;
-      margin-bottom: 46px;
       background-color: map-get($map: $color, $key: white-a);
-      border-radius: 10px;
+      position: relative;
+      margin-bottom: to-rem(46);
+      width: to-rem(68);
+      height: to-rem(68);
+      border-radius: to-rem(10);
       .benefit-icon {
         position: absolute;
-        width: 37px;
-        height: 37px;
         top: 50%;
         left: 50%;
+        width: to-rem(37);
+        height: to-rem(37);
         transform: translate(-50%, -50%);
       }
     }
-    .benefit-title {        
-      padding-bottom: 16px;
+    .benefit-title {
+      padding-bottom: to-rem(16);
       font-weight: bold;
-      font-size: 16px;
-      line-height: 24px;
+      font-size: to-rem(16);
+      line-height: to-rem(24);
 
       &.hover {
         color: map-get($map: $color, $key: nav-h);
@@ -229,82 +243,76 @@
     }
 
     .benefit-des {
-      font-size: 14px;
-      line-height: 21px;
+      font-size: to-rem(14);
+      line-height: to-rem(21);
       color: #808080;
     }
 
     &:hover {
-      .item-title, .benefit-icon {
-        color: map-get($map: $color, $key: nav-h);      
-      }  
+      .item-title,
+      .benefit-icon {
+        color: map-get($map: $color, $key: nav-h);
+      }
     }
   }
 }
 
 .subscribe-section {
   position: relative;
-  height: 217px;
   z-index: 0;
+  height: to-rem(217);
   .background-ft {
     position: absolute;
+    z-index: -30;
     width: 100%;
     height: 100%;
-    z-index: -10;
+    &-ip {
+      display: none;
+    }
   }
   &::after {
+    background-image: map-get($map: $background-overlay, $key: overlay-ft);
     position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;      
     top: 0;
     left: 0;
-    opacity: 0.7;
     z-index: -10;
-    background-image: map-get($map: $background-overlay, $key: overlay-ft);
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
   }
   .sub-content {
     height: 100%;
   }
 
   .sub-info {
-    width: 50%;    
-    font-size: 24px;
-    line-height: 36px;
     color: map-get($map: $color, $key: white-a);
+    width: 50%;
+    font-size: to-rem(24);
+    line-height: to-rem(36);
   }
 
   .sub-email {
     width: 50%;
     .mail {
-      padding: 24px 24px;
-      height: 20px;
+      color: map-get($map: $color, $key: grey-w);
+      background-color: map-get($map: $color, $key: white-a);
+      padding: to-rem(24);
+      height: to-rem(20);
       width: 100%;
       align-items: center;
-      font-size: 13px;
-      line-height: 19px;
-      color: #ABABAB;
-      background-color: #fff;
-      border-radius: 61px;
+      font-size: to-rem(13);
+      line-height: to-rem(19);
+      border-radius: to-rem(61);
       border: 0;
       outline: none;
-    }
-    .button {   
-      padding: 14px 52px;
-      margin-left: 40px;
-      font-weight: bold;
-      font-size: 13px;
-      line-height: 19px;
-      text-align: center;
-      border-radius: 56px;  
-      background-color: map-get($map: $color, $key: nav-h);
     }
   }
 }
 
 @media only screen and (max-width: 375px) {
   .banner {
-    height: 740px;
+    height: to-rem(740);
     .bg-img {
       display: none;
     }
@@ -312,79 +320,90 @@
       display: block;
     }
     .section-body {
-      padding: 271px 0 0 0;
+      @include to-rem-four(padding, 271, 0, 0, 0);
       .title {
-        font-size: 48px;
+        font-size: to-rem(48);
       }
       .shop-now-group {
         .shop-now-link {
-          font-size: 14px;
-          line-height: 21px;
+          font-size: to-rem(14);
+          line-height: to-rem(21);
         }
-      }        
-    }    
+      }
+    }
     .section-footer {
       display: none;
     }
   }
 
   .collection-section {
-    padding: 24px 0 0 0;
+    @include to-rem-four(padding, 24, 0, 0, 0);
     .collection-group {
-      .collection {          
-        height: 224px;     
+      .collection {
+        height: to-rem(224);
         width: 100%;
-        .collection-bg{
+        .collection-bg {
           object-fit: cover;
         }
         .collection-content {
-          padding: 0;
-          height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          padding-left: 16px;
-          padding-bottom: 16px; 
+          @include to-rem-four(padding, 0, 0, 16, 16);
+          height: 100%;
 
           .discount {
-            font-size: 8px;
-            line-height: 12px;
-            padding: 2px 6px;
+            font-size: to-rem(8);
+            line-height: to-rem(12);
+            @include to-rem-two(padding, 2, 6);
           }
           .detail {
-            min-height: 68px;
-            min-width: 90px;
-            padding-right: 45px;
+            min-height: to-rem(68);
+            min-width: to-rem(90);
+            padding-right: to-rem(45);
           }
           .collection-title {
-            margin-bottom: 8px;
-            font-weight: normal;              
-            font-size: 14px;
-            line-height: 21px;
             color: map-get($map: $color, $key: white-a);
+            margin-bottom: to-rem(8);
+            font-weight: normal;
+            font-size: to-rem(14);
+            line-height: to-rem(21);
           }
           .collection-link {
-            left: 16px;
-            bottom: 16px;          
-            font-size: 10px;
-            line-height: 15px;
-            padding: 3px 9px;
+            left: to-rem(16);
+            bottom: to-rem(16);
+            @include to-rem-two(padding, 3, 9);
+            font-size: to-rem(10);
+            line-height: to-rem(15);
           }
         }
-      }        
-    }    
-  }  
+      }
+    }
+  }
+  .prd-section {
+    .section-header {
+      .section-title {
+        font-weight: 300;
+        font-size: to-rem(18);
+        line-height: to-rem(27);
+      }
+      .txt-center {
+        text-align: left;
+        padding-bottom: to-rem(16);
+      }
+    }
+  }
 
   .benefit-section {
     .section-header {
       .section-title {
         font-weight: 300;
-        font-size: 18px;
-        line-height: 27px;
+        font-size: to-rem(18);
+        line-height: to-rem(27);
       }
     }
     .section-body {
-      padding-bottom: 28px;
+      padding-bottom: to-rem(28);
       .benefit-group {
         display: block;
         .benefit-item {
@@ -395,20 +414,20 @@
         display: flex;
         justify-content: space-between;
         .benefit-img {
-          margin: 0 16px 16px 0;
+          @include to-rem-four(margin, 0, 16, 16, 0);
         }
         .benefit-content {
           flex: 1;
-          padding: 5px 0;
+          @include to-rem-two(padding, 5, 0);
           .benefit-title {
-            padding-bottom: 8px;
-            font-size: 12px;
-            line-height: 18px;
+            padding-bottom: to-rem(8);
+            font-size: to-rem(12);
+            line-height: to-rem(18);
           }
 
           .benefit-des {
-            font-size: 10px;
-            line-height: 15px;           
+            font-size: to-rem(10);
+            line-height: to-rem(15);
           }
         }
       }
@@ -416,36 +435,47 @@
   }
 
   .subscribe-section {
+    .background-ft {
+      display: none;
+      &-ip {
+        display: block;
+        position: absolute;
+        z-index: -30;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
     .sub-content {
       display: block;
       height: auto;
       width: 100%;
     }
     .sub-info {
-        width: 100%;        
-        padding: 24px 117px 24px 0;
-        font-size: 14px;
-        line-height: 21px;
+      width: 100%;
+      @include to-rem-four(padding, 24, 117, 24, 0);
+      font-size: to-rem(14);
+      line-height: to-rem(21);
     }
     .sub-email {
       display: block;
       padding: 0;
       width: 100%;
       text-align: start;
-        height: 32px;
-        .mail {
-          padding: 16px 12px;
-          margin-bottom: 12px;
-          &::placeholder {
-            opacity: 0.7;
-          }
+      height: to-rem(32);
+      .mail {
+        @include to-rem-two(padding, 16, 12);
+        margin-bottom: to-rem(12);
+        &::placeholder {
+          opacity: 0.7;
         }
+      }
       .button {
         margin: 0;
-        padding: 7px 19px;
-        font-size: 13px;
-        line-height: 19px;       
+        @include to-rem-two(padding, 7, 19);
+        font-size: to-rem(13);
+        line-height: to-rem(19);
       }
     }
-  }   
+  }
 }

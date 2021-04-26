@@ -1,84 +1,86 @@
-
-.footer{
+.footer {
   color: map-get($map: $color, $key: white-a);
   background-color: map-get($map: $color, $key: nav-h);
-  & a{
-    color:map-get($map: $color, $key: white-a);;
+  width: 100%;
+
+  & .info-link {
+    color: map-get($map: $color, $key: white-a);
   }
 
-  .top-section {        
-    padding: 40px 0 32px;
-    .footer-left{
-      max-width: 543px;
-      padding-right: 169px
+  .top-section {
+    @include to-rem-four(padding, 46, 0, 32, 0);
+    .footer-left {
+      max-width: to-rem(540);
+      padding-right: to-rem(169);
     }
 
     .footer-right {
-      max-width: 686px;
-      font-size: 14px;
-      line-height: 150%;
+      max-width: to-rem(686);
+      font-size: to-rem(14);
+      line-height: 0.15;
     }
   }
   .footer-left {
     .footer-content {
-        padding: 24px 0 62px 0;
-        font-size: 14px;
-        line-height: 21px;
-        color: map-get($map: $color, $key: white-a);
+      color: map-get($map: $color, $key: white-a);
+      @include to-rem-four(padding, 24, 0, 62, 0);
+      font-size: to-rem(14);
+      line-height: to-rem(21);
     }
-    
+
     .footer-network {
-        max-width: 203px;
+      max-width: to-rem(203);
     }
   }
-}
+  .footer-right {
+    .genenal-info {
+      display: flex;
+      padding: 0;
+      .footer-general {
+        padding: 0;
 
+        &.shopping-online {
+          padding-right: torem(87);
+        }
+        &.information {
+          padding-right: to-rem(52);
+        }
+      }
 
+      & .info-item,
+      & .info-link {
+        font-size: to-rem(14);
+        line-height: 1.5;
+        font-weight: 400;
+      }
 
+      .info-group {
+        padding-right: to-rem(8);
+        li {
+          color: map-get($map: $color, $key: white-a);
+          padding-bottom: to-rem(19);
+        }
+      }
 
-.footer-right {   
-  .genenal-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 52px;
-    padding: 0;
-    .shopping-online {
-      padding-right: 35px;
-    }
-
-    & .info-item, & .info-link {
-      font-size: 14px;
-      line-height: 1.50;
-      font-weight: 400;
-    }
-
-    .info-group {
-      padding-right: 8px;
-      li {
+      & .info-title {
         color: map-get($map: $color, $key: white-a);
-        padding-bottom: 19px;
+        font-size: to-rem(16);
+        font-weight: bold;
+        line-height: to-rem(24);
+        padding-bottom: to-rem(19);
       }
     }
-
-    & .info-title {
-      font-size: 16px;
-      font-weight: bold;
-      line-height: 24px;
-      padding-bottom: 19px;
+  }
+  .bottom-section {
+    .bottom-title {
       color: map-get($map: $color, $key: white-a);
+      border-top: to-rem(1) solid map-get($map: $color, $key: white-a);
+      text-align: center;
+      font-size: to-rem(12);
+      line-height: to-rem(18);
+      @include to-rem-two(padding, 24, 0);
     }
-  }    
-}
-
-.bottom-section {
-  .bottom-title {
-    text-align: center;
-    font-size: 12px;
-    line-height: 18px;
-    padding: 24px 0;
-    color: map-get($map: $color, $key: white-a);
-    border-top: 1px solid map-get($map: $color, $key: white-a);
-  }    
+  }
 }
 
 @media only screen and (max-width: 375px) {
@@ -89,37 +91,37 @@
       .footer-left {
         padding-right: 0;
         .footer-content {
-          font-size: 14px;
+          font-size: to-rem(14);
           font-weight: normal;
         }
         .footer-network {
           display: none;
         }
-      } 
-    }   
+      }
+    }
     .footer-right {
       .genenal-info {
         display: block;
         justify-content: flex-start;
         & .info-item {
           .info-link {
-            font-size: 12px;
+            font-size: to-rem(12);
           }
         }
         .footer-general {
-          padding-bottom: 24px;
+          padding-bottom: to-rem(24);
         }
       }
 
       .info-title {
-        padding-bottom: 16px;
+        padding-bottom: to-rem(16);
       }
 
       .info-group {
         .info-item {
-          padding-bottom: 5px!important;
+          padding-bottom: to-rem(5) !important;
         }
-      }      
+      }
     }
-  }  
+  }
 }
