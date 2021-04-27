@@ -1,33 +1,30 @@
 .row {
-  margin: 0 -10px;
+  margin: 0 -#{to-rem(10)};
   display: flex;
   flex-wrap: wrap;
 }
 
-.col-lg-6 {
-  width: 50%;
-  padding: 0 10px;
-}
+@include build-grid(lg, 12, 10);
 
-.col-lg-3 {
-  width: 25%;
-  padding: 0 10px;
+.row-bn {
+  margin: 0 -#{to-rem(30)};
+  display: flex;
+  flex-wrap: wrap;
 }
+@include build-grid(md, 12, 30);
 
 @media only screen and (max-width: 375px) {
   .row {
-    margin: 0 -4.5px;
+    margin: 0 -#{to-rem(4.5)};
     display: flex;
     flex-wrap: wrap;
   }
 
-  .col-sm-12 {
-    width: 100%;
-    padding: 0 4.5px 8px 4.5px;
+  @include build-grid-ip(sm, 12, 4.5, 8);
+  .row-bn {
+    margin: 0 -#{to-rem(10)};
+    display: flex;
+    flex-wrap: wrap;
   }
-
-  .col-sm-6 {
-    width: 50%;
-    padding: 0 4.5px 12px 4.5px;
-  }
+  @include build-grid(md, 12, 10);
 }

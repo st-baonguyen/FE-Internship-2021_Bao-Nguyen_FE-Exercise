@@ -1,7 +1,7 @@
 .footer {
+  width: 100%;
   color: map-get($map: $color, $key: white-a);
   background-color: map-get($map: $color, $key: nav-h);
-  width: 100%;
 
   & .info-link {
     color: map-get($map: $color, $key: white-a);
@@ -22,10 +22,10 @@
   }
   .footer-left {
     .footer-content {
-      color: map-get($map: $color, $key: white-a);
       @include to-rem-four(padding, 24, 0, 62, 0);
       font-size: to-rem(14);
       line-height: to-rem(21);
+      color: map-get($map: $color, $key: white-a);
     }
 
     .footer-network {
@@ -40,7 +40,7 @@
         padding: 0;
 
         &.shopping-online {
-          padding-right: torem(87);
+          padding-right: to-rem(87);
         }
         &.information {
           padding-right: to-rem(52);
@@ -57,28 +57,28 @@
       .info-group {
         padding-right: to-rem(8);
         li {
-          color: map-get($map: $color, $key: white-a);
           padding-bottom: to-rem(19);
+          color: map-get($map: $color, $key: white-a);
         }
       }
 
       & .info-title {
-        color: map-get($map: $color, $key: white-a);
+        padding-bottom: to-rem(19);
         font-size: to-rem(16);
         font-weight: bold;
         line-height: to-rem(24);
-        padding-bottom: to-rem(19);
+        color: map-get($map: $color, $key: white-a);
       }
     }
   }
   .bottom-section {
     .bottom-title {
-      color: map-get($map: $color, $key: white-a);
-      border-top: to-rem(1) solid map-get($map: $color, $key: white-a);
+      @include to-rem-two(padding, 24, 0);
       text-align: center;
       font-size: to-rem(12);
       line-height: to-rem(18);
-      @include to-rem-two(padding, 24, 0);
+      color: map-get($map: $color, $key: white-a);
+      border-top: to-rem(1) solid map-get($map: $color, $key: white-a);
     }
   }
 }

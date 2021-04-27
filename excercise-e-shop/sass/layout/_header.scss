@@ -1,8 +1,8 @@
 .header-pc {
+  @include to-rem-two(padding, 48, 0);
   position: absolute;
   z-index: 50;
   width: 100%;
-  @include to-rem-two(padding, 48, 0);
 
   .header-left,
   .header-right {
@@ -18,9 +18,9 @@
   .header-center {
     width: 30%;
     .nav-link {
-      color: map-get($map: $color, $key: nav-h);
       font-weight: bold;
       text-align: center;
+      color: map-get($map: $color, $key: nav-h);
     }
   }
 }
@@ -34,12 +34,12 @@
     display: none;
   }
   .header-mb {
+    @include to-rem-two(padding, 20, 0);
     display: flex;
     position: relative;
     z-index: 50;
     width: 100%;
     height: to-rem(72);
-    @include to-rem-two(padding, 20, 0);
     .header-body {
       width: 100%;
     }

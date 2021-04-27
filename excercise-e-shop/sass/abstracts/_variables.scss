@@ -8,9 +8,13 @@ $color: (
   bg-sell-off: #f00,
   grey-real: #cecece,
   grey-w: #ababab,
+  grey-b: #f7f7f7,
+  grey-d: #808080,
+  grey-bd: #c4c4c4,
+  grey-l: #787885,
 );
 
-$box-shadow: 0px 4px 8px rgba(90, 91, 106, 0.2);
+$box-shadow: 0 to-rem(4) to-rem(8) rgba(90, 91, 106, 0.2);
 
 $background-overlay: (
   overlay-bn:

@@ -1,6 +1,4 @@
 .btn-default {
-  color: map-get($map: $color, $key: black-a);
-  background-color: map-get($map: $color, $key: white-a);
   @include to-rem-two(padding, 14, 18);
   border: 0;
   font-weight: bold;
@@ -9,31 +7,32 @@
   line-height: to-rem(19);
   border-radius: to-rem(39);
   cursor: pointer;
+  color: map-get($map: $color, $key: black-a);
+  background-color: map-get($map: $color, $key: white-a);
 }
 
 .btn-default-outline {
   @extend .btn-default;
   @include to-rem-two(padding, 14, 30);
-  border: to-rem(1) solid #c4c4c4;
+  border: to-rem(1) solid map-get($map: $color, $key: grey-bd);
 }
 
 .badge-sell-off {
-  color: map-get($map: $color, $key: white-a);
-  background-color: map-get($map: $color, $key: bg-sell-off);
+  @include to-rem-two(padding, 6, 12);
   position: absolute;
   top: to-rem(30);
   left: to-rem(40);
-  @include to-rem-two(padding, 6, 12);
   font-weight: bold;
   font-size: to-rem(12);
   line-height: to-rem(18);
   text-align: center;
   border: 0;
   border-radius: to-rem(20);
+  color: map-get($map: $color, $key: white-a);
+  background-color: map-get($map: $color, $key: bg-sell-off);
 }
 
 .btn-submit {
-  background-color: map-get($map: $color, $key: nav-h);
   @include to-rem-two(padding, 14, 52);
   margin-left: to-rem(40);
   font-weight: bold;
@@ -41,12 +40,13 @@
   line-height: to-rem(19);
   text-align: center;
   border-radius: to-rem(56);
+  background-color: map-get($map: $color, $key: nav-h);
 }
 @media only screen and (max-width: 375px) {
   .badge-sell-off {
+    @include to-rem-two(padding, 2, 6);
     top: 0;
     left: 0;
-    @include to-rem-two(padding, 2, 6);
     font-size: to-rem(8);
     line-height: to-rem(12);
   }
