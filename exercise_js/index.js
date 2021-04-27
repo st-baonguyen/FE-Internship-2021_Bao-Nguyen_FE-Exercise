@@ -19,21 +19,35 @@ function absolute(a) {
 // 3+4. A masked number is a string that consists of digits and one asterisk (*) that should be replaced by exactly one digit.
 // Given a masked number find all the possible options to replace the asterisk with a digit to produce an integer divisible by 3 and by 6.
 
-function maskedNumber(a) {
-  const variableOne = 3;
-  const variableTwo = 6;
-  let temp = a.split("");
+function maskedNumberFirst(value) {
+  const variable = 3;
+  let temp = value.split("");
   let index = temp.indexOf("*");
-  let arrOne = [];
-  let arrTwo = [];
+  let arr = [];
   for (let i = 0; i <= 9; i++) {
     let item = temp
       .slice(0, index)
       .concat(i)
       .concat(temp.slice(index + 1));
-    if (item.join("") % variableOne === 0) arrOne.push(item.join(""));
-    if (item.join("") % variableTwo === 0) arrTwo.push(item.join(""));
+    if (item.join("") % variable === 0) arr.push(item.join(""));
   }
-  console.log(arrOne);
-  console.log(arrTwo);
+  return arr;
 }
+
+function maskedNumberSecond(value) {
+  const variable = 6;
+  let temp = value.split("");
+  let index = temp.indexOf("*");
+  let arr = [];
+  for (let i = 0; i <= 9; i++) {
+    let item = temp
+      .slice(0, index)
+      .concat(i)
+      .concat(temp.slice(index + 1));
+    if (item.join("") % variable === 0) arr.push(item.join(""));
+  }
+  return arr;
+}
+
+maskedNumberFirst("1234567890*");
+maskedNumberSecond("1234567890*");
