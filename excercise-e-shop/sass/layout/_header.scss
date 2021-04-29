@@ -1,0 +1,56 @@
+.header-pc {
+  @include to-rem-two(padding, 48, 0);
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+
+  .header-left,
+  .header-right {
+    position: relative;
+    width: 10%;
+    .option-group {
+      width: 100%;
+    }
+    .search {
+      position: relative;
+    }
+  }
+  .header-center {
+    width: 30%;
+    .nav-link {
+      font-weight: bold;
+      text-align: center;
+      color: map-get($map: $color, $key: nav-h);
+    }
+  }
+}
+
+.header-mb {
+  display: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .header-pc {
+    display: none;
+  }
+  .header-mb {
+    @include to-rem-two(padding, 20, 0);
+    display: flex;
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    height: to-rem(72);
+    .header-body {
+      width: 100%;
+    }
+    .header-right {
+      width: max-content;
+      .option-sm {
+        display: flex;
+      }
+      .option-item {
+        margin-left: to-rem(24);
+      }
+    }
+  }
+}

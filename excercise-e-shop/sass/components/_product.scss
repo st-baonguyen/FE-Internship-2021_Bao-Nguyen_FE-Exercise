@@ -1,0 +1,85 @@
+.prd-section {
+  .section-body {
+    position: relative;
+    .section-link {
+      position: absolute;
+      right: 0;
+      top: -#{to-rem(87)};
+      height: fit-content;
+      line-height: to-rem(15);
+    }
+  }
+  .prd-item {
+    position: relative;
+  }
+  .prd {
+    .btn-sell-off {
+      top: to-rem(24);
+      left: to-rem(28);
+    }
+    &-img {
+      padding-bottom: to-rem(15);
+      width: 100%;
+    }
+    &-name {
+      font-weight: 300;
+      font-size: to-rem(16);
+      line-height: to-rem(24);
+    }
+    &-price {
+      position: relative;
+      font-size: to-rem(20);
+      line-height: to-rem(30);
+      &.price-off {
+        color: map-get($map: $color, $key: bg-sell-off);
+      }
+      &.tag::after {
+        color: map-get($map: $color, $key: grey-real);
+        position: absolute;
+        content: attr(real-price);
+        right: 0;
+        top: 0;
+        font-size: to-rem(20);
+        line-height: to-rem(30);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .prd-section {
+    .section-body {
+      .section-link {
+        right: 0;
+        top: -#{to-rem(60)};
+        padding: 0;
+        align-self: flex-end;
+        font-size: to-rem(10);
+        border: 0;
+      }
+    }
+    .prd-item {
+      padding-bottom: to-rem(12);
+      .badge-sell-off {
+        top: to-rem(12);
+        left: to-rem(9);
+      }
+      .prd-img {
+        padding-bottom: 0;
+      }
+      .prd-name {
+        font-weight: 300;
+        font-size: to-rem(12);
+        line-height: to-rem(18);
+      }
+      .prd-price {
+        font-size: to-rem(10);
+        line-height: to-rem(15);
+        &.tag::after {
+          font-size: to-rem(10);
+          line-height: to-rem(15);
+        }
+      }
+    }
+  }
+}

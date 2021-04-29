@@ -1,0 +1,30 @@
+.row {
+  margin: 0 -#{to-rem(10)};
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@include build-grid(lg, 12, 10);
+
+.row-bn {
+  margin: 0 -#{to-rem(30)};
+  display: flex;
+  flex-wrap: wrap;
+}
+@include build-grid(md, 12, 30);
+
+@media only screen and (max-width: 375px) {
+  .row {
+    margin: 0 -#{to-rem(4.5)};
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include build-grid-ip(sm, 12, 4.5, 8);
+  .row-bn {
+    margin: 0 -#{to-rem(10)};
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include build-grid(md, 12, 10);
+}
