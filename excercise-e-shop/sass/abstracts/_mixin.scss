@@ -1,9 +1,32 @@
-@mixin build-grid ($grid-col) {
-    @for $i from 1 through $grid-col {
-        .col-#{n} {
-            width: percentage($i/$grid-col);
-            padding: $padding;
-        }
-    }    
+@function to-rem($font-size) {
+  @return #{$font-size/$size-base}rem;
 }
 
+@mixin to-rem-four($property, $top, $right, $bottom, $left) {
+  #{$property}: to-rem($top) to-rem($right) to-rem($bottom) to-rem($left);
+}
+
+@mixin to-rem-two($property, $top-bottom, $right-left) {
+  #{$property}: to-rem($top-bottom) to-rem($right-left);
+}
+
+@mixin build-grid($size, $col, $padding) {
+  @for $i from 1 through $col {
+    .col-#{$size}-#{$i} {
+      width: percentage($i/$col);
+      @include to-rem-two(padding, 0, $padding);
+    }
+  }
+}
+
+@mixin build-grid-ip($size, $col, $pd-horizontal, $bottom) {
+  @for $i from 1 through $col {
+    .col-#{$size}-#{$i} {
+      width: percentage($i/$col);
+      @if $i == 6 {
+        $bottom: 12;
+      }
+      @include to-rem-four(padding, 0, $pd-horizontal, $bottom, $pd-horizontal);
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .container {
-  max-width: 1152px;
+  max-width: to-rem(1152);
   margin: auto;
 }
 
@@ -10,7 +10,7 @@
 
 .flex-center-y {
   display: flex;
-  align-items: center;;
+  align-items: center;
 }
 
 .flex-end-x {
@@ -37,14 +37,14 @@
   justify-content: flex-start;
 }
 
-.flex-w {
+.flex-wrap {
   display: flex;
   flex-wrap: wrap;
 }
 
 @media screen and (max-width: 375px) {
-    .container {
-      max-width: 327px;
-      margin: auto;
-    }
+  .container {
+    max-width: to-rem(327);
+    margin: auto;
+  }
 }
