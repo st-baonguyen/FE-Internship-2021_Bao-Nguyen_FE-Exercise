@@ -281,8 +281,8 @@ button {
 .badge-sell-off {
   padding: 0.375rem 0.75rem;
   position: absolute;
-  top: 1.875rem;
-  left: 2.5rem;
+  top: 1.5rem;
+  left: 1.125rem;
   font-weight: bold;
   font-size: 0.75rem;
   line-height: 1.125rem;
@@ -292,7 +292,7 @@ button {
   color: #fff;
   background-color: #f00; }
 
-.btn-submit {
+.btn-submit, .btn-add-cart {
   padding: 0.875rem 3.25rem;
   margin-left: 2.5rem;
   font-weight: bold;
@@ -301,6 +301,11 @@ button {
   text-align: center;
   border-radius: 3.5rem;
   background-color: #fbb03b; }
+
+.btn-add-cart {
+  padding: 0.625rem 1.25rem;
+  margin: 0;
+  cursor: pointer; }
 
 @media only screen and (max-width: 375px) {
   .badge-sell-off {
@@ -544,33 +549,46 @@ button {
 .prd-section .prd-item {
   position: relative; }
 
-.prd-section .prd .btn-sell-off {
-  top: 1.5rem;
-  left: 1.75rem; }
-
-.prd-section .prd-img {
-  padding-bottom: 0.9375rem;
-  width: 100%; }
-
-.prd-section .prd-name {
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.5rem; }
-
-.prd-section .prd-price {
-  position: relative;
-  font-size: 1.25rem;
-  line-height: 1.875rem; }
-  .prd-section .prd-price.price-off {
-    color: #f00; }
-  .prd-section .prd-price.tag::after {
-    color: #cecece;
-    position: absolute;
-    content: attr(real-price);
-    right: 0;
-    top: 0;
+.prd-section .prd {
+  position: relative; }
+  .prd-section .prd .btn-sell-off {
+    top: 1.5rem;
+    left: 1.75rem; }
+  .prd-section .prd-img {
+    padding-bottom: 0.9375rem;
+    width: 100%; }
+  .prd-section .prd-name {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem; }
+  .prd-section .prd-price {
+    position: relative;
     font-size: 1.25rem;
     line-height: 1.875rem; }
+    .prd-section .prd-price.price-off {
+      color: #f00; }
+    .prd-section .prd-price.tag::after {
+      color: #cecece;
+      position: absolute;
+      content: attr(real-price);
+      right: 0;
+      top: 0;
+      font-size: 1.25rem;
+      line-height: 1.875rem; }
+
+.prd-section .cart {
+  display: none;
+  position: absolute;
+  z-index: 50;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.prd-section .prd:hover .cart {
+  display: block; }
+
+.prd-section .prd:hover .prd-img {
+  opacity: 0.7; }
 
 @media only screen and (max-width: 375px) {
   .prd-section .section-body .section-link {
