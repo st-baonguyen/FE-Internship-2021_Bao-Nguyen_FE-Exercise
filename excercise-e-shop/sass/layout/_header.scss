@@ -23,6 +23,31 @@
       color: map-get($map: $color, $key: nav-h);
     }
   }
+  .cart {
+    position: relative;
+    &::after {
+      content: attr(data-cart);
+      position: absolute;
+      right: -8px;
+      top: -6px;
+      padding: 2px 5px;
+      font-size: 10px;
+      font-weight: bold;
+      color: map-get($map: $color, $key: white-a);
+      background-color: red;
+      border-radius: 50%;
+    }
+  }
+}
+
+.header-cart {
+  position: static;
+  background-color: map-get($map: $color, $key: nav-h);
+  .header-center {
+    .nav-link {
+      color: map-get($map: $color, $key: white-a);
+    }
+  }
 }
 
 .header-mb {

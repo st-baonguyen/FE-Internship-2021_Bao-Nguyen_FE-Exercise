@@ -336,6 +336,25 @@ button {
       font-weight: bold;
       text-align: center;
       color: #fbb03b; }
+  .header-pc .cart {
+    position: relative; }
+    .header-pc .cart::after {
+      content: attr(data-cart);
+      position: absolute;
+      right: -8px;
+      top: -6px;
+      padding: 2px 5px;
+      font-size: 10px;
+      font-weight: bold;
+      color: #fff;
+      background-color: red;
+      border-radius: 50%; }
+
+.header-cart {
+  position: static;
+  background-color: #fbb03b; }
+  .header-cart .header-center .nav-link {
+    color: #fff; }
 
 .header-mb {
   display: none; }
@@ -615,6 +634,71 @@ button {
       .prd-section .prd-item .prd-price.tag::after {
         font-size: 0.625rem;
         line-height: 0.9375rem; } }
+
+.cart-section .section-header {
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 24px; }
+
+.cart-section .section-body .prd-list {
+  margin: 0 -10px; }
+
+.cart-section .section-body .prd-item {
+  padding: 24px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6; }
+  .cart-section .section-body .prd-item .prd-img {
+    height: 192px; }
+  .cart-section .section-body .prd-item .prd-name {
+    min-width: 350px;
+    padding: 0 24px;
+    text-align: left; }
+  .cart-section .section-body .prd-item .prd-body-right {
+    height: 192px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right; }
+  .cart-section .section-body .prd-item .prd-price {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 150%; }
+  .cart-section .section-body .prd-item .prd-amount .amount {
+    padding: 5px 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    cursor: pointer; }
+  .cart-section .section-body .prd-item .prd-amount .amount-now {
+    padding: 0 10px; }
+  .cart-section .section-body .prd-item .remove {
+    font-weight: 500;
+    font-size: 14px;
+    color: #ababab;
+    cursor: pointer; }
+
+.cart-section .cart-body-right .sub-body {
+  padding: 24px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px; }
+
+.cart-section .cart-body-right .sub-total {
+  font-weight: bold;
+  font-size: 16px; }
+
+.cart-section .cart-body-right .sub-price {
+  font-weight: 500;
+  font-size: 32px;
+  text-align: right; }
+
+.cart-section .cart-body-right .sub-footer {
+  padding: 18px 80px;
+  margin-top: 10px;
+  text-align: center;
+  color: #333333;
+  background-color: #fbb03b;
+  border-radius: 4px;
+  cursor: pointer; }
 
 .collection-section {
   padding: 3rem 0rem; }
