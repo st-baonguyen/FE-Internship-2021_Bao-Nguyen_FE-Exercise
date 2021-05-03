@@ -211,6 +211,9 @@ function removeItem() {
   cartList = getItem();
   let remove = document.querySelectorAll(".remove");
   for (let i = 0; i < remove.length; i++) {
+    if (cartList.length === 0) {
+      document.querySelector(".prd-list").innerHTML = "Giỏ hàng rỗng";
+    }
     remove[i].addEventListener("click", function () {
       console.log(i);
       let removePrd = cartList.slice(0, i).concat(cartList.slice(i + 1));
