@@ -292,7 +292,7 @@ button {
   color: #fff;
   background-color: #f00; }
 
-.btn-submit {
+.btn-submit, .btn-add-cart {
   padding: 0.875rem 3.25rem;
   margin-left: 2.5rem;
   font-weight: bold;
@@ -301,6 +301,11 @@ button {
   text-align: center;
   border-radius: 3.5rem;
   background-color: #fbb03b; }
+
+.btn-add-cart {
+  padding: 0.625rem 1.25rem;
+  margin: 0;
+  cursor: pointer; }
 
 @media only screen and (max-width: 375px) {
   .badge-sell-off {
@@ -312,7 +317,7 @@ button {
 
 .header-pc {
   padding: 3rem 0rem;
-  position: absolute;
+  position: fixed;
   z-index: 50;
   width: 100%; }
   .header-pc .header-left,

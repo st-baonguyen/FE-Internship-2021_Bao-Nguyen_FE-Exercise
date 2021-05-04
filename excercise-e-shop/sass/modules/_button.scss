@@ -42,6 +42,14 @@
   border-radius: to-rem(56);
   background-color: map-get($map: $color, $key: nav-h);
 }
+
+.btn-add-cart {
+  @extend .btn-submit;
+  @include to-rem-two(padding, 10, 20);
+  margin: 0;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 375px) {
   .badge-sell-off {
     @include to-rem-two(padding, 2, 6);

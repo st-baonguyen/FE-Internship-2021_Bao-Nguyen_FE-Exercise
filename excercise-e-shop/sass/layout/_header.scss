@@ -1,6 +1,6 @@
 .header-pc {
   @include to-rem-two(padding, 48, 0);
-  position: absolute;
+  position: fixed;
   z-index: 50;
   width: 100%;
 
