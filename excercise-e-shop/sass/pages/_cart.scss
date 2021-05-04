@@ -14,10 +14,10 @@
       background-color: map-get($map: $color,$key: grey-b);
       border-radius: to-rem(4);
     }
-    .prd-list {
+    .cart-list {
       @include to-rem-two(margin, 0, -10);
     }
-    .prd-item {
+    .cart-item {
       padding: to-rem(24);
       margin-bottom: to-rem(30);
       border-radius: to-rem(4);
@@ -28,16 +28,16 @@
       .prd-info {
         @include to-rem-two(padding, 0, 24);
         min-width: to-rem(350);
-        height: to-rem(80);        
+        height: to-rem(130);        
         text-align: left;
         .prd-name {
           font-size: to-rem(22);
         }        
-        .prd-price {
+        .now-price {
           font-size: to-rem(20);
         }
       }
-      .prd-body-right {
+      .cart-body-right {
         height: to-rem(192);       
         text-align: right;
       }
@@ -47,6 +47,7 @@
       }
       .badge-sell {
         @include to-rem-two(padding, 10, 0);
+        width: 40%;
       }
       .real-price {
         padding-right: to-rem(10);
@@ -82,23 +83,23 @@
       }
     }
   }
-  .cart-body-right {
+  .cart-total-price {
     padding-bottom: to-rem(50);
-    .sub-body {
+    .cart-total {
       padding: to-rem(24);
       border: to-rem(1) solid map-get($map: $color, $key: grey-bd);
       border-radius: to-rem(4);
     }
-    .sub-total {
+    .cart-title {
       font-weight: bold;
       font-size: to-rem(16);
     }
-    .sub-price {
+    .cart-coupon {
       font-weight: 500;
       font-size: to-rem(32);
       text-align: right;
     }
-    .sub-footer {
+    .cart-submit {
       @include to-rem-two(padding, 18, 80);
       margin-top: to-rem(10);
       text-align: center;
