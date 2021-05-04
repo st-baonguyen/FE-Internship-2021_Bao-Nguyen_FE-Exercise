@@ -5,28 +5,28 @@ const products = [
     price: "$89.99",
     realPrice: "$119.99",
     amount: 1,
-    image: "./assets/sample/product4.png",
+    image: "./asset/sample/product4.png",
   },
   {
     id: 2,
     name: "Loose Knit 3/4 Sleeve",
     price: "$119.99",
     amount: 1,
-    image: "./assets/sample/product5.png",
+    image: "./asset/sample/product5.png",
   },
   {
     id: 3,
     name: "Basic Slim Fit T-Shirt",
     price: "$79.99",
     amount: 1,
-    image: "./assets/sample/product7.png",
+    image: "./asset/sample/product7.png",
   },
   {
     id: 4,
     name: "Loose Textured T-Shirt",
     price: "$119.99",
     amount: 1,
-    image: "./assets/sample/product8.png",
+    image: "../asset/sample/product8.png",
   },
   {
     id: 1,
@@ -34,30 +34,34 @@ const products = [
     price: "$89.99",
     realPrice: "$119.99",
     amount: 1,
-    image: "../assets/sample/product4.png",
+    image: "../asset/sample/product4.png",
   },
   {
     id: 2,
     name: "Loose Knit 3/4 Sleeve",
     price: "$119.99",
     amount: 1,
-    image: "../assets/sample/product5.png",
+    image: "../asset/sample/product5.png",
   },
   {
     id: 3,
     name: "Basic Slim Fit T-Shirt",
     price: "$79.99",
     amount: 1,
-    image: "../assets/sample/product7.png",
+    image: "../asset/sample/product7.png",
   },
   {
     id: 4,
     name: "Loose Textured T-Shirt",
     price: "$119.99",
     amount: 1,
-    image: "../assets/sample/product8.png",
+    image: "../asset/sample/product8.png",
   },
 ];
+
+function formartMoney(money) {
+  money.slice(1);
+}
 
 function renderItem(item) {
   return `
@@ -72,7 +76,19 @@ function renderItem(item) {
         <h4 class="prd-name">${item.name}</h4>
       </div>
       <div class="prd-body-right">
-        <p class="prd-price price-off tag" real-price="$119.99">${item.price}</p>
+        <div class="price">
+          <span class="prd-price">${item.price}</span>
+          <div class="badge-sell">
+            <span class="real-price-off">${
+              item.realPrice ? item.realPrice : ""
+            }</span>
+            <span class="percent-sell-off">${
+              item.realPrice
+                ? 100 - +item.price.slice(1) / +item.realPrice.slice(1) + "%"
+                : ""
+            }</span>
+          </div>
+        </div>
         <div class="prd-amount">
           <span class="amount decrese-amount">-</span>
           <span class="amount-now">${item.amount}</span>
@@ -123,7 +139,6 @@ function addNumberCart() {
 
 function setItem(product) {
   let prd = getItem();
-
   let arr = prd || [];
   if (arr.length === 0) {
     arr.push(product);
@@ -181,7 +196,6 @@ function amountItem(action) {
       if (newAmount <= 1) {
         document.querySelectorAll(".decrese-amount")[i].style.backgroundColor =
           "#e6e6e6";
-        // alert("Quality need more than 1!");
       } else {
         document.querySelectorAll(".decrese-amount")[i].style.backgroundColor =
           "#fff";
@@ -213,6 +227,7 @@ function removeItem() {
   for (let i = 0; i < remove.length; i++) {
     if (cartList.length === 0) {
       document.querySelector(".prd-list").innerHTML = "Giỏ hàng rỗng";
+      document.querySelector(".cart-body-right").innerHTML = "";
     }
     remove[i].addEventListener("click", function () {
       console.log(i);
