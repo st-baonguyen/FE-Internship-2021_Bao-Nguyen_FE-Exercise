@@ -901,7 +901,7 @@ button {
   .cart-section .section-body .prd-item .prd-info {
     padding: 0rem 1.5rem;
     min-width: 21.875rem;
-    height: 5rem;
+    height: 8.125rem;
     text-align: left; }
     .cart-section .section-body .prd-item .prd-info .prd-name {
       font-size: 1.375rem; }
@@ -914,7 +914,8 @@ button {
     font-weight: bold;
     font-size: 1.5rem; }
   .cart-section .section-body .prd-item .badge-sell {
-    padding: 0.625rem 0rem; }
+    padding: 0.625rem 0rem;
+    width: 40%; }
   .cart-section .section-body .prd-item .real-price {
     padding-right: 0.625rem;
     text-decoration: line-through;

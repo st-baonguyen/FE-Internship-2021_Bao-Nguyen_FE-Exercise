@@ -28,7 +28,7 @@
       .prd-info {
         @include to-rem-two(padding, 0, 24);
         min-width: to-rem(350);
-        height: to-rem(80);        
+        height: to-rem(130);        
         text-align: left;
         .prd-name {
           font-size: to-rem(22);
@@ -47,6 +47,7 @@
       }
       .badge-sell {
         @include to-rem-two(padding, 10, 0);
+        width: 40%;
       }
       .real-price {
         padding-right: to-rem(10);
