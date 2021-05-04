@@ -2,9 +2,9 @@ const products = [
   {
     id: 1,
     name: "T-Shirt Summer Vibes",
-    price: 119.99,
+    price: "119.99",
     amount: 1,
-    percent: '30',
+    percent: 30,
     image: "./asset/sample/product4.png",
   },
   {

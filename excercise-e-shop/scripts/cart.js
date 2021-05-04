@@ -1,28 +1,23 @@
 // render product
 function renderItem(item) {
   return `
-  <li class="prd-item">
-    <div class="prd flex-center-x flex-start-y">
-      <div class="prd-body-left flex-center-x">
-        <img
-          src=${item.image}
-          class="prd-img"
-          alt="T-Shirt Summer Vibes"
-        />
+  <li class="cart-item">
+    <div class="cart flex-center-x flex-start-y">
+      <div class="cart-body-left flex-center-x">
+        <img src=${item.image} class="prd-img" alt=${item.name} />
         <div class="prd-info flex-between-y">
           <h4 class="prd-name">${item.name}</h4>
-          <span class="prd-price">${(item.percent) !== 0 ? "$"+(item.price -item.price*item.percent/100).toFixed(2) : "$"+item.price}</span>
-          <div class="badge-sell flex-center-x">
-            <span class="real-price">${item.percent !== 0 ? "$"+item.price : ''}</span>
-            <span class="percent-sell-off">${item.percent !== 0 ? '-'+ item.percent + '%' : ''}</span>
-          </div>
-          </div>        
+          <div class="prd-price">
+            <span class="now-price">${(item.percent) !== 0 ? "$"+(item.price -item.price*item.percent/100).toFixed(2) : "$"+item.price}</span>
+            <div class="badge-sell flex-center-x">
+              <span class="real-price">${item.percent !== 0 ? "$"+item.price : ''}</span>
+              <span class="percent-sell-off">${item.percent !== 0 ? '-'+ item.percent + '%' : ''}</span>
+            </div>
+          </div>          
+        </div>        
       </div>  
-      <div class="prd-body-right flex-between-y">
-        <div class="total">
-          <span class="prd-total">${(item.percent) !== 0 ?"$"+((item.price - item.price*item.percent/100)*item.amount).toFixed(2): "$"+(item.price * item.amount).toFixed(2)}</span>
-          
-        </div>
+      <div class="cart-body-right flex-between-y">
+        <span class="prd-total">${(item.percent) !== 0 ?"$"+((item.price - item.price*item.percent/100)*item.amount).toFixed(2): "$"+(item.price * item.amount).toFixed(2)}</span>
         <div class="prd-amount">
           <span class="amount decrese-amount">-</span>
           <input class="amount-now" value=${item.amount} onkeyup={changeQualityInput(value)}>
@@ -61,10 +56,11 @@ function totalCost() {
   let price = getItem();
   let total = 0;
   for (const key in price) {
-    total += +price[key].price * +price[key].amount;
+    let item = price[key];
+    total += (item.percent !== 0 ? (+item.price - item.price*item.percent/100): item.price) * +item.amount;
   }
   if (total) {
-    document.querySelector(".sub-price").innerHTML = "$" + total.toFixed(2);
+    document.querySelector(".cart-coupon").innerHTML = "$" + total.toFixed(2);
   }
 }
 
@@ -76,7 +72,7 @@ function displayCart() {
     listPrd += renderItem(element);
   });
   if (listPrd) {
-    document.querySelector(".prd-list").innerHTML = listPrd;
+    document.querySelector(".cart-list").innerHTML = listPrd;
   }
   totalCost();
   addNumberCart();
@@ -87,7 +83,7 @@ function displayCart() {
 
 // total of 1 product
 function totalPricePrd(amount, index) {
-  let priceTotal = (amount * (document.querySelectorAll(".prd-price")[index].textContent.slice(1))).toFixed(2);
+  let priceTotal = (amount * (document.querySelectorAll(".now-price")[index].textContent.slice(1))).toFixed(2);
   document.querySelectorAll(".prd-total")[index].innerHTML = "$"+priceTotal;
 }
 
@@ -151,7 +147,7 @@ function removeItems() {
   for (let i = 0; i < remove.length; i++) {
     if (cartList.length === 0) {
       let empty = document.querySelector(".section-body");
-      empty.classList.add("empty");
+      empty.classList.add("cart-empty");
       empty.innerHTML = "Giỏ hàng trống";
       document.querySelector(".cart-body-right").innerHTML = "";
     }
