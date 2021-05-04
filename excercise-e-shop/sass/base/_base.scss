@@ -42,6 +42,12 @@
   flex-wrap: wrap;
 }
 
+.flex-between-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 375px) {
   .container {
     max-width: to-rem(327);
