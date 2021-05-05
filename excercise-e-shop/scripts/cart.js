@@ -122,14 +122,17 @@ function totalPricePrd(amount, index) {
  */
 function changeQualityInput(target, id, amount) {
   console.log('---',target, id, amount);
-  let changeQuality = document.querySelectorAll('.amount-now');
-  let confirmValue = value < 1 ? 1 : value;
-  for(let k= 0; k < changeQuality.length; k++ ){
-    changeQuality[k].addEventListener('change', function() {
-      updateAmount(+confirmValue, k);
-      document.querySelectorAll('.amount-now')[k].value = confirmValue;
-      totalPricePrd(confirmValue, k)
-    })
+  // let changeQuality = document.querySelectorAll('.amount-now');
+  // let confirmValue = value < 1 ? 1 : value;
+  // for(let k= 0; k < changeQuality.length; k++ ){
+  //   changeQuality[k].addEventListener('change', function() {
+  //     updateAmount(+confirmValue, k);
+  //     document.querySelectorAll('.amount-now')[k].value = confirmValue;
+  //     totalPricePrd(confirmValue, k)
+  //   })
+  // }
+  if (target.value < 1) {
+    target.value = 1
   }
 }
 
