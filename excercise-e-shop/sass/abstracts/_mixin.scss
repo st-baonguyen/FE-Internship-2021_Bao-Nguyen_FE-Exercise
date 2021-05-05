@@ -13,6 +13,33 @@
   #{$property}: to-rem($top-bottom) to-rem($right-left);
 }
 
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function convertPxToRem($px) {
+  @return 0rem + strip-units($px) / 16;
+}
+@mixin pxRem($property, $values) {
+  // Create a couple of empty lists as output buffers:
+  $px-values: ();
+  $rem-values: ();
+  // Ensure $values is a list.
+  @if type-of($values) != 'list' {
+    $values: join((), $values);
+  }
+
+  @each $value in $values {
+    @if type-of($value) == number and (unitless($value) or unit($value) == px) {
+      $rem-values: join($rem-values, convertPxToRem($value));
+    }
+    @else {
+      $rem-values: join($rem-values, $value);
+    }
+  }
+  #{$property}: $rem-values;
+}
+
 @mixin build-grid($size, $col, $padding) {
   @for $i from 1 through $col {
     .col-#{$size}-#{$i} {

@@ -1,15 +1,15 @@
 // -----banner-section -----
 .banner {
+  @include pxRem(height, 800);
   position: relative;
   z-index: 0;
   width: 100%;
-  height: to-rem(800);
 
   .title {
-    max-width: to-rem(400);
-    padding-bottom: to-rem(24);
+    @include pxRem(max-width, 400);
+    @include pxRem(padding-bottom, 24);
+    @include pxRem(font-size, 72);
     font-weight: bold;
-    font-size: to-rem(72);
     line-height: 1.015;
     color: map-get($map: $color, $key: white-a);
   }
@@ -40,7 +40,7 @@
   }
 
   .section-body {
-    @include to-rem-four(padding, 222, 0, 0, 96);
+    @include pxRem(padding, 222 0 0 96);
     z-index: 10;
     .highlight {
       @extend .title;
