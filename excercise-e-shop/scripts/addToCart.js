@@ -1,3 +1,6 @@
+/**
+ * Array products
+ */
 var products = [
   {
     id: 1,
@@ -37,7 +40,7 @@ var products = [
     price: '$89.99',
     realPrice: '$119.99',
     amount: 1,
-    percent: 0,
+    percent: 30,
     image: './asset/sample/product4.png',
   },
   {
@@ -67,28 +70,28 @@ var products = [
 ];
 
 /**
- * @var {carts} query all button has class 'btn-add-cart''
+ * @var {carts} find all button has class 'btn-add-cart''
  */
 var carts = document.querySelectorAll('.btn-add-cart');
 
 for (let t = 0; t < carts.length; t++ ) {
   carts[t].addEventListener('click', function () {
-    addToLocal(products[t]);
+    setItem(products[t]);
   });
 }
+
 function getItem() {
   return JSON.parse(localStorage.getItem('listItem'));
 }
 
 /**
  * 
- * @param {product} received from other function, 
+ * @param {product} received information of product when press button add to cart, 
  * @var {prd} is data get from localstorage
  * @var {arr} check if have data in localstorage, set arr = prd else arr = empty arr
  * @var {count} to check if exist product in local, increase quality, else push prd to local 
  */
 function setItem(product) {
-  // console.log(product);
   var prd = getItem();
   var arr = prd || [];
   if (arr.length === 0) {
@@ -107,4 +110,6 @@ function setItem(product) {
     }
   }
   localStorage.setItem('listItem', JSON.stringify(arr));
+  //update numbert at cart icon when add 1 product
+  updateNumberCart();
 }

@@ -1,9 +1,8 @@
 /**
- * 
  * @param {item} is information of 1 product: {image, name, price, discount percent }
  * @returns 1 product 
  */
-function renderItem(item) {
+ function renderItem(item) {
   return '' +
   '<li class="cart-item">' +
     '<div class="cart flex-center-x flex-start-y">'+
@@ -17,7 +16,7 @@ function renderItem(item) {
               (item.percent !== 0 ? "$" + (item.price -item.price*item.percent/100).toFixed(2) : "$"+item.price) + 
             '</div>' +
             '<div class="badge-sell flex-center-x">'+
-              // check if percent of product !== 0, show real price else now show
+              // check if percent of product !== 0, show real price else not show
               '<span class="real-price">' + (item.percent !== 0 ? "$" + item.price : "" ) +'</span>'+
               // check if percent of product !== 0, show percent-discount else now show
               '<span class="percent-sell-off">' + (item.percent !== 0 ? ("-"+ item.percent + "%") : "") + '</span>'+
@@ -29,12 +28,15 @@ function renderItem(item) {
         // check if percent of product !== 0, recaculate total money of product 
         '<span class="prd-total">' +( item.percent !== 0 ?"$"+((item.price - item.price*item.percent/100)*item.amount).toFixed(2): "$"+(item.price * item.amount).toFixed(2)) + '</span>'+
         '<div class="prd-amount">'+
-          '<span class="amount decrese-amount">-</span>'+
-          // event when change quality at input tag
-          '<input class="amount-now" value="' +item.amount+ '" onchange="changeQualityInput(this,' +item.id+ ',' +item.amount+ ')">'+
-          '<span class="amount increse-amount">+</span>'+
+          // event when press decrease button
+          '<span class="amount decrese-amount" onclick="changeQuantityBtn(' + item.id +','+ (item.amount-1) + ')">-</span>'+
+          // event when change quantity at input tag
+          '<input class="amount-now" value="' +item.amount+ '" onchange="changeQuantityInput(this,' + item.id +','+')">'+
+          // event when press increase button
+          '<span class="amount increse-amount" onclick="changeQuantityBtn(' + item.id + ',' + (item.amount+1)+ ')">+</span>'+
         '</div>'+
-        '<span class="remove">Remove</span>'+
+        // event when press remove button
+        '<span class="remove" onclick="removeItem(' +item.id+ ')">Remove</span>'+
       '</div>'+
     '</div>'+
   '</li>';
@@ -48,34 +50,74 @@ function getItem() {
   return JSON.parse(localStorage.getItem('listItem'));
 }
 
+/**
+ * function general, set data to localstorage
+ * @param {listItem} is value of key 'listItem' to set to localStorage
+ */
+function setListItem(listItem) {
+  return localStorage.setItem('listItem', JSON.stringify(listItem));
+}
+
+var cartList = getItem();
+
+
 displayCart();
 
 /**
- * Set number at cart icon when change quality and change numberCart in local
- * Caculate quality of product dependent by quality of product
+ * Render all product in localstorage to cart page
+ * Set all product to tag has className "cart-list"
  */
-function addNumberCart() {
-  let listCart = getItem();
-  let number = 0;
-  listCart.forEach((element) => {
-    number += element.amount;
+function displayCart() {
+  var productItem = getItem();
+  var listPrd = '';
+  productItem?.forEach((element) => {
+    listPrd += renderItem(element);
   });
-  localStorage.setItem('cartNumber', number);
-  const numberCart = localStorage.getItem('cartNumber');
-  const numCart = document.querySelector('.cart');
-  numCart.setAttribute('data-cart', numberCart);
+  if (listPrd) {
+    document.querySelector('.cart-list').innerHTML = listPrd;
+  }
+  disable();
+  totalCost();
+  updateNumberCart();
+  emptyCart();
+}
+disable();
+
+/**
+ * find all input contain amount of product
+ * check if quantity of product is 1, set background of decrease button 
+ */
+function disable() {
+  var listDisable = document.querySelectorAll('.amount-now');
+  for(var k = 0; k < listDisable.length; k++ ) {
+    if(+listDisable[k].value === 1)
+      document.querySelectorAll('.decrese-amount')[k].style.backgroundColor="#e6e6e6";
+  }
+}
+
+/**
+ * if data on localstorage is empty array, add className 'cart-empty' to tag has className 'section-body
+ * and set text 'Giỏ hàng trống'
+ */
+function emptyCart() {
+  if (cartList.length === 0) {
+    var empty = document.querySelector('.section-body');
+    empty.classList.add('cart-empty');
+    empty.innerHTML = 'Giỏ hàng trống';
+    // document.querySelector('.cart-body-right').innerHTML = '';
+  }
 }
 
 /**
  * Total money of all product
- * call data from localstorage, loop through all product, and caculate price of product
+ * Get data from localstorage, loop through all product, and caculate price of product
  * Set total money to tag has className 'cart-coupon'
  */
-function totalCost() {
-  let price = getItem();
-  let total = 0;
+ function totalCost() {
+  var price = getItem();
+  var total = 0;
   for (const key in price) {
-    let item = price[key];
+    var item = price[key];
     total += (item.percent !== 0 ? (+item.price - item.price*item.percent/100): item.price) * +item.amount;
   }
   if (total) {
@@ -84,132 +126,59 @@ function totalCost() {
 }
 
 /**
- * Render all product in localstorage to cart page
- * Set all product to tag has className "cart-list"
- */
-function displayCart() {
-  let productItem = getItem();
-  let listPrd = '';
-  productItem?.forEach((element) => {
-    listPrd += renderItem(element);
-  });
-  if (listPrd) {
-    document.querySelector('.cart-list').innerHTML = listPrd;
-  }
-  totalCost();
-  addNumberCart();
-  removeItems();
-  amountItem('decrese-amount');
-  amountItem('increse-amount');
-}
-
-/**
- * Caculate total money of 1 product
- * @param {amount} is amount of 1 product
- * @param {index} is index of product in array when query all class 'now-price'
- */
-function totalPricePrd(amount, index) {
-  let priceTotal = (amount * (document.querySelectorAll('.now-price')[index].textContent.slice(1))).toFixed(2);
-  document.querySelectorAll('.prd-total')[index].innerHTML = '$'+priceTotal;
-}
-
-/**
- * Change quality of product when change value at input tag
- * @param {value} is value change when change value at input tag 
- * Add event for input in array query has class 'amount-now'
- * @function updateAmount update quality of product to localstorage 
- * @function totalPricePrd is recaculate total of this product
- */
-function changeQualityInput(target, id, amount) {
-  console.log('---',target, id, amount);
-  // let changeQuality = document.querySelectorAll('.amount-now');
-  // let confirmValue = value < 1 ? 1 : value;
-  // for(let k= 0; k < changeQuality.length; k++ ){
-  //   changeQuality[k].addEventListener('change', function() {
-  //     updateAmount(+confirmValue, k);
-  //     document.querySelectorAll('.amount-now')[k].value = confirmValue;
-  //     totalPricePrd(confirmValue, k)
-  //   })
-  // }
-  if (target.value < 1) {
-    target.value = 1
-  }
-}
-
-/**
- * Update quality of product when press increase button or decrease
- * @param {action} if press increase-amount button, increase newAmount by 1
- * @param {action} if press decrease-amount button, decrease newAmount by 1
- */
-function amountItem(action) {
-  let changeAmount = document.querySelectorAll(`.${action}`);
-  for (let l = 0; l < changeAmount.length; l++) {
-    changeAmount[l].addEventListener('click', function () {
-      // get current quality of product by letiable newAmount
-      let newAmount = Number(
-        document.querySelectorAll('.amount-now')[l].value
-      );
-      if (action === 'increse-amount') newAmount = newAmount + 1;
-      
-      //  Can't decrease quality < 1
-
-      if (action === 'decrese-amount' && newAmount > 1) {
-        newAmount = newAmount - 1;
-      }
-      if (newAmount == 1) {
-        // if quality of product == 1 change background button to show to user know can't decrease less than 1
-        document.querySelectorAll('.decrese-amount')[l].style.backgroundColor =
-          '#e6e6e6';
-      } else {
-        // if quality of product == 1 change background button to show to user know can't decrease more than 1
-        document.querySelectorAll('.decrese-amount')[l].style.backgroundColor =
-          '#fff';
-      }
-      document.querySelectorAll('.amount-now')[l].value = newAmount;
-      totalPricePrd(newAmount, l);
-      updateAmount(newAmount, l);
-      addNumberCart();
-    });
-  }
-}
-
-/**
- * function general to update quality of product 
- * @param {amount}  quality of product in array data from localstorage
+ * function general to update quantity of product at index position
+ * @param {quantity}  quantity of product in array data from localstorage
  * @param {index} index of product in array data from localstorage
  */
-function updateAmount(amount, index) {
-  cartList = getItem();
-  for (let m = 0; m < cartList.length; m++) {
-    if (cartList[m] === cartList[index]) {
-      cartList[m].amount = amount;
-    }
-  }
-  localStorage.setItem('listItem', JSON.stringify(cartList));
-  totalCost();
-  addNumberCart();
+
+function updateQuantity(index, quantity) {
+  cartList[index].amount = quantity;
+  localStorage.setItem("listItem", JSON.stringify(cartList));
+  displayCart();
+  updateNumberCart();
+}
+
+/**
+ * Update quantity of product when press increase button or decrease
+ * @param {id} is id of product
+ * @param {quantity} is quantity of product
+ * Min of quantity is 1
+ */
+function changeQuantityBtn(id, quantity) {
+  quantity < 1 ? quantity = 1 : quantity;
+  disable(index);
+  var index = cartList.findIndex(function(item) {
+    return item.id === id
+  });
+  cartList[index].amount = quantity;
+  updateQuantity(index, quantity);
+}
+
+/**
+ * Change quantity of product when change value at input tag
+ * @param {target} is input tag
+ * @param {id} is id of product
+ * @function updateQuantiy update quantity of product
+ */
+function changeQuantityInput(target, id) {
+  +target.value < 1 ? target.value = 1 : +target.value;
+  var newQuantity = +target.value < 1 ? 1 : +target.value;
+  var index = cartList.findIndex(function(item) {
+    return item.id === id
+  });
+  updateQuantity(index, newQuantity);
 }
 
 /**
  * Remove item from localstorage and rerender list product in cart page
+ * @param {id} is id of product from click remove button
+ * filter all product has id !== id of product and resetItem to local
  */
-function removeItems() {
-  cartListRemove = getItem();
-  let remove = document.querySelectorAll('.remove');
-  for (let n = 0; n < remove.length; n++) {
-    // if data on localstorage is empty array, add className 'cart-empty' to tag has className 'section-body
-    // and set text 'Giỏ hàng trống'
-    if (cartListRemove.length === 0) {
-      let empty = document.querySelector('.section-body');
-      empty.classList.add('cart-empty');
-      empty.innerHTML = 'Giỏ hàng trống';
-      document.querySelector('.cart-body-right').innerHTML = '';
-    }
-    // get index of product has been press remove button, and remove it and reset current product to localstorge
-    remove[n].addEventListener('click', function () {
-      let removePrd = cartListRemove.slice(0, n).concat(cartListRemove.slice(n + 1));
-      localStorage.setItem('listItem', JSON.stringify(removePrd));
-      displayCart();
-    });
-  }
+function removeItem(id) {
+    let itemRemove = cartList.filter(function(item) {
+      return item.id !== id;
+    })
+    setListItem(itemRemove);
+    cartList = getItem();
+    displayCart();
 }
