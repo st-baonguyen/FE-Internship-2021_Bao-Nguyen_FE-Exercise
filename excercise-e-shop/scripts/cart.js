@@ -31,7 +31,7 @@ function renderItem(item) {
         '<div class="prd-amount">'+
           '<span class="amount decrese-amount">-</span>'+
           // event when change quality at input tag
-          '<input class="amount-now" value="' +item.amount+ '" onchange="changeQualityInput(this.value)">'+
+          '<input class="amount-now" value="' +item.amount+ '" onchange="changeQualityInput(this,' +item.id+ ',' +item.amount+ ')">'+
           '<span class="amount increse-amount">+</span>'+
         '</div>'+
         '<span class="remove">Remove</span>'+
@@ -120,7 +120,8 @@ function totalPricePrd(amount, index) {
  * @function updateAmount update quality of product to localstorage 
  * @function totalPricePrd is recaculate total of this product
  */
-function changeQualityInput(value) {
+function changeQualityInput(target, id, amount) {
+  console.log('---',target, id, amount);
   let changeQuality = document.querySelectorAll('.amount-now');
   let confirmValue = value < 1 ? 1 : value;
   for(let k= 0; k < changeQuality.length; k++ ){
