@@ -73,7 +73,7 @@
   }
   .bottom-section {
     .bottom-title {
-      @include to-rem-two(padding, 24, 0);
+      @include to-rem-four(padding, 24, 0);
       text-align: center;
       font-size: to-rem(12);
       line-height: to-rem(18);

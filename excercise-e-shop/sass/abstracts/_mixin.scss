@@ -1,8 +1,11 @@
-@function to-rem($font-size) {
-  @return #{$font-size/$size-base}rem;
+@function to-rem($size) {
+  @if($size == null) {
+    @return null;
+  }
+  @return #{$size/$size-base}rem;
 }
 
-@mixin to-rem-four($property, $top, $right, $bottom, $left) {
+@mixin to-rem-four($property, $top:null, $right:null, $bottom:null, $left:null) {
   #{$property}: to-rem($top) to-rem($right) to-rem($bottom) to-rem($left);
 }
 

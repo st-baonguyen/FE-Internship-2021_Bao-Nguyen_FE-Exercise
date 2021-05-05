@@ -6,7 +6,7 @@
   }
   .section-body {
     &.cart-empty {
-      @include to-rem-four(padding, 50, 0, 50, 0);
+      @include to-rem-two(padding, 50, 0);
       @include to-rem-two(margin, 20, 0);
       justify-content: center;
       font-size: to-rem(20);
