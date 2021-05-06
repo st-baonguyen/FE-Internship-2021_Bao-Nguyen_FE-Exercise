@@ -1,5 +1,5 @@
 .container {
-  max-width: to-rem(1152);
+  @include pxRem(max-width, 1152);
   margin: auto;
 }
 
@@ -44,7 +44,7 @@
 
 @media screen and (max-width: 375px) {
   .container {
-    max-width: to-rem(327);
+    @include pxRem(max-width, 327);
     margin: auto;
   }
 }
