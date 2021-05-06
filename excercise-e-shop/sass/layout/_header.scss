@@ -1,5 +1,5 @@
 .header-pc {
-  @include to-rem-two(padding, 48, 0);
+  @include pxRem(padding, 48 0);
   position: fixed;
   z-index: 50;
   width: 100%;
@@ -28,10 +28,10 @@
     &::after {
       content: attr(data-cart);
       position: absolute;
-      right: -8px;
-      top: -6px;
-      padding: 0px 5px;
-      font-size: 10px;
+      right: -#{to-rem(8)};
+      top: -#{to-rem(6)};
+      @include to-rem-two(padding, 0, 5);
+      font-size: to-rem(10);
       font-weight: bold;
       color: map-get($map: $color, $key: white-a);
       background-color: red;
