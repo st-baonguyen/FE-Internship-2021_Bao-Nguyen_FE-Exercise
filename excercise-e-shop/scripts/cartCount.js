@@ -26,3 +26,4 @@ function updateCartIcon(quantity) {
 }
 updateNumberCart();
 
+//file use to import when use es6
