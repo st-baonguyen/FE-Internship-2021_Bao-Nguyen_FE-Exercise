@@ -70,7 +70,7 @@ var products = [
 ];
 
 /**
- * @var {carts} find all button has class 'btn-add-cart''
+ * @var {carts} find all button has class 'btn-add-cart' and add to cart with array product
  */
 var carts = document.querySelectorAll(".btn-add-cart");
 
@@ -139,3 +139,5 @@ function updateCartIcon(quantity) {
   const numCart = document.querySelector(".cart");
   numCart.setAttribute("data-cart", quantity);
 }
+
+updateNumberCart();

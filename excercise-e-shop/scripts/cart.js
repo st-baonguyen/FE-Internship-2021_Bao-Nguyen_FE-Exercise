@@ -105,7 +105,6 @@ function displayCart() {
   updateNumberCart();
   emptyCart();
 }
-disable();
 
 /**
  * find all input contain amount of product
@@ -128,7 +127,6 @@ function emptyCart() {
     var empty = document.querySelector('.section-body');
     empty.classList.add('cart-empty');
     empty.innerHTML = 'Giỏ hàng trống';
-    // document.querySelector('.cart-body-right').innerHTML = '';
   }
 }
 
@@ -140,7 +138,7 @@ function emptyCart() {
  function totalCost() {
   var price = getItem();
   var total = 0;
-  for (const key in price) {
+  for (var key in price) {
     var item = price[key];
     total += (item.percent !== 0 ? (+item.price - item.price*item.percent/100): item.price) * +item.amount;
   }
@@ -170,9 +168,7 @@ function updateQuantity(index, quantity) {
 function changeQuantityBtn(id, quantity) {
   quantity < 1 ? quantity = 1 : quantity;
   disable(index);
-  var index = cartList.findIndex(function(item) {
-    return item.id === id
-  });
+  var index = findIndexPrd(id);
   cartList[index].amount = quantity;
   updateQuantity(index, quantity);
 }
@@ -186,10 +182,21 @@ function changeQuantityBtn(id, quantity) {
 function changeQuantityInput(target, id) {
   +target.value < 1 ? target.value = 1 : +target.value;
   var newQuantity = +target.value < 1 ? 1 : +target.value;
-  var index = cartList.findIndex(function(item) {
-    return item.id === id
-  });
+  var index = findIndexPrd(id);
   updateQuantity(index, newQuantity);
+}
+
+/**
+ * find index of product in array cart list
+ * @param {id} is the id of the selected product to change quantity
+ * @return {k} is index of product in array cart list on localstorage
+ */
+function findIndexPrd(id) {
+  for(var k = 0; k<=cartList.length; k++) {
+    if(cartList[k].id === id) {
+      return k;
+    }
+  }
 }
 
 /**
