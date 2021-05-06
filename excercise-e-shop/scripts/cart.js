@@ -130,6 +130,7 @@ function emptyCart() {
  * @param {quantity}  quantity of product in array data from localstorage
  * @param {index} index of product in array data from localstorage
  */
+
 function updateQuantity(index, quantity) {
   cartList[index].amount = quantity;
   localStorage.setItem("listItem", JSON.stringify(cartList));
