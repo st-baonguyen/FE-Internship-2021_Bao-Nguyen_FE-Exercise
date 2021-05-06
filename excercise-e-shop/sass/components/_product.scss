@@ -2,11 +2,10 @@
   .section-body {
     position: relative;
     .section-link {
+      @include pxRem(top, -87);
       position: absolute;
       right: 0;
-      top: -#{to-rem(87)};
       height: fit-content;
-      line-height: to-rem(15);
     }
   }
   .prd-item {
@@ -15,33 +14,33 @@
   .prd {
     position: relative;
     .btn-sell-off {
-      top: to-rem(24);
-      left: to-rem(28);
+      @include pxRem(top, 24);
+      @include pxRem(left, 28);
     }
     &-img {
-      padding-bottom: to-rem(15);
+      @include pxRem(padding-bottom, 15);
       width: 100%;
     }
     &-name {
+      @include pxRem(font-size, 16);
+      @include pxRem(line-height, 24);
       font-weight: 300;
-      font-size: to-rem(16);
-      line-height: to-rem(24);
     }
     &-price {
+      @include pxRem(font-size, 20);
+      @include pxRem(line-height, 30);
       position: relative;
-      font-size: to-rem(20);
-      line-height: to-rem(30);
       &.price-off {
         color: map-get($map: $color, $key: bg-sell-off);
       }
       &.tag::after {
+        @include pxRem(font-size, 20);
+        line-height: to-rem(30);
         color: map-get($map: $color, $key: grey-real);
         position: absolute;
         content: attr(real-price);
         right: 0;
         top: 0;
-        font-size: to-rem(20);
-        line-height: to-rem(30);
       }
     }
   }
@@ -67,34 +66,35 @@
   .prd-section {
     .section-body {
       .section-link {
+        @include pxRem(font-size, 10);
+        @include pxRem(top, -60);
         right: 0;
-        top: -#{to-rem(60)};
         padding: 0;
-        align-self: flex-end;
-        font-size: to-rem(10);
         border: 0;
+        align-self: flex-end;
       }
     }
     .prd-item {
-      padding-bottom: to-rem(12);
+      @include pxRem(padding-bottom, 12);
       .badge-sell-off {
-        top: to-rem(12);
-        left: to-rem(9);
+        @include pxRem(top, 12);
+        @include pxRem(left, 9);
       }
       .prd-img {
         padding-bottom: 0;
       }
       .prd-name {
+        @include pxRem(font-size, 12);
+        @include pxRem(line-height, 12);
         font-weight: 300;
-        font-size: to-rem(12);
-        line-height: to-rem(18);
       }
       .prd-price {
-        font-size: to-rem(10);
-        line-height: to-rem(15);
+        @include pxRem(font-size, 10);
+        @include pxRem(line-height, 15);
+
         &.tag::after {
-          font-size: to-rem(10);
-          line-height: to-rem(15);
+          @include pxRem(font-size, 10);
+          @include pxRem(line-height, 15);
         }
       }
     }
