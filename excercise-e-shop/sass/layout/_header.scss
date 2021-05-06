@@ -1,6 +1,6 @@
 .header-pc {
-  @include to-rem-two(padding, 48, 0);
-  position: absolute;
+  @include pxRem(padding, 48 0);
+  position: fixed;
   z-index: 50;
   width: 100%;
 
@@ -34,12 +34,12 @@
     display: none;
   }
   .header-mb {
-    @include to-rem-two(padding, 20, 0);
+    @include pxRem(padding, 20 0);
+    @include pxRem(height, 72);
     display: flex;
     position: relative;
     z-index: 50;
     width: 100%;
-    height: to-rem(72);
     .header-body {
       width: 100%;
     }
@@ -49,7 +49,7 @@
         display: flex;
       }
       .option-item {
-        margin-left: to-rem(24);
+        @include pxRem(margin-left, 24);
       }
     }
   }
