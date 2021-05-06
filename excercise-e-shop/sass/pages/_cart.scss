@@ -106,7 +106,7 @@
       @include pxRem(border-radius, 4);
       text-align: center;
       font-weight: bold;
-      color: map-get($map: $color, $key: white-a);
+      color: map-get($map: $color, $key: black-a);
       background-color: map-get($map: $color, $key: nav-h);
       cursor: pointer;
     }
