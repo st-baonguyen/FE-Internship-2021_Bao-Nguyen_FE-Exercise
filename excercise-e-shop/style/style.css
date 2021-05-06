@@ -285,8 +285,10 @@ button {
 
 .badge-sell-off {
   padding: 0.375rem 0.75rem;
-  top: 1.875rem;
-  left: 2.5rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.125rem;
+  font-weight: bold;
   font-size: 0.75rem;
   line-height: 1.125rem;
   border-radius: 1.25rem;
@@ -607,25 +609,11 @@ button {
   top: 50%;
   transform: translate(-50%, -50%); }
 
-.prd-section .prd-name {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 300; }
+.prd-section .prd:hover .cart {
+  display: block; }
 
-.prd-section .prd-price {
-  font-size: 1.25rem;
-  line-height: 1.875rem;
-  position: relative; }
-  .prd-section .prd-price.price-off {
-    color: #f00; }
-  .prd-section .prd-price.tag::after {
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-    position: absolute;
-    color: #cecece;
-    content: attr(real-price);
-    right: 0;
-    top: 0; }
+.prd-section .prd:hover .prd-img {
+  opacity: 0.7; }
 
 @media only screen and (max-width: 375px) {
   .prd-section .section-body .section-link {
@@ -652,6 +640,96 @@ button {
       .prd-section .prd-item .prd-price.tag::after {
         font-size: 0.625rem;
         line-height: 0.9375rem; } }
+
+.cart-section .section-header {
+  padding: 1.25rem 0rem;
+  font-weight: bold;
+  font-size: 1.5rem; }
+
+.cart-section .section-body.empty {
+  padding: 3.125rem 0rem 3.125rem 0rem;
+  margin: 1.25rem 0rem;
+  justify-content: center;
+  font-size: 1.25rem;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 0.25rem; }
+
+.cart-section .section-body .prd-list {
+  margin: 0rem -0.625rem; }
+
+.cart-section .section-body .prd-item {
+  padding: 1.5rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #c4c4c4; }
+  .cart-section .section-body .prd-item .prd-img {
+    height: 12rem; }
+  .cart-section .section-body .prd-item .prd-info {
+    padding: 0rem 1.5rem;
+    min-width: 21.875rem;
+    height: 5rem;
+    text-align: left; }
+    .cart-section .section-body .prd-item .prd-info .prd-name {
+      font-size: 1.375rem; }
+    .cart-section .section-body .prd-item .prd-info .prd-price {
+      font-size: 1.25rem; }
+  .cart-section .section-body .prd-item .prd-body-right {
+    height: 12rem;
+    text-align: right; }
+  .cart-section .section-body .prd-item .prd-total {
+    font-weight: bold;
+    font-size: 1.5rem; }
+  .cart-section .section-body .prd-item .badge-sell {
+    padding: 0.625rem 0rem; }
+  .cart-section .section-body .prd-item .real-price {
+    padding-right: 0.625rem;
+    text-decoration: line-through;
+    color: #ababab; }
+  .cart-section .section-body .prd-item .percent-sell-off {
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: #f00; }
+  .cart-section .section-body .prd-item .prd-amount .amount {
+    padding: 0.3125rem 0.625rem;
+    border: 0.0625rem solid #c4c4c4;
+    border-radius: 0.25rem;
+    cursor: pointer; }
+  .cart-section .section-body .prd-item .prd-amount .amount-now {
+    padding: 0.375rem 0.125rem;
+    width: 3.125rem;
+    text-align: center;
+    border-radius: 0.3125rem;
+    border-width: 0.0625rem;
+    border-color: #e6e6; }
+  .cart-section .section-body .prd-item .remove {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #ababab;
+    cursor: pointer; }
+
+.cart-section .cart-body-right {
+  padding-bottom: 3.125rem; }
+  .cart-section .cart-body-right .sub-body {
+    padding: 1.5rem;
+    border: 0.0625rem solid #c4c4c4;
+    border-radius: 0.25rem; }
+  .cart-section .cart-body-right .sub-total {
+    font-weight: bold;
+    font-size: 1rem; }
+  .cart-section .cart-body-right .sub-price {
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: right; }
+  .cart-section .cart-body-right .sub-footer {
+    padding: 1.125rem 5rem;
+    margin-top: 0.625rem;
+    text-align: center;
+    font-weight: bold;
+    color: #333333;
+    background-color: #fbb03b;
+    border-radius: 0.25rem;
+    cursor: pointer; }
 
 .collection-section {
   padding: 3rem 0rem; }

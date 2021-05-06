@@ -25,6 +25,11 @@
   @include pxRem(line-height, 18);
   @include pxRem(border-radius, 20);
   position: absolute;
+<<<<<<< HEAD
+=======
+  top: to-rem(24);
+  left: to-rem(18);
+>>>>>>> exercise/20210430-bao_nguyen_cart_page
   font-weight: bold;
   text-align: center;
   border: 0;

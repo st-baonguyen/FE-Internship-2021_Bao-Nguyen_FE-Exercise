@@ -5,7 +5,7 @@
     font-size: to-rem(24);
   }
   .section-body {
-    &.cart-empty {
+    &.empty {
       @include to-rem-four(padding, 50, 0, 50, 0);
       @include to-rem-two(margin, 20, 0);
       justify-content: center;
@@ -14,12 +14,12 @@
       background-color: map-get($map: $color,$key: grey-b);
       border-radius: to-rem(4);
     }
-    .cart-list {
+    .prd-list {
       @include to-rem-two(margin, 0, -10);
     }
-    .cart-item {
+    .prd-item {
       padding: to-rem(24);
-      margin-bottom: to-rem(30);
+      margin-bottom: to-rem(12);
       border-radius: to-rem(4);
       border: to-rem(1) solid map-get($map: $color, $key: grey-bd);
       .prd-img {
@@ -28,16 +28,17 @@
       .prd-info {
         @include to-rem-two(padding, 0, 24);
         min-width: to-rem(350);
-        height: to-rem(130);        
+        height: to-rem(80);
+        
         text-align: left;
         .prd-name {
           font-size: to-rem(22);
         }        
-        .now-price {
+        .prd-price {
           font-size: to-rem(20);
         }
       }
-      .cart-body-right {
+      .prd-body-right {
         height: to-rem(192);       
         text-align: right;
       }
@@ -47,7 +48,6 @@
       }
       .badge-sell {
         @include to-rem-two(padding, 10, 0);
-        width: 40%;
       }
       .real-price {
         padding-right: to-rem(10);
@@ -83,28 +83,28 @@
       }
     }
   }
-  .cart-total-price {
+  .cart-body-right {
     padding-bottom: to-rem(50);
-    .cart-total {
+    .sub-body {
       padding: to-rem(24);
       border: to-rem(1) solid map-get($map: $color, $key: grey-bd);
       border-radius: to-rem(4);
     }
-    .cart-title {
+    .sub-total {
       font-weight: bold;
       font-size: to-rem(16);
     }
-    .cart-coupon {
+    .sub-price {
       font-weight: 500;
       font-size: to-rem(32);
       text-align: right;
     }
-    .cart-submit {
+    .sub-footer {
       @include to-rem-two(padding, 18, 80);
       margin-top: to-rem(10);
       text-align: center;
       font-weight: bold;
-      color: map-get($map: $color, $key: white-a);
+      color: map-get($map: $color, $key: black-a);
       background-color: map-get($map: $color, $key: nav-h);
       border-radius: to-rem(4);
       cursor: pointer;

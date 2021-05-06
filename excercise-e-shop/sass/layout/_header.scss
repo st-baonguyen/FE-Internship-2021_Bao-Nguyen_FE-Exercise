@@ -1,5 +1,5 @@
 .header-pc {
-  @include pxRem(padding, 48 0);
+  @include to-rem-two(padding, 48, 0);
   position: fixed;
   z-index: 50;
   width: 100%;
