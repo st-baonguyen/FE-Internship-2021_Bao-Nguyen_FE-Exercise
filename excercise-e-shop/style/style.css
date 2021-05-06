@@ -874,17 +874,17 @@ button {
 
 .cart-section .section-header {
   padding: 1.25rem 0rem;
-  font-weight: bold;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  font-weight: bold; }
 
 .cart-section .section-body.cart-empty {
   padding: 3.125rem 0rem;
   margin: 1.25rem 0rem;
-  justify-content: center;
   font-size: 1.25rem;
+  border-radius: 0.25rem;
+  justify-content: center;
   align-items: center;
-  background-color: #f7f7f7;
-  border-radius: 0.25rem; }
+  background-color: #f7f7f7; }
 
 .cart-section .section-body .cart-list {
   margin: 0rem -0.625rem; }
@@ -893,13 +893,14 @@ button {
   padding: 1.5rem;
   margin-bottom: 1.875rem;
   border-radius: 0.25rem;
-  border: 0.0625rem solid #c4c4c4; }
+  border: solid 0.0625rem #c4c4c4; }
   .cart-section .section-body .cart-item .prd-img {
     height: 12rem; }
   .cart-section .section-body .cart-item .prd-info {
-    padding: 0rem 1.5rem;
+    padding-bottom: 0rem 1.5rem;
     min-width: 21.875rem;
     height: 8.125rem;
+    padding-left: 1.25rem;
     text-align: left; }
     .cart-section .section-body .cart-item .prd-info .prd-name {
       font-size: 1.375rem; }
@@ -909,8 +910,8 @@ button {
     height: 12rem;
     text-align: right; }
   .cart-section .section-body .cart-item .prd-total {
-    font-weight: bold;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-weight: bold; }
   .cart-section .section-body .cart-item .badge-sell {
     padding: 0.625rem 0rem;
     width: 40%; }
@@ -919,24 +920,24 @@ button {
     text-decoration: line-through;
     color: #ababab; }
   .cart-section .section-body .cart-item .percent-sell-off {
-    font-weight: bold;
     font-size: 0.875rem;
+    font-weight: bold;
     color: #f00; }
   .cart-section .section-body .cart-item .prd-amount .amount {
     padding: 0.3125rem 0.625rem;
-    border: 0.0625rem solid #c4c4c4;
+    border: solid 0.0625rem #c4c4c4;
     border-radius: 0.25rem;
     cursor: pointer; }
   .cart-section .section-body .cart-item .prd-amount .amount-now {
     padding: 0.375rem 0.125rem;
     width: 3.125rem;
-    text-align: center;
     border-radius: 0.3125rem;
     border-width: 0.0625rem;
+    text-align: center;
     border-color: #e6e6; }
   .cart-section .section-body .cart-item .remove {
-    font-weight: 500;
     font-size: 0.875rem;
+    font-weight: 500;
     color: #ababab;
     cursor: pointer; }
 
@@ -944,21 +945,21 @@ button {
   padding-bottom: 3.125rem; }
   .cart-section .cart-total-price .cart-total {
     padding: 1.5rem;
-    border: 0.0625rem solid #c4c4c4;
+    border: solid 0.0625rem #c4c4c4;
     border-radius: 0.25rem; }
   .cart-section .cart-total-price .cart-title {
-    font-weight: bold;
-    font-size: 1rem; }
+    font-size: 1rem;
+    font-weight: bold; }
   .cart-section .cart-total-price .cart-coupon {
-    font-weight: 500;
     font-size: 2rem;
+    font-weight: 500;
     text-align: right; }
   .cart-section .cart-total-price .cart-submit {
     padding: 1.125rem 5rem;
     margin-top: 0.625rem;
+    border-radius: 0.25rem;
     text-align: center;
     font-weight: bold;
     color: #fff;
     background-color: #fbb03b;
-    border-radius: 0.25rem;
     cursor: pointer; }
