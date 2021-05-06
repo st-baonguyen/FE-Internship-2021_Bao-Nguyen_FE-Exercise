@@ -1,11 +1,11 @@
 *,
 ::before,
 ::after {
+  font-size: 1rem;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
   font-style: normal;
   font-weight: normal;
   color: #333333; }
@@ -75,7 +75,7 @@ button {
     margin: auto; } }
 
 .row {
-  margin: 0 -0.625rem;
+  margin: 0rem -0.625rem;
   display: flex;
   flex-wrap: wrap; }
 
@@ -128,7 +128,7 @@ button {
   padding: 0rem 0.625rem; }
 
 .row-bn {
-  margin: 0 -1.875rem;
+  margin: 0rem -1.875rem;
   display: flex;
   flex-wrap: wrap; }
 
@@ -182,7 +182,7 @@ button {
 
 @media only screen and (max-width: 375px) {
   .row {
-    margin: 0 -0.28125rem;
+    margin: 0rem -0.28125rem;
     display: flex;
     flex-wrap: wrap; }
   .col-sm-1 {
@@ -222,7 +222,7 @@ button {
     width: 100%;
     padding: 0rem 0.28125rem 0.75rem 0.28125rem; }
   .row-bn {
-    margin: 0 -0.625rem;
+    margin: 0rem 0.625rem;
     display: flex;
     flex-wrap: wrap; }
   .col-md-1 {
@@ -264,55 +264,55 @@ button {
 
 .btn-default, .btn-default-outline {
   padding: 0.875rem 1.125rem;
-  border: 0;
-  font-weight: bold;
   font-size: 0.8125rem;
-  text-transform: uppercase;
   line-height: 1.1875rem;
   border-radius: 2.4375rem;
+  border: 0;
+  font-weight: bold;
+  text-transform: uppercase;
   cursor: pointer;
   color: #333333;
   background-color: #fff; }
 
 .btn-default-outline {
   padding: 0.875rem 1.875rem;
-  border: 0.0625rem solid #c4c4c4; }
+  border: solid 0.0625rem #c4c4c4; }
 
 .badge-sell-off {
   padding: 0.375rem 0.75rem;
-  position: absolute;
   top: 1.875rem;
   left: 2.5rem;
-  font-weight: bold;
   font-size: 0.75rem;
   line-height: 1.125rem;
+  border-radius: 1.25rem;
+  position: absolute;
+  font-weight: bold;
   text-align: center;
   border: 0;
-  border-radius: 1.25rem;
   color: #fff;
   background-color: #f00; }
 
 .btn-submit {
   padding: 0.875rem 3.25rem;
   margin-left: 2.5rem;
-  font-weight: bold;
   font-size: 0.8125rem;
   line-height: 1.1875rem;
-  text-align: center;
   border-radius: 3.5rem;
+  font-weight: bold;
+  text-align: center;
   background-color: #fbb03b; }
 
 @media only screen and (max-width: 375px) {
   .badge-sell-off {
     padding: 0.125rem 0.375rem;
-    top: 0;
-    left: 0;
     font-size: 0.5rem;
-    line-height: 0.75rem; } }
+    line-height: 0.75rem;
+    top: 0;
+    left: 0; } }
 
 .header-pc {
   padding: 3rem 0rem;
-  position: absolute;
+  position: fixed;
   z-index: 50;
   width: 100%; }
   .header-pc .header-left,
@@ -340,11 +340,11 @@ button {
     display: none; }
   .header-mb {
     padding: 1.25rem 0rem;
+    height: 4.5rem;
     display: flex;
     position: relative;
     z-index: 50;
-    width: 100%;
-    height: 4.5rem; }
+    width: 100%; }
     .header-mb .header-body {
       width: 100%; }
     .header-mb .header-right {
@@ -398,16 +398,16 @@ button {
     .footer .footer-right .genenal-info .info-title {
       padding-bottom: 1.1875rem;
       font-size: 1rem;
-      font-weight: bold;
       line-height: 1.5rem;
+      font-weight: bold;
       color: #fff; }
   .footer .bottom-section .bottom-title {
     padding: 1.5rem 0rem;
-    text-align: center;
     font-size: 0.75rem;
     line-height: 1.125rem;
-    color: #fff;
-    border-top: 0.0625rem solid #fff; }
+    border-top: solid 0.0625rem #fff;
+    text-align: center;
+    color: #fff; }
 
 @media only screen and (max-width: 375px) {
   .footer {
@@ -427,22 +427,22 @@ button {
       .footer .footer-right .genenal-info .info-item .info-link {
         font-size: 0.75rem; }
       .footer .footer-right .genenal-info .footer-general {
-        padding-bottom: 1.5rem; }
+        font-size: 1.5rem; }
     .footer .footer-right .info-title {
       padding-bottom: 1rem; }
     .footer .footer-right .info-group .info-item {
       padding-bottom: 0.3125rem !important; } }
 
 .banner {
+  height: 50rem;
   position: relative;
   z-index: 0;
-  width: 100%;
-  height: 50rem; }
+  width: 100%; }
   .banner .title, .banner .section-body .highlight {
     max-width: 25rem;
     padding-bottom: 1.5rem;
-    font-weight: bold;
     font-size: 4.5rem;
+    font-weight: bold;
     line-height: 1.015;
     color: #fff; }
   .banner .bg-img {
@@ -472,40 +472,40 @@ button {
     .banner .section-body .shop-now-group .shop-now-icon {
       padding-right: 1.3125rem; }
     .banner .section-body .shop-now-group .shop-now-link {
-      font-weight: bold;
       font-size: 1.5rem;
-      line-height: 2.25rem;
+      font-size: 2.25rem;
+      font-weight: bold;
       text-decoration-line: underline;
       color: #fff; }
   .banner .section-footer {
+    height: 7.8125rem;
     position: absolute;
     bottom: 0;
     right: calc(50% - 36rem + 12.25rem);
     width: 100%;
-    height: 7.8125rem;
     display: flex;
     flex-direction: row-reverse; }
     .banner .section-footer .benefit-group {
       padding: 2.375rem 4rem 1.5rem 0rem;
-      width: 100%;
       border-top-right-radius: 4.375rem;
+      width: 100%;
       background-color: #fff; }
   .banner .benefit-group {
     height: 7.8125rem; }
     .banner .benefit-group .benefit-item {
       width: 14.75rem;
-      align-items: start;
-      margin-left: 3rem; }
+      margin-left: 3rem;
+      align-items: start; }
       .banner .benefit-group .benefit-item .benefit {
         padding: 0; }
       .banner .benefit-group .benefit-item .benefit-icon {
         margin-right: 0.9375rem; }
       .banner .benefit-group .benefit-item .benefit-content .benefit-title {
-        padding: 0;
         margin-bottom: 0.25rem;
-        font-weight: bold;
         font-size: 0.875rem;
         line-height: 1.3125rem;
+        padding: 0;
+        font-weight: bold;
         color: #333333; }
       .banner .benefit-group .benefit-item .benefit-content .benefit-des {
         font-size: 0.75rem;
@@ -535,11 +535,10 @@ button {
 .prd-section .section-body {
   position: relative; }
   .prd-section .section-body .section-link {
+    top: -5.4375rem;
     position: absolute;
     right: 0;
-    top: -5.4375rem;
-    height: fit-content;
-    line-height: 0.9375rem; }
+    height: fit-content; }
 
 .prd-section .prd-item {
   position: relative; }
@@ -553,33 +552,33 @@ button {
   width: 100%; }
 
 .prd-section .prd-name {
-  font-weight: 300;
   font-size: 1rem;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  font-weight: 300; }
 
 .prd-section .prd-price {
-  position: relative;
   font-size: 1.25rem;
-  line-height: 1.875rem; }
+  line-height: 1.875rem;
+  position: relative; }
   .prd-section .prd-price.price-off {
     color: #f00; }
   .prd-section .prd-price.tag::after {
-    color: #cecece;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
     position: absolute;
+    color: #cecece;
     content: attr(real-price);
     right: 0;
-    top: 0;
-    font-size: 1.25rem;
-    line-height: 1.875rem; }
+    top: 0; }
 
 @media only screen and (max-width: 375px) {
   .prd-section .section-body .section-link {
-    right: 0;
-    top: -3.75rem;
-    padding: 0;
-    align-self: flex-end;
     font-size: 0.625rem;
-    border: 0; }
+    top: -3.75rem;
+    right: 0;
+    padding: 0;
+    border: 0;
+    align-self: flex-end; }
   .prd-section .prd-item {
     padding-bottom: 0.75rem; }
     .prd-section .prd-item .badge-sell-off {
@@ -588,9 +587,9 @@ button {
     .prd-section .prd-item .prd-img {
       padding-bottom: 0; }
     .prd-section .prd-item .prd-name {
-      font-weight: 300;
       font-size: 0.75rem;
-      line-height: 1.125rem; }
+      line-height: 0.75rem;
+      font-weight: 300; }
     .prd-section .prd-item .prd-price {
       font-size: 0.625rem;
       line-height: 0.9375rem; }
@@ -601,10 +600,10 @@ button {
 .collection-section {
   padding: 3rem 0rem; }
   .collection-section .collection-group .collection {
+    height: 22.4375rem;
     position: relative;
     z-index: 0;
-    width: 100%;
-    height: 22.4375rem; }
+    width: 100%; }
     .collection-section .collection-group .collection .collect-bg {
       position: absolute;
       z-index: -10;
@@ -634,9 +633,9 @@ button {
     justify-content: space-between; }
   .collection-section .discount {
     padding: 0.375rem 0.5625rem;
+    margin-bottom: 0.5rem;
     position: static;
-    align-self: flex-start;
-    margin-bottom: 0.5rem; }
+    align-self: flex-start; }
   .collection-section .collection-title {
     margin-bottom: 2rem;
     font-size: 1.5rem;
@@ -644,13 +643,13 @@ button {
     color: #fff; }
   .collection-section .collection-link {
     padding: 0.875rem 1.125rem;
-    align-self: flex-start;
-    font-weight: bold;
     font-size: 0.8125rem;
     line-height: 1.1875rem;
+    border-radius: 2.4375rem;
+    align-self: flex-start;
+    font-weight: bold;
     text-transform: uppercase;
     border: 0;
-    border-radius: 2.4375rem;
     color: #333333;
     background-color: #fff; }
 
@@ -660,9 +659,9 @@ button {
     position: relative; }
     .prd-section .section-header .section-title {
       padding-bottom: 2.4375rem;
-      font-weight: 300;
       font-size: 2rem;
-      line-height: 3rem; }
+      line-height: 3rem;
+      font-weight: 300; }
   .prd-section .txt-center {
     text-align: center; }
 
@@ -670,31 +669,31 @@ button {
   background-color: #f7f7f7; }
   .benefit-section .section-header .section-title {
     padding: 3rem 0rem 3.125rem 0rem;
-    text-align: center;
-    font-weight: 300;
     font-size: 2rem;
-    line-height: 3rem; }
+    line-height: 3rem;
+    text-align: center;
+    font-weight: 300; }
   .benefit-section .section-body {
     padding-bottom: 3.375rem; }
   .benefit-section .benefit .benefit-img {
-    position: relative;
     margin-bottom: 2.875rem;
     width: 4.25rem;
     height: 4.25rem;
     border-radius: 0.625rem;
+    position: relative;
     background-color: #fff; }
     .benefit-section .benefit .benefit-img .benefit-icon {
+      width: 2.3125rem;
+      height: 2.3125rem;
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 2.3125rem;
-      height: 2.3125rem;
       transform: translate(-50%, -50%); }
   .benefit-section .benefit .benefit-title {
     padding-bottom: 1rem;
-    font-weight: bold;
     font-size: 1rem;
-    line-height: 1.5rem; }
+    line-height: 1.5rem;
+    font-weight: bold; }
     .benefit-section .benefit .benefit-title.hover {
       color: #fbb03b; }
   .benefit-section .benefit .benefit-des {
@@ -706,9 +705,9 @@ button {
     color: #fbb03b; }
 
 .subscribe-section {
+  height: 13.5625rem;
   position: relative;
-  z-index: 0;
-  height: 13.5625rem; }
+  z-index: 0; }
   .subscribe-section .background-ft {
     position: absolute;
     z-index: -30;
@@ -729,20 +728,20 @@ button {
   .subscribe-section .sub-content {
     height: 100%; }
   .subscribe-section .sub-info {
-    width: 50%;
     font-size: 1.5rem;
     line-height: 2.25rem;
+    width: 50%;
     color: #fff; }
   .subscribe-section .sub-email {
     width: 50%; }
     .subscribe-section .sub-email .txt-mail {
       padding: 1.5rem;
       height: 1.25rem;
-      width: 100%;
-      align-items: center;
       font-size: 0.8125rem;
       line-height: 1.1875rem;
       border-radius: 3.8125rem;
+      width: 100%;
+      align-items: center;
       border: 0;
       outline: none;
       color: #ababab;
@@ -768,13 +767,13 @@ button {
           line-height: 0.75rem; }
         .collection-section .collection-group .collection .collection-content .detail {
           min-height: 4.25rem;
-          min-width: 5.625rem;
+          min-height: 5.625rem;
           padding-right: 2.8125rem; }
         .collection-section .collection-group .collection .collection-content .collection-title {
           margin-bottom: 0.5rem;
-          font-weight: normal;
           font-size: 0.875rem;
           line-height: 1.3125rem;
+          font-weight: normal;
           color: #fff; }
         .collection-section .collection-group .collection .collection-content .collection-link {
           padding: 0.1875rem 0.5625rem;
@@ -783,16 +782,16 @@ button {
           font-size: 0.625rem;
           line-height: 0.9375rem; }
   .prd-section .section-header .section-title {
-    font-weight: 300;
     font-size: 1.125rem;
-    line-height: 1.6875rem; }
+    line-height: 1.6875rem;
+    font-weight: 300; }
   .prd-section .section-header .txt-center {
-    text-align: left;
-    padding-bottom: 1rem; }
+    padding-bottom: 1rem;
+    text-align: left; }
   .benefit-section .section-header .section-title {
-    font-weight: 300;
     font-size: 1.125rem;
-    line-height: 1.6875rem; }
+    line-height: 1.6875rem;
+    font-weight: 300; }
   .benefit-section .section-body {
     padding-bottom: 1.75rem; }
     .benefit-section .section-body .benefit-group {
@@ -805,8 +804,8 @@ button {
       .benefit-section .section-body .benefit-vertical .benefit-img {
         margin: 0rem 1rem 1rem 0rem; }
       .benefit-section .section-body .benefit-vertical .benefit-content {
-        flex: 1;
-        padding: 0.3125rem 0rem; }
+        padding: 0.3125rem 0rem;
+        flex: 1; }
         .benefit-section .section-body .benefit-vertical .benefit-content .benefit-title {
           padding-bottom: 0.5rem;
           font-size: 0.75rem;
@@ -829,14 +828,14 @@ button {
     width: 100%; }
   .subscribe-section .sub-info {
     padding: 1.5rem 7.3125rem 1.5rem 0rem;
-    width: 100%;
     font-size: 0.875rem;
-    line-height: 1.3125rem; }
+    line-height: 1.3125rem;
+    width: 100%; }
   .subscribe-section .sub-email {
+    height: 2rem;
     display: block;
     padding: 0;
     width: 100%;
-    height: 2rem;
     text-align: start; }
     .subscribe-section .sub-email .txt-mail {
       padding: 1rem 0.75rem;
@@ -846,6 +845,5 @@ button {
         opacity: 0.7; }
     .subscribe-section .sub-email .button {
       padding: 0.4375rem 1.1875rem;
-      margin: 0;
       font-size: 0.8125rem;
       line-height: 1.1875rem; } }
