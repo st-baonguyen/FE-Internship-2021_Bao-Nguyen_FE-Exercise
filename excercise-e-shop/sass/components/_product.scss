@@ -34,9 +34,9 @@
       }
       &.tag::after {
         @include pxRem(font-size, 20);
-        line-height: to-rem(30);
-        color: map-get($map: $color, $key: grey-real);
+        @include pxRem(line-height, 30);
         position: absolute;
+        color: map-get($map: $color, $key: grey-real);
         content: attr(real-price);
         right: 0;
         top: 0;

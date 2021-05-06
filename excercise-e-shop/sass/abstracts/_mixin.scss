@@ -20,6 +20,7 @@
 @function convertPxToRem($px) {
   @return 0rem + strip-units($px) / 16;
 }
+<<<<<<< HEAD
 @mixin pxRem($property, $values) {
   // Create a couple of empty lists as output buffers:
   $px-values: ();
@@ -29,12 +30,25 @@
     $values: join((), $values);
   }
 
+=======
+
+@mixin pxRem($property, $values) {
+  $px-values: ();
+  $rem-values: ();
+  @if type-of($values) != 'list' {
+    $values: join((), $values);
+  }
+>>>>>>> exercise/20210501-bao_nguyen_e_shop_cart
   @each $value in $values {
     @if type-of($value) == number and (unitless($value) or unit($value) == px) {
       $rem-values: join($rem-values, convertPxToRem($value));
     }
     @else {
+<<<<<<< HEAD
       $rem-values: join($rem-values, $value);
+=======
+    $rem-values: join($rem-values, $value);
+>>>>>>> exercise/20210501-bao_nguyen_e_shop_cart
     }
   }
   #{$property}: $rem-values;

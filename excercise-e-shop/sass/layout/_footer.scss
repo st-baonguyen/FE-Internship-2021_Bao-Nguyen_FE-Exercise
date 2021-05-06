@@ -8,28 +8,28 @@
   }
 
   .top-section {
-    @include to-rem-four(padding, 46, 0, 32, 0);
+    @include pxRem(padding, 46 0 32 0);
     .footer-left {
-      max-width: to-rem(540);
-      padding-right: to-rem(169);
+      @include pxRem(max-width, 540);
+      @include pxRem(padding-right, 169);
     }
 
     .footer-right {
-      max-width: to-rem(686);
-      font-size: to-rem(14);
+      @include pxRem(max-width, 686);
+      @include pxRem(font-size, 14);
       line-height: 0.15;
     }
   }
   .footer-left {
     .footer-content {
-      @include to-rem-four(padding, 24, 0, 62, 0);
-      font-size: to-rem(14);
-      line-height: to-rem(21);
+      @include pxRem(padding, 24 0 62 0);
+      @include pxRem(font-size, 14);
+      @include pxRem(line-height, 21);
       color: map-get($map: $color, $key: white-a);
     }
 
     .footer-network {
-      max-width: to-rem(203);
+      @include pxRem(max-width, 203);
     }
   }
   .footer-right {
@@ -40,45 +40,45 @@
         padding: 0;
 
         &.shopping-online {
-          padding-right: to-rem(87);
+          @include pxRem(padding-right, 87);
         }
         &.information {
-          padding-right: to-rem(52);
+          @include pxRem(padding-right, 52);
         }
       }
 
       & .info-item,
       & .info-link {
-        font-size: to-rem(14);
+        @include pxRem(font-size, 14);
         line-height: 1.5;
         font-weight: 400;
       }
 
       .info-group {
-        padding-right: to-rem(8);
+        @include pxRem(padding-right, 8);
         li {
-          padding-bottom: to-rem(19);
+          @include pxRem(padding-bottom, 19);
           color: map-get($map: $color, $key: white-a);
         }
       }
 
       & .info-title {
-        padding-bottom: to-rem(19);
-        font-size: to-rem(16);
+        @include pxRem(padding-bottom, 19);
+        @include pxRem(font-size, 16);
+        @include pxRem(line-height, 24);
         font-weight: bold;
-        line-height: to-rem(24);
         color: map-get($map: $color, $key: white-a);
       }
     }
   }
   .bottom-section {
     .bottom-title {
-      @include to-rem-four(padding, 24, 0);
+      @include pxRem(padding, 24 0);
+      @include pxRem(font-size, 12);
+      @include pxRem(line-height, 18);
+      @include pxRem(border-top, solid 1 map-get($map: $color, $key: white-a));
       text-align: center;
-      font-size: to-rem(12);
-      line-height: to-rem(18);
       color: map-get($map: $color, $key: white-a);
-      border-top: to-rem(1) solid map-get($map: $color, $key: white-a);
     }
   }
 }
@@ -91,7 +91,7 @@
       .footer-left {
         padding-right: 0;
         .footer-content {
-          font-size: to-rem(14);
+          @include pxRem(font-size, 14);
           font-weight: normal;
         }
         .footer-network {
@@ -105,21 +105,21 @@
         justify-content: flex-start;
         & .info-item {
           .info-link {
-            font-size: to-rem(12);
+            @include pxRem(font-size, 12);
           }
         }
         .footer-general {
-          padding-bottom: to-rem(24);
+          @include pxRem(font-size, 24);          
         }
       }
 
       .info-title {
-        padding-bottom: to-rem(16);
+        @include pxRem(padding-bottom, 16);          
       }
 
       .info-group {
         .info-item {
-          padding-bottom: to-rem(5) !important;
+          @include pxRem(padding-bottom, 5 !important);
         }
       }
     }
