@@ -41,6 +41,7 @@ import {updateNumberCart, getItem} from './common.js';
 }
 
 let cartList = getItem();
+const valueDisable = 1;
 
 /**
  * Render all product in localstorage to cart page
@@ -72,8 +73,9 @@ function displayCart() {
 function disable() {
   let listDisable = document.querySelectorAll('.amount-now');
   for(let k = 0; k < listDisable.length; k++ ) {
-    if(+listDisable[k].value === 1)
+    if(+listDisable[k].value === valueDisable) {
       document.querySelectorAll('.decrese-amount')[k].style.backgroundColor='#e6e6e6';
+    }
   }
 }
 
@@ -131,7 +133,7 @@ function changeQuantityBtn(action) {
     changeQuantity[i].addEventListener("click", () => {
       let newQuantity = Number(document.querySelectorAll(".amount-now")[i].value);
       if (action === "increse-amount") newQuantity = newQuantity + 1;
-      if (action === "decrese-amount" && newQuantity > 1) {
+      if (action === "decrese-amount" && newQuantity > valueDisable) {
         newQuantity = newQuantity - 1;
       }      
       // updateQuantiy update quantity of product
