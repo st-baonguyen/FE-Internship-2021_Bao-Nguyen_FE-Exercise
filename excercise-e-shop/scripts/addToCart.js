@@ -122,7 +122,7 @@ function setItem(product) {
 function updateNumberCart() {
   var numberCart = getItem();
   var countNumberCart = 0;
-  if (numberCart == null) {
+  if (numberCart === null) {
     countNumberCart = 0;
   } else {
     countNumberCart = numberCart.reduce(function (total, quantity) {

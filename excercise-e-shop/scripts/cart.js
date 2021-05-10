@@ -59,6 +59,7 @@ function setListItem(listItem) {
 }
 
 var cartList = getItem();
+var valueDisable = 1;
 
 /**
  * Update number at cart icon when change quality product
@@ -67,7 +68,7 @@ var cartList = getItem();
  function updateNumberCart() {
   var numberCart = getItem();
   var countNumberCart = 0;
-  if(numberCart == null) {
+  if(numberCart === null) {
     countNumberCart = 0;
   }
   else {
@@ -113,8 +114,9 @@ function displayCart() {
 function disable() {
   var listDisable = document.querySelectorAll('.amount-now');
   for(var k = 0; k < listDisable.length; k++ ) {
-    if(+listDisable[k].value === 1)
+    if(+listDisable[k].value === valueDisable) {
       document.querySelectorAll('.decrese-amount')[k].style.backgroundColor='#e6e6e6';
+    }
   }
 }
 
@@ -166,7 +168,7 @@ function updateQuantity(index, quantity) {
  * Min of quantity is 1
  */
 function changeQuantityBtn(id, quantity) {
-  quantity < 1 ? quantity = 1 : quantity;
+  quantity < valueDisable ? quantity = valueDisable : quantity;
   disable(index);
   var index = findIndexPrd(id);
   cartList[index].amount = quantity;
@@ -180,8 +182,8 @@ function changeQuantityBtn(id, quantity) {
  * @function updateQuantiy update quantity of product
  */
 function changeQuantityInput(target, id) {
-  +target.value < 1 ? target.value = 1 : +target.value;
-  var newQuantity = +target.value < 1 ? 1 : +target.value;
+  +target.value < valueDisable ? target.value = valueDisable : +target.value;
+  var newQuantity = +target.value < valueDisable ? valueDisable : +target.value;
   var index = findIndexPrd(id);
   updateQuantity(index, newQuantity);
 }
@@ -192,7 +194,7 @@ function changeQuantityInput(target, id) {
  * @return {k} is index of product in array cart list on localstorage
  */
 function findIndexPrd(id) {
-  for(var k = 0; k<=cartList.length; k++) {
+  for(var k = 0; k <= cartList.length; k++) {
     if(cartList[k].id === id) {
       return k;
     }
