@@ -10,9 +10,9 @@
       @include pxRem(margin, 20 0);
       @include pxRem(font-size, 20);
       @include pxRem(border-radius, 4);
+      background-color: map-get($map: $color,$key: grey-b);
       justify-content: center;
       align-items: center;
-      background-color: map-get($map: $color,$key: grey-b);
     }
     .cart-list {
       @include pxRem(margin, 0 -10);
@@ -52,13 +52,13 @@
       }
       .real-price {
         @include pxRem(padding-right, 10);
-        text-decoration: line-through;
         color: map-get($map: $color, $key: grey-w);
+        text-decoration: line-through;
       }
       .percent-sell-off {
         @include pxRem(font-size, 14);
-        font-weight: bold;
         color: map-get($map: $color, $key: bg-sell-off);
+        font-weight: bold;
       }
       .prd-amount {
         .amount {
@@ -72,14 +72,14 @@
           @include pxRem(width, 50);
           @include pxRem(border-radius, 5);
           @include pxRem(border-width, 1);
-          text-align: center;
           border-color: map-get($map: $color, $key: pink-am);
+          text-align: center;
         }
       }
       .remove {
         @include pxRem(font-size, 14);
-        font-weight: 500;
         color: map-get($map: $color, $key: grey-w);
+        font-weight: 500;
         cursor: pointer;
       }
     }
@@ -104,10 +104,10 @@
       @include pxRem(padding, 18 80);
       @include pxRem(margin-top, 10);
       @include pxRem(border-radius, 4);
-      text-align: center;
-      font-weight: bold;
       color: map-get($map: $color, $key: black-a);
       background-color: map-get($map: $color, $key: nav-h);
+      text-align: center;
+      font-weight: bold;
       cursor: pointer;
     }
   }
