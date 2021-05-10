@@ -889,3 +889,95 @@ button {
       padding: 0.4375rem 1.1875rem;
       font-size: 0.8125rem;
       line-height: 1.1875rem; } }
+
+.cart-section .section-header {
+  padding: 1.25rem 0rem;
+  font-size: 1.5rem;
+  font-weight: bold; }
+
+.cart-section .section-body.cart-empty {
+  padding: 3.125rem 0rem;
+  margin: 1.25rem 0rem;
+  font-size: 1.25rem;
+  border-radius: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7; }
+
+.cart-section .section-body .cart-list {
+  margin: 0rem -0.625rem; }
+
+.cart-section .section-body .cart-item {
+  padding: 1.5rem;
+  margin-bottom: 1.875rem;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem #c4c4c4; }
+  .cart-section .section-body .cart-item .prd-img {
+    height: 12rem; }
+  .cart-section .section-body .cart-item .prd-info {
+    padding-bottom: 0rem 1.5rem;
+    min-width: 21.875rem;
+    height: 8.125rem;
+    padding-left: 1.25rem;
+    text-align: left; }
+    .cart-section .section-body .cart-item .prd-info .prd-name {
+      font-size: 1.375rem; }
+    .cart-section .section-body .cart-item .prd-info .now-price {
+      font-size: 1.25rem; }
+  .cart-section .section-body .cart-item .cart-body-right {
+    height: 12rem;
+    text-align: right; }
+  .cart-section .section-body .cart-item .prd-total {
+    font-size: 1.5rem;
+    font-weight: bold; }
+  .cart-section .section-body .cart-item .badge-sell {
+    padding: 0.625rem 0rem;
+    width: 40%; }
+  .cart-section .section-body .cart-item .real-price {
+    padding-right: 0.625rem;
+    text-decoration: line-through;
+    color: #ababab; }
+  .cart-section .section-body .cart-item .percent-sell-off {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #f00; }
+  .cart-section .section-body .cart-item .prd-amount .amount {
+    padding: 0.3125rem 0.625rem;
+    border: solid 0.0625rem #c4c4c4;
+    border-radius: 0.25rem;
+    cursor: pointer; }
+  .cart-section .section-body .cart-item .prd-amount .amount-now {
+    padding: 0.375rem 0.125rem;
+    width: 3.125rem;
+    border-radius: 0.3125rem;
+    border-width: 0.0625rem;
+    text-align: center;
+    border-color: #e6e6; }
+  .cart-section .section-body .cart-item .remove {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ababab;
+    cursor: pointer; }
+
+.cart-section .cart-total-price {
+  padding-bottom: 3.125rem; }
+  .cart-section .cart-total-price .cart-total {
+    padding: 1.5rem;
+    border: solid 0.0625rem #c4c4c4;
+    border-radius: 0.25rem; }
+  .cart-section .cart-total-price .cart-title {
+    font-size: 1rem;
+    font-weight: bold; }
+  .cart-section .cart-total-price .cart-coupon {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: right; }
+  .cart-section .cart-total-price .cart-submit {
+    padding: 1.125rem 5rem;
+    margin-top: 0.625rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    font-weight: bold;
+    color: #333333;
+    background-color: #fbb03b;
+    cursor: pointer; }

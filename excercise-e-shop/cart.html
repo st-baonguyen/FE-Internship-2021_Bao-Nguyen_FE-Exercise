@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <header class="header-pc header-cart">
+      <div class="container flex-center-x flex-center-y">
+        <div class="header-left">
+          <a href="home.html">
+            <img src="./asset/main/Logo.png" class="large-logo" alt="E-shop">
+          </a>
+        </div>
+        <div class="header-center">
+          <nav class="header-nav">
+            <ul class="nav-group flex-center-x flex-center-y">
+              <li class="nav-item"><a href="#" class="nav-link">Men</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Woman</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Kids</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-right">
+          <ul class="option-group option-lg flex-center-x flex-center-y">
+            <li class="option-item">
+              <a href="#" class="option-link">
+                <img src="./asset/icons/search.svg" alt="search" class="search-icon">
+              </a>
+            </li>
+            <li class="option-item cart" data-cart="0">
+              <a href="cart.html" class="option-link">
+                <img src="./asset/icons/cart.svg" alt="cart-icon">
+              </a>
+            </li>
+            <li class="option-item">
+              <a href="#" class="option-link">
+                <img src="./asset/icons/person.svg" alt="person">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="cart-section">
+        <div class="container">
+          <div class="section-header">Cart</div>
+          <div class="section-body flex-center-x">
+            <ul class="cart-body-left list-group cart-list col-lg-8">
+              <li class="cart-item">
+                <div class="cart flex-center-x flex-start-y">
+                  <div class="cart-body-left flex-center-x">
+                    <img src="./asset/sample/product4.png" class="prd-img" alt="">
+                    <div class="prd-info flex-between-y">
+                      <h4 class="prd-name">T-Shirt Summer Vibes</h4>
+                      <div class="prd-price">
+                        <span class="now-price">$83.99</span>
+                        <div class="badge-sell flex-center-x">
+                          <span class="real-price">$119.99</span>
+                          <span class="percent-sell-off">-30%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-body-right flex-between-y">
+                    <span class="prd-total">$83.99</span>                      
+                    <div class="prd-amount">
+                      <span class="amount decrese-amount">-</span>
+                      <input class="amount-now" value="1"></input>
+                      <span class="amount increse-amount">+</span>
+                    </div>
+                    <span class="remove">Remove</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="cart-total-price col-lg-4">
+              <div class="cart-total">
+                <div class="cart-title">TOTAL</div>
+                <div class="cart-coupon">$83.99</div>
+              </div>
+              <div class="cart-submit">CHECK OUT</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="top-section container flex-center-x">
+          <div class="footer-left">
+            <div class="footer-logo">
+              <a href="#">
+                <img src="./asset/main/logo-footer.png" alt="E-shop">
+              </a>
+            </div>
+            <p class="footer-content">
+              House My Brand designs clothing for the young, the old &everyone
+              in between – but most importantly, for the fashionable
+            </p>
+            <div class="footer-network">
+              <ul class="network-group flex-center-x flex-center-y">
+                <li class="network-item">
+                  <a href="#" class="network-link">
+                    <img src="./asset/icons/fb.svg" alt="facebook">
+                  </a>
+                </li>
+                <li class="network-item">
+                  <a href="#" class="network-link">
+                    <img src="./asset/icons/twitter.svg" alt="twitter">
+                  </a>
+                </li>
+                <li class="network-item">
+                  <a href="#" class="network-link">
+                    <img src="./asset/icons/linkedin.svg" alt="linkedin">
+                  </a>
+                </li>
+                <li class="network-item">
+                  <a href="#" class="network-link">
+                    <img src="./asset/icons/instagram.svg" alt="instagram">
+                  </a>
+                </li>
+                <li class="network-item">
+                  <a href="#" class="network-link">
+                    <img src="./asset/icons/youtube.svg" alt="youtube">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-right flex-start-x flex-center-y">
+            <ul class="genenal-info flex">
+              <li class="footer-general shopping-online">
+                <p class="info-title">Shopping online</p>
+                <ul class="info-group">
+                  <li class="info-item">
+                    <a href="#" class="info-link">Order Status</a>
+                  </li>
+                  <li class="info-item">
+                    <a href="#" class="info-link">Shipping and Delivery</a>
+                  </li>
+                  <li class="info-item">
+                    <a href="#" class="info-link">Returns</a>
+                  </li>
+                  <li class="info-item">
+                    <a href="#" class="info-link">Payment Options</a>
+                  </li>
+                  <li class="info-item">
+                    <a href="#" class="info-link">Contact Us</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer-general information">
+                <p class="info-title">Information</p>
+                <ul class="info-group">
+                  <li class="info-item">
+                    <a href="#" class="info-link">Gift Cards</a>
+                  </li>
+                  <li class="info-item">
+                    <a href="#" class="info-link">Find a store</a>
+                  </li>
+                  <li class="info-item">
+                    <a href="#" class="info-link">Newsletter</a>
+                  </li>
+                  <li class="info-item">
+                    <a href="#" class="info-link">Become a member</a>
+                  </li>
+                  <li class="info-item">
+                    <a href="#" class="info-link">Site feedback</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer-general contact">
+                <p class="info-title">Contact</p>
+                <ul class="info-group">
+                  <li class="info-item">store@uikit.com</li>
+                  <li class="info-item">Hotline: +1 131 138 138</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-section">
+          <p class="bottom-title">
+            DESIGN BY ICEO.CO - © 2019. ALL RIGHTS RESERVED.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
