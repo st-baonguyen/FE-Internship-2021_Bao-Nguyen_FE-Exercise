@@ -5,40 +5,40 @@
  function renderItem(item) {
   return '' +
   '<li class="cart-item">' +
-    '<div class="cart flex-center-x flex-start-y">'+
+    '<div class="cart flex-center-x flex-start-y">' +
       '<div class="cart-body-left flex-center-x">' +
-        '<img src="'+item.image+'" class="prd-img" alt="'+ item.name+ '"/>' + 
+        '<img src="'+ item.image +'" class="prd-img" alt="' + item.name + '"/>' + 
         '<div class="prd-info flex-between-y">' +
           '<h4 class="prd-name">' + item.name + '</h4>'+
           '<div class="prd-price">'+
             '<div class="now-price">' + 
               // check if percent of product !== 0, recaculate price of product, else show current price 
-              (item.percent !== 0 ? "$" + (item.price -item.price*item.percent/100).toFixed(2) : "$"+item.price) + 
+              (item.percent !== 0 ? "$" + (item.price -item.price * item.percent / 100).toFixed(2) : "$" + item.price) + 
             '</div>' +
             '<div class="badge-sell flex-center-x">'+
               // check if percent of product !== 0, show real price else not show
-              '<span class="real-price">' + (item.percent !== 0 ? "$" + item.price : "" ) +'</span>'+
+              '<span class="real-price">' + (item.percent !== 0 ? "$" + item.price : "" ) + '</span>' +
               // check if percent of product !== 0, show percent-discount else now show
-              '<span class="percent-sell-off">' + (item.percent !== 0 ? ("-"+ item.percent + "%") : "") + '</span>'+
-            '</div>'+
-          '</div>'+          
-        '</div>'+        
-      '</div>'+
+              '<span class="percent-sell-off">' + (item.percent !== 0 ? ("-" + item.percent + "%") : "") + '</span>' +
+            '</div>' +
+          '</div>' +          
+        '</div>' +        
+      '</div>' +
       '<div class="cart-body-right flex-between-y">'+
         // check if percent of product !== 0, recaculate total money of product 
-        '<span class="prd-total">' +( item.percent !== 0 ?"$"+((item.price - item.price*item.percent/100)*item.amount).toFixed(2): "$"+(item.price * item.amount).toFixed(2)) + '</span>'+
+        '<span class="prd-total">' + (item.percent !== 0 ? "$" + ((item.price - item.price * item.percent / 100) * item.amount).toFixed(2) : "$" + (item.price * item.amount).toFixed(2)) + '</span>' +
         '<div class="prd-amount">'+
           // event when press decrease button
-          '<span class="amount decrese-amount" onclick="changeQuantityBtn(' + item.id +','+ (item.amount-1) + ')">-</span>'+
+          '<span class="amount decrese-amount" onclick="changeQuantityBtn(' + item.id + ',' + (item.amount - 1) + ')">-</span>' +
           // event when change quantity at input tag
-          '<input class="amount-now" value="' +item.amount+ '" onchange="changeQuantityInput(this,' + item.id +','+')">'+
+          '<input class="amount-now" value="' + item.amount + '" onchange="changeQuantityInput(this,' + item.id + ',' + ')">' +
           // event when press increase button
-          '<span class="amount increse-amount" onclick="changeQuantityBtn(' + item.id + ',' + (item.amount+1)+ ')">+</span>'+
-        '</div>'+
+          '<span class="amount increse-amount" onclick="changeQuantityBtn(' + item.id + ',' + (item.amount + 1) + ')">+</span>' +
+        '</div>' +
         // event when press remove button
-        '<span class="remove" onclick="removeItem(' +item.id+ ')">Remove</span>'+
-      '</div>'+
-    '</div>'+
+        '<span class="remove" onclick="removeItem(' + item.id + ')">Remove</span>' +
+      '</div>' +
+    '</div>' +
   '</li>';
 }
 
@@ -142,7 +142,7 @@ function emptyCart() {
   var total = 0;
   for (var key in price) {
     var item = price[key];
-    total += (item.percent !== 0 ? (+item.price - item.price*item.percent/100): item.price) * +item.amount;
+    total += (item.percent !== 0 ? (+item.price - item.price * item.percent / 100) : item.price) * +item.amount;
   }
   if (total) {
     document.querySelector('.cart-coupon').innerHTML = '$' + total.toFixed(2);
