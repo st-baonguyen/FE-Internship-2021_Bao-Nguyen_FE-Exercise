@@ -72,7 +72,7 @@ function displayCart() {
  */
 function disable() {
   let listDisable = document.querySelectorAll('.amount-now');
-  for(let k = 0; k < listDisable.length; k++ ) {
+  for(let k = 0; k < listDisable.length; k++) {
     if(+listDisable[k].value === valueDisable) {
       document.querySelectorAll('.decrese-amount')[k].style.backgroundColor='#e6e6e6';
     }
@@ -144,7 +144,21 @@ function changeQuantityBtn(action) {
 
 /**
  * Change quantity of product when change value at input tag
- * @function updateQuantiy update quantity of product and set to Localstorage
+ * @param {target} is input tag
+ * @param {id} is id of product
+ * @function updateQuantiy update quantity of product
+ */
+function changeQuantityInput(target, id) {
+  +target.value < valueDisable ? target.value = valueDisable : +target.value;
+  var newQuantity = +target.value < valueDisable ? valueDisable : +target.value;
+  var index = findIndexPrd(id);
+  updateQuantity(index, newQuantity);
+}
+
+/**
+ * find index of product in array cart list
+ * @param {id} is the id of the selected product to change quantity
+ * @return {i} is index of product in array cart list on localstorage
  */
 function changeQuantityInput() {
   let changeQuantity = document.querySelectorAll('.amount-now');
