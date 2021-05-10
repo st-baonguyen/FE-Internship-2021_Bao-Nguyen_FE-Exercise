@@ -74,7 +74,7 @@
  */
 var carts = document.querySelectorAll(".btn-add-cart");
 
-for (let t = 0; t < carts.length; t++) {
+for (var t = 0; t < carts.length; t++) {
   carts[t].addEventListener("click", function () {
     setItem(products[t]);
   });

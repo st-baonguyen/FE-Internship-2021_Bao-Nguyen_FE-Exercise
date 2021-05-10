@@ -82,7 +82,7 @@ var cartList = getItem();
  * @param {quantity} is quantity of all product in cart, get from localstorage 
  */
 function updateCartIcon(quantity) {
-  const numCart = document.querySelector('.cart');
+  var numCart = document.querySelector('.cart');
   numCart.setAttribute('data-cart', quantity);
 }
 
