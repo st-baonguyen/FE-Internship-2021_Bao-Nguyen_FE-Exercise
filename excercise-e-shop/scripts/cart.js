@@ -113,7 +113,7 @@ function displayCart() {
  */
 function disable() {
   var listDisable = document.querySelectorAll('.amount-now');
-  for(var k = 0; k < listDisable.length; k++ ) {
+  for(var k = 0; k < listDisable.length; k++) {
     if(+listDisable[k].value === valueDisable) {
       document.querySelectorAll('.decrese-amount')[k].style.backgroundColor='#e6e6e6';
     }
@@ -191,7 +191,7 @@ function changeQuantityInput(target, id) {
 /**
  * find index of product in array cart list
  * @param {id} is the id of the selected product to change quantity
- * @return {k} is index of product in array cart list on localstorage
+ * @return {i} is index of product in array cart list on localstorage
  */
 function findIndexPrd(id) {
   for(var i = 0; i <= cartList.length; i++) {
