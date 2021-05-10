@@ -47,7 +47,7 @@
     align-self: flex-start;
   }
   .collection-title {
-    @include pxRem(margin, 32);
+    @include pxRem(margin-bottom, 32);
     @include pxRem(font-size, 24);
     @include pxRem(line-height, 30);
     color: map-get($map: $color, $key: white-a);
@@ -84,6 +84,8 @@
     text-align: center;
   }
 }
+
+//------benefit section------
 
 .benefit-section {
   background-color: map-get($map: $color, $key: grey-b);
@@ -344,7 +346,6 @@
         @include  pxRem(padding, 7 19);
         @include  pxRem(font-size, 13);
         @include  pxRem(line-height, 19);
-        margin: 0;
       }
     }
   }

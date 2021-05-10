@@ -1,4 +1,3 @@
-// -----banner-section -----
 .banner {
   @include pxRem(height, 800);
   position: relative;
@@ -112,7 +111,7 @@
 
 @media only screen and (max-width: 375px) {
   .banner {
-    height: to-rem(740);
+    @include pxRem(height, 740);
     .bg-img {
       display: none;
     }
@@ -120,14 +119,14 @@
       display: block;
     }
     .section-body {
-      @include to-rem-four(padding, 271, 0, 0, 0);
+      @include pxRem(padding, 271 0 0 0);
       .title {
-        font-size: to-rem(48);
+        @include pxRem(font-size, 48);
       }
       .shop-now-group {
         .shop-now-link {
-          font-size: to-rem(14);
-          line-height: to-rem(21);
+          @include pxRem(font-size, 14);
+          @include pxRem(line-height, 21);
         }
       }
     }
