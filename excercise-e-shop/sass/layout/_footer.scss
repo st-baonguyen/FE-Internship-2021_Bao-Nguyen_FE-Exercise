@@ -66,8 +66,8 @@
         @include pxRem(padding-bottom, 19);
         @include pxRem(font-size, 16);
         @include pxRem(line-height, 24);
-        font-weight: bold;
         color: map-get($map: $color, $key: white-a);
+        font-weight: bold;
       }
     }
   }
@@ -77,8 +77,8 @@
       @include pxRem(font-size, 12);
       @include pxRem(line-height, 18);
       @include pxRem(border-top, solid 1 map-get($map: $color, $key: white-a));
-      text-align: center;
       color: map-get($map: $color, $key: white-a);
+      text-align: center;
     }
   }
 }

@@ -3,12 +3,12 @@
   @include pxRem(font-size, 13);
   @include pxRem(line-height, 19);
   @include pxRem(border-radius, 39);
+  color: map-get($map: $color, $key: black-a);
+  background-color: map-get($map: $color, $key: white-a);
   border: 0;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  color: map-get($map: $color, $key: black-a);
-  background-color: map-get($map: $color, $key: white-a);
 }
 
 .btn-default-outline {
@@ -24,12 +24,12 @@
   @include pxRem(font-size, 12);
   @include pxRem(line-height, 18);
   @include pxRem(border-radius, 20);
+  color: map-get($map: $color, $key: white-a);
+  background-color: map-get($map: $color, $key: bg-sell-off);
   position: absolute;
   font-weight: bold;
   text-align: center;
   border: 0;
-  color: map-get($map: $color, $key: white-a);
-  background-color: map-get($map: $color, $key: bg-sell-off);
 }
 
 .btn-submit {
@@ -38,9 +38,9 @@
   @include pxRem(font-size, 13);
   @include pxRem(line-height, 19);
   @include pxRem(border-radius, 56);
+  background-color: map-get($map: $color, $key: nav-h);
   font-weight: bold;
   text-align: center;
-  background-color: map-get($map: $color, $key: nav-h);
 }
 
 .btn-add-cart {
