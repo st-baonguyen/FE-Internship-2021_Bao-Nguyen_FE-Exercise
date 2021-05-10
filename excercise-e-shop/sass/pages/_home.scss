@@ -1,12 +1,12 @@
 // -----collection-section -----
 .collection-section {
-  @include to-rem-two(padding, 48, 0);
+  @include pxRem(padding, 48 0);
   .collection-group {
     .collection {
+      @include pxRem(height, 359);
       position: relative;
       z-index: 0;
       width: 100%;
-      height: to-rem(359);
       .collect-bg {
         position: absolute;
         z-index: -10;
@@ -14,14 +14,14 @@
         height: 100%;
       }
       .collection-content {
-        @include to-rem-four(padding, 0, 40, 53, 40);
+        @include pxRem(padding, 0 40 53 40);
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
       }
       &::after {
-        @include to-rem-two(padding, 0, 20);
+        @include pxRem(padding, 0 20);
         position: absolute;
         top: 0;
         left: 0;
@@ -35,33 +35,33 @@
     }
   }
   .detail {
-    min-height: to-rem(140);
+    @include pxRem(min-height, 140);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   .discount {
-    @include to-rem-two(padding, 6, 9);
+    @include pxRem(padding, 6 9);
+    @include pxRem(margin-bottom, 8);
     position: static;
     align-self: flex-start;
-    margin-bottom: to-rem(8);
   }
   .collection-title {
-    margin-bottom: to-rem(32);
-    font-size: to-rem(24);
-    line-height: to-rem(30);
+    @include pxRem(margin-bottom, 32);
+    @include pxRem(font-size, 24);
+    @include pxRem(line-height, 30);
     color: map-get($map: $color, $key: white-a);
   }
 
   .collection-link {
-    @include to-rem-two(padding, 14, 18);
+    @include pxRem(padding, 14 18);
+    @include pxRem(font-size, 13);
+    @include pxRem(line-height, 19);
+    @include pxRem(border-radius, 39);
     align-self: flex-start;
     font-weight: bold;
-    font-size: to-rem(13);
-    line-height: to-rem(19);
     text-transform: uppercase;
     border: 0;
-    border-radius: to-rem(39);
     color: map-get($map: $color, $key: black-a);
     background-color: map-get($map: $color, $key: white-a);
   }
@@ -70,14 +70,14 @@
 // -----product-section -----
 
 .prd-section {
-  @include to-rem-two(padding, 48, 0);
+  @include pxRem(padding, 48 0);
   .section-header {
     position: relative;
     .section-title {
-      padding-bottom: to-rem(39);
+      @include pxRem(padding-bottom, 39);
+      @include pxRem(font-size, 32);
+      @include pxRem(line-height, 48);
       font-weight: 300;
-      font-size: to-rem(32);
-      line-height: to-rem(48);
     }
   }
   .txt-center {
@@ -85,51 +85,52 @@
   }
 }
 
+//------benefit section------
+
 .benefit-section {
   background-color: map-get($map: $color, $key: grey-b);
   .section-header {
     .section-title {
-      @include to-rem-four(padding, 48, 0, 50, 0);
+      @include pxRem(padding, 48 0 50 0);
+      @include pxRem(font-size, 32);
+      @include pxRem(line-height, 48);
       text-align: center;
       font-weight: 300;
-      font-size: to-rem(32);
-      line-height: to-rem(48);
     }
   }
   .section-body {
-    padding-bottom: to-rem(54);
+    @include pxRem(padding-bottom, 54);
   }
   .benefit {
     .benefit-img {
+      @include pxRem(margin-bottom, 46);
+      @include pxRem(width, 68);
+      @include pxRem(height, 68);
+      @include pxRem(border-radius, 10);
       position: relative;
-      margin-bottom: to-rem(46);
-      width: to-rem(68);
-      height: to-rem(68);
-      border-radius: to-rem(10);
       background-color: map-get($map: $color, $key: white-a);
       .benefit-icon {
+        @include pxRem(width, 37);
+        @include pxRem(height, 37);
         position: absolute;
         top: 50%;
         left: 50%;
-        width: to-rem(37);
-        height: to-rem(37);
         transform: translate(-50%, -50%);
       }
     }
     .benefit-title {
-      padding-bottom: to-rem(16);
+      @include pxRem(padding-bottom, 16);
+      @include pxRem(font-size, 16);
+      @include pxRem(line-height, 24);
       font-weight: bold;
-      font-size: to-rem(16);
-      line-height: to-rem(24);
-
       &.hover {
         color: map-get($map: $color, $key: nav-h);
       }
     }
 
     .benefit-des {
-      font-size: to-rem(14);
-      line-height: to-rem(21);
+      @include pxRem(font-size, 14);
+      @include pxRem(line-height, 21);
       color: map-get($map: $color, $key: grey-d);
     }
 
@@ -145,9 +146,9 @@
 // -----subscribe-section -----
 
 .subscribe-section {
+  @include pxRem(height, 217);
   position: relative;
   z-index: 0;
-  height: to-rem(217);
   .background-ft {
     position: absolute;
     z-index: -30;
@@ -173,22 +174,22 @@
   }
 
   .sub-info {
+    @include pxRem(font-size, 24);
+    @include pxRem(line-height, 36);
     width: 50%;
-    font-size: to-rem(24);
-    line-height: to-rem(36);
     color: map-get($map: $color, $key: white-a);
   }
 
   .sub-email {
     width: 50%;
     .txt-mail {
-      padding: to-rem(24);
-      height: to-rem(20);
+      @include pxRem(padding, 24);
+      @include pxRem(height, 20);
+      @include pxRem(font-size, 13);
+      @include pxRem(line-height, 19);
+      @include pxRem(border-radius, 61);
       width: 100%;
       align-items: center;
-      font-size: to-rem(13);
-      line-height: to-rem(19);
-      border-radius: to-rem(61);
       border: 0;
       outline: none;
       color: map-get($map: $color, $key: grey-w);
@@ -202,44 +203,44 @@
 @media only screen and (max-width: 375px) {
   // -----collection-section -----
   .collection-section {
-    @include to-rem-four(padding, 24, 0, 0, 0);
+    @include pxRem(padding, 24 0 0 0);
     .collection-group {
       .collection {
-        height: to-rem(224);
+        @include pxRem(height, 224);
         width: 100%;
         .collection-bg {
           object-fit: cover;
         }
         .collection-content {
-          @include to-rem-four(padding, 0, 0, 16, 16);
+          @include pxRem(padding, 0 0 16 16);
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
           height: 100%;
 
           .discount {
-            @include to-rem-two(padding, 2, 6);
-            font-size: to-rem(8);
-            line-height: to-rem(12);
+            @include pxRem(padding, 2 6);
+            @include pxRem(font-size, 8);
+            @include pxRem(line-height, 12);
           }
           .detail {
-            min-height: to-rem(68);
-            min-width: to-rem(90);
-            padding-right: to-rem(45);
+            @include pxRem(min-height, 68);
+            @include pxRem(min-height, 90);
+            @include pxRem(padding-right, 45);
           }
           .collection-title {
-            margin-bottom: to-rem(8);
+            @include pxRem(margin-bottom, 8);
+            @include pxRem(font-size, 14);
+            @include pxRem(line-height, 21);
             font-weight: normal;
-            font-size: to-rem(14);
-            line-height: to-rem(21);
             color: map-get($map: $color, $key: white-a);
           }
           .collection-link {
-            @include to-rem-two(padding, 3, 9);
-            left: to-rem(16);
-            bottom: to-rem(16);
-            font-size: to-rem(10);
-            line-height: to-rem(15);
+            @include pxRem(padding, 3 9);
+            @include pxRem(left, 16);
+            @include pxRem(bottom, 16);
+            @include pxRem(font-size, 10);
+            @include pxRem(line-height, 15);
           }
         }
       }
@@ -251,13 +252,13 @@
   .prd-section {
     .section-header {
       .section-title {
+        @include pxRem(font-size, 18);
+        @include pxRem(line-height, 27);
         font-weight: 300;
-        font-size: to-rem(18);
-        line-height: to-rem(27);
       }
       .txt-center {
+        @include pxRem(padding-bottom, 16);
         text-align: left;
-        padding-bottom: to-rem(16);
       }
     }
   }
@@ -265,13 +266,13 @@
   .benefit-section {
     .section-header {
       .section-title {
+        @include pxRem(font-size, 18);
+        @include pxRem(line-height, 27);
         font-weight: 300;
-        font-size: to-rem(18);
-        line-height: to-rem(27);
       }
     }
     .section-body {
-      padding-bottom: to-rem(28);
+      @include pxRem(padding-bottom, 28);
       .benefit-group {
         display: block;
         .benefit-item {
@@ -282,20 +283,20 @@
         display: flex;
         justify-content: space-between;
         .benefit-img {
-          @include to-rem-four(margin, 0, 16, 16, 0);
+          @include pxRem(margin, 0 16 16 0);
         }
         .benefit-content {
+          @include pxRem(padding, 5 0);
           flex: 1;
-          @include to-rem-two(padding, 5, 0);
           .benefit-title {
-            padding-bottom: to-rem(8);
-            font-size: to-rem(12);
-            line-height: to-rem(18);
+            @include pxRem(padding-bottom, 8);
+            @include pxRem(font-size, 12);
+            @include pxRem(line-height, 18);
           }
 
           .benefit-des {
-            font-size: to-rem(10);
-            line-height: to-rem(15);
+            @include pxRem(font-size, 10);
+            @include pxRem(line-height, 15);
           }
         }
       }
@@ -322,30 +323,29 @@
       width: 100%;
     }
     .sub-info {
-      @include to-rem-four(padding, 24, 117, 24, 0);
+      @include  pxRem(padding, 24 117 24 0);
+      @include  pxRem(font-size, 14);
+      @include  pxRem(line-height, 21);
       width: 100%;
-      font-size: to-rem(14);
-      line-height: to-rem(21);
     }
     .sub-email {
+      @include  pxRem(height, 32);
       display: block;
       padding: 0;
       width: 100%;
-      height: to-rem(32);
       text-align: start;
       .txt-mail {
-        @include to-rem-two(padding, 16, 12);
-        margin-bottom: to-rem(12);
-        font-size: to-rem(12);
+        @include  pxRem(padding, 16 12);
+        @include  pxRem(margin-bottom, 12);
+        @include  pxRem(font-size, 12);
         &::placeholder {
           opacity: 0.7;
         }
       }
       .button {
-        @include to-rem-two(padding, 7, 19);
-        margin: 0;
-        font-size: to-rem(13);
-        line-height: to-rem(19);
+        @include  pxRem(padding, 7 19);
+        @include  pxRem(font-size, 13);
+        @include  pxRem(line-height, 19);
       }
     }
   }
