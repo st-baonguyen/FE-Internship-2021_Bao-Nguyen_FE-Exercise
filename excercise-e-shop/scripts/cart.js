@@ -17,17 +17,17 @@ import {updateNumberCart, getItem} from './common.js';
           <h4 class="prd-name">${item.name}</h4>
           <div class="prd-price">
             <div class="now-price">
-              ${item.percent !== 0 ? "$" + (item.price -item.price*item.percent/100).toFixed(2) : "$"+item.price} 
+              ${item.percent !== 0 ? "$" + (item.price -item.price * item.percent / 100).toFixed(2) : "$" + item.price} 
             </div>
             <div class="badge-sell flex-center-x">
               <span class="real-price">${item.percent !== 0 ? "$" + item.price : "" }</span>
-              <span class="percent-sell-off">${item.percent !== 0 ? ("-"+ item.percent + "%") : ""}</span>
+              <span class="percent-sell-off">${item.percent !== 0 ? ("-" + item.percent + "%") : ""}</span>
             </div>
           </div>     
         </div>    
       </div>
       <div class="cart-body-right flex-between-y">
-        <span class="prd-total">${item.percent !== 0 ?"$"+((item.price - item.price * item.percent/100)* item.amount).toFixed(2): "$"+(item.price * item.amount).toFixed(2)}</span>
+        <span class="prd-total">${item.percent !== 0 ? "$" + ((item.price - item.price * item.percent / 100) * item.amount).toFixed(2) : "$" + (item.price * item.amount).toFixed(2)}</span>
         <div class="prd-amount">
           <span class="amount decrese-amount">-</span>
           <input class="amount-now" value="${item.amount}">
@@ -101,7 +101,7 @@ function emptyCart() {
   let total = 0;
   for (let key in price) {
     let item = price[key];
-    total += (item.percent !== 0 ? (+item.price - item.price*item.percent/100): item.price) * +item.amount;
+    total += (item.percent !== 0 ? (+item.price - item.price * item.percent / 100) : item.price) * +item.amount;
   }
   if (total) {
     document.querySelector('.cart-coupon').innerHTML = '$' + total.toFixed(2);
