@@ -194,9 +194,9 @@ function changeQuantityInput(target, id) {
  * @return {k} is index of product in array cart list on localstorage
  */
 function findIndexPrd(id) {
-  for(var k = 0; k <= cartList.length; k++) {
-    if(cartList[k].id === id) {
-      return k;
+  for(var i = 0; i <= cartList.length; i++) {
+    if(cartList[i].id === id) {
+      return i;
     }
   }
 }
