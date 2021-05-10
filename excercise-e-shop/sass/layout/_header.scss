@@ -1,6 +1,6 @@
 .header-pc {
-  @include to-rem-two(padding, 48, 0);
-  position: absolute;
+  @include pxRem(padding, 48 0);
+  position: fixed;
   z-index: 50;
   width: 100%;
 
@@ -23,6 +23,31 @@
       color: map-get($map: $color, $key: nav-h);
     }
   }
+  .cart {
+    position: relative;
+    &::after {
+      content: attr(data-cart);
+      position: absolute;
+      right: -#{to-rem(8)};
+      top: -#{to-rem(6)};
+      @include to-rem-two(padding, 0, 5);
+      font-size: to-rem(10);
+      font-weight: bold;
+      color: map-get($map: $color, $key: white-a);
+      background-color: red;
+      border-radius: 50%;
+    }
+  }
+}
+
+.header-cart {
+  position: static;
+  background-color: map-get($map: $color, $key: nav-h);
+  .header-center {
+    .nav-link {
+      color: map-get($map: $color, $key: white-a);
+    }
+  }
 }
 
 .header-mb {
@@ -34,12 +59,12 @@
     display: none;
   }
   .header-mb {
-    @include to-rem-two(padding, 20, 0);
+    @include pxRem(padding, 20 0);
+    @include pxRem(height, 72);
     display: flex;
     position: relative;
     z-index: 50;
     width: 100%;
-    height: to-rem(72);
     .header-body {
       width: 100%;
     }
@@ -49,7 +74,7 @@
         display: flex;
       }
       .option-item {
-        margin-left: to-rem(24);
+        @include pxRem(margin-left, 24);
       }
     }
   }
