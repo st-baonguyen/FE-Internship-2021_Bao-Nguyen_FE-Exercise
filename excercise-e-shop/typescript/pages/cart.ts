@@ -1,5 +1,5 @@
 import { updateNumberCart, getItem } from '../common/index.js';
-import Product from '../interface/item';
+import Product from '../interface/product';
 import valueDisable from '../constant/index.js';
 
 /**

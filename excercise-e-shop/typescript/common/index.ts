@@ -1,4 +1,4 @@
-import Product from '../interface/item';
+import Product from '../interface/product';
 /**
  * function general, get data from localstorage
  */
