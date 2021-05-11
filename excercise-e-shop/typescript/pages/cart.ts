@@ -1,4 +1,7 @@
-import {updateNumberCart, getItem} from './common.js';
+import { updateNumberCart, getItem } from '../common/index.js';
+import Product from '../interface/item';
+import valueDisable from '../constant/index.js';
+
 /**
  * @param {item} is information of 1 product: {image, name, price, discount percent }
  * @returns 1 product 
@@ -7,7 +10,7 @@ import {updateNumberCart, getItem} from './common.js';
  * check if percent of product !== 0, show percent-discount else now show
  * check if percent of product !== 0, recaculate total money of product 
  */
- function renderItem(item) {
+function renderItem(item: Product): string {
   return `
   <li class="cart-item">
     <div class="cart flex-center-x flex-start-y">
@@ -17,17 +20,17 @@ import {updateNumberCart, getItem} from './common.js';
           <h4 class="prd-name">${item.name}</h4>
           <div class="prd-price">
             <div class="now-price">
-              ${item.percent !== 0 ? "$" + (item.price -item.price * item.percent / 100).toFixed(2) : "$" + item.price} 
+              ${item.discount !== 0 ? "$" + (+item.price - +item.price * item.discount / 100).toFixed(2) : "$" + +item.price} 
             </div>
             <div class="badge-sell flex-center-x">
-              <span class="real-price">${item.percent !== 0 ? "$" + item.price : "" }</span>
-              <span class="percent-sell-off">${item.percent !== 0 ? ("-" + item.percent + "%") : ""}</span>
+              <span class="real-price">${item.discount !== 0 ? "$" + +item.price : ""}</span>
+              <span class="percent-sell-off">${item.discount !== 0 ? ("-" + item.discount + "%") : ""}</span>
             </div>
           </div>     
         </div>    
       </div>
       <div class="cart-body-right flex-between-y">
-        <span class="prd-total">${item.percent !== 0 ? "$" + ((item.price - item.price * item.percent / 100) * item.amount).toFixed(2) : "$" + (item.price * item.amount).toFixed(2)}</span>
+        <span class="prd-total">${item.discount !== 0 ? "$" + ((+item.price - +item.price * item.discount / 100) * item.amount).toFixed(2) : "$" + (+item.price * item.amount).toFixed(2)}</span>
         <div class="prd-amount">
           <span class="amount decrese-amount">-</span>
           <input class="amount-now" value="${item.amount}">
@@ -40,17 +43,16 @@ import {updateNumberCart, getItem} from './common.js';
   `;
 }
 
-let cartList = getItem();
-const valueDisable = 1;
+let cartList: any = getItem();
 
 /**
  * Render all product in localstorage to cart page
  * Set all product to tag has className 'cart-list'
  */
-function displayCart() {
-  let productItem = getItem();
-  let listPrd = '';
-  productItem?.forEach((element) => {
+function displayCart(): void {
+  let productItem: any = getItem();
+  let listPrd: string = '';
+  productItem?.forEach((element: Product) => {
     listPrd += renderItem(element);
   });
   if (listPrd) {
@@ -70,11 +72,12 @@ function displayCart() {
  * find all input tag contain amount of product
  * check if quantity of product is 1, set background of decrease button 
  */
-function disable() {
-  let listDisable = document.querySelectorAll('.amount-now');
-  for(let k = 0; k < listDisable.length; k++) {
-    if(+listDisable[k].value === valueDisable) {
-      document.querySelectorAll('.decrese-amount')[k].style.backgroundColor='#e6e6e6';
+function disable(): void {
+  let listDisable: any = document.querySelectorAll('.amount-now');
+  for (let k = 0; k < listDisable.length; k++) {
+    if (+listDisable[k].value === valueDisable) {
+      let disable: any = document.querySelectorAll('.decrese-amount');
+      disable[k].style.backgroundColor = '#e6e6e6';
     }
   }
 }
@@ -83,9 +86,9 @@ function disable() {
  * if data on localstorage is empty array, add className 'cart-empty' to tag has className 'section-body
  * and set text 'Giỏ hàng trống'
  */
-function emptyCart() {
+function emptyCart(): void {
   if (cartList.length === 0) {
-    let empty = document.querySelector('.section-body');
+    let empty: any = document.querySelector('.section-body');
     empty.classList.add('cart-empty');
     empty.innerHTML = 'Giỏ hàng trống';
   }
@@ -96,12 +99,12 @@ function emptyCart() {
  * Get data from localstorage, loop through all product, and caculate price of product
  * Set total money to tag has className 'cart-coupon'
  */
- function totalCost() {
-  let price = getItem();
-  let total = 0;
+function totalCost(): void {
+  let price: any = getItem();
+  let total: number = 0;
   for (let key in price) {
-    let item = price[key];
-    total += (item.percent !== 0 ? (+item.price - item.price * item.percent / 100) : item.price) * +item.amount;
+    let item: any = price[key];
+    total += (item.discount !== 0 ? (+item.price - +item.price * item.discount / 100) : item.price) * +item.amount;
   }
   if (total) {
     document.querySelector('.cart-coupon').innerHTML = '$' + total.toFixed(2);
@@ -113,7 +116,7 @@ function emptyCart() {
  * @param {quantity}  quantity of product in array data from localstorage
  * @param {index} index of product in array data from localstorage
  */
-function updateQuantity(index, quantity) {
+function updateQuantity(index: number, quantity: number): void {
   cartList[index].amount = quantity;
   localStorage.setItem('listItem', JSON.stringify(cartList));
   displayCart();
@@ -126,33 +129,21 @@ function updateQuantity(index, quantity) {
  * Can't decrease quantity product less than 1
  * @function updateQuantiy update quantity of product and set to Localstorage
  */
-function changeQuantityBtn(action) {
-  let changeQuantity = document.querySelectorAll(`.${action}`);
+function changeQuantityBtn(action: string): void {
+  let changeQuantity: any = document.querySelectorAll(`.${action}`);
   for (let i = 0; i < changeQuantity.length; i++) {
     // find button has been clicked and addEventListener
     changeQuantity[i].addEventListener("click", () => {
-      let newQuantity = Number(document.querySelectorAll(".amount-now")[i].value);
+      let indexQuantity: any = document.querySelectorAll(".amount-now");
+      let newQuantity: number = Number(indexQuantity[i].value);
       if (action === "increse-amount") newQuantity = newQuantity + 1;
       if (action === "decrese-amount" && newQuantity > valueDisable) {
         newQuantity = newQuantity - 1;
-      }      
+      }
       // updateQuantiy update quantity of product
       updateQuantity(i, newQuantity);
-    }); 
+    });
   }
-}
-
-/**
- * Change quantity of product when change value at input tag
- * @param {target} is input tag
- * @param {id} is id of product
- * @function updateQuantiy update quantity of product
- */
-function changeQuantityInput(target, id) {
-  +target.value < valueDisable ? target.value = valueDisable : +target.value;
-  var newQuantity = +target.value < valueDisable ? valueDisable : +target.value;
-  var index = findIndexPrd(id);
-  updateQuantity(index, newQuantity);
 }
 
 /**
@@ -160,12 +151,13 @@ function changeQuantityInput(target, id) {
  * @param {id} is the id of the selected product to change quantity
  * @return {i} is index of product in array cart list on localstorage
  */
-function changeQuantityInput() {
-  let changeQuantity = document.querySelectorAll('.amount-now');
-  for(let i= 0; i < changeQuantity.length; i++ ){
+function changeQuantityInput(): void {
+  let changeQuantity: any = document.querySelectorAll('.amount-now');
+  for (let i = 0; i < changeQuantity.length; i++) {
     changeQuantity[i].addEventListener("change", () => {
-      let newQuantity = document.querySelectorAll('.amount-now')[i].value;
-      updateQuantity(i, + newQuantity);
+      let indexQuantityInput: any = document.querySelectorAll('.amount-now');
+      let newQuantity: number = indexQuantityInput[i].value;
+      updateQuantity(i, newQuantity);
     })
   }
 }
@@ -175,12 +167,12 @@ function changeQuantityInput() {
  * @param {id} is id of product from click remove button
  * filter all product has id !== id of product and resetItem to local
  */
-function removeItems() {
+function removeItems(): void {
   cartList = getItem();
-  let removeItem = document.querySelectorAll(".remove");
-  for (let i = 0; i < removeItem.length; i++) {    
+  let removeItem: any = document.querySelectorAll(".remove");
+  for (let i = 0; i < removeItem.length; i++) {
     removeItem[i].addEventListener("click", () => {
-      let newList = cartList.slice(0, i).concat(cartList.slice(i + 1));
+      let newList: Array<Product> = cartList.slice(0, i).concat(cartList.slice(i + 1));
       localStorage.setItem("listItem", JSON.stringify(newList));
       displayCart();
     });
