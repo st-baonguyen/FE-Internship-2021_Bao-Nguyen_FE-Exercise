@@ -36,8 +36,6 @@ Việc render HTML, CSS sẽ được thực hiện ở phía client.
 **Nhược điểm** 
 - SEO không tốt.
 
-
-
 #### Single Page Application (SPA):
 >- Là một ứng dụng web hay một website mà ở đó tất cả các thao tác của người dùng chỉ diễn ra trên 1 trang duy nhất, tất cả các cấu trúc của trang web (HTML) được load sẵn 1 lần và sẽ không load lại ngay cả khi chuyển trang.
 >- Cách thức hoạt động dựa trên CSR
@@ -54,7 +52,6 @@ Việc render HTML, CSS sẽ được thực hiện ở phía client.
 - SEO không tốt.
 - Content không có độ chi tiết cao.
 - Trình duyệt phải xử lý nhiều.
-
 
 #### Progressive Web App (PWA):
 >Là các Web App, ứng dụng các tính năng hiện đại của các trình duyệt, giúp cho thiết bị Mobile có thể nâng cấp chúng tương đương với những ứng dụng thuần, hay ta quen gọi là ứng dụng native.
