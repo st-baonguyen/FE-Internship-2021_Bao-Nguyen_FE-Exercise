@@ -53,6 +53,17 @@ Việc render HTML, CSS sẽ được thực hiện ở phía client.
 - Content không có độ chi tiết cao.
 - Trình duyệt phải xử lý nhiều.
 
+#### Multi Page Applications (MPA):
+>Hoạt động dựa trên SSR.
+
+**Ưu điểm**
+- SEO tốt, phù hợp với những trang tập trung vào văn bản như tin tức, blog ...
+- Tải trang ban đầu nhanh.
+
+**Nhược điểm**
+- Tải trang chậm 
+- Vì tất cả việc xử lý ở phía server nên cần đảm bảo server đủ mạnh
+- Trải nghiệm người dùng không tốt
 #### Progressive Web App (PWA):
 >Là các Web App, ứng dụng các tính năng hiện đại của các trình duyệt, giúp cho thiết bị Mobile có thể nâng cấp chúng tương đương với những ứng dụng thuần, hay ta quen gọi là ứng dụng native.
 
