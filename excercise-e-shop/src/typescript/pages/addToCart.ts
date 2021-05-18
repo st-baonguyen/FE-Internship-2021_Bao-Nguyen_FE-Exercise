@@ -1,5 +1,6 @@
 import { updateNumberCart, getItem } from '../common/index.js';
 import Product from '../interface/product.js';
+import '../../style/style.scss';
 
 /**
  * Array products

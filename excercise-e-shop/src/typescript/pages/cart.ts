@@ -1,6 +1,7 @@
 import { updateNumberCart, getItem } from '../common/index.js';
 import Product from '../interface/product';
 import valueDisable from '../constant/index.js';
+import '../../style/style.scss';
 
 /**
  * @param {item} is information of 1 product: {image, name, price, discount percent }

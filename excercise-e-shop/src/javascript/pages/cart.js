@@ -1,5 +1,6 @@
 import { updateNumberCart, getItem } from '../common/index.js';
 import valueDisable from '../constant/index.js';
+import '../../style/style.scss';
 function renderItem(item) {
     return `
   <li class="cart-item">

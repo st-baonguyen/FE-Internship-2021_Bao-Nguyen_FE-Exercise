@@ -1,4 +1,5 @@
 import { updateNumberCart, getItem } from '../common/index.js';
+import '../../style/style.scss';
 const products = [
     {
         id: 1,
