@@ -1,0 +1,81 @@
+.header-pc {
+  @include pxRem(padding, 48 0);
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+
+  .header-left,
+  .header-right {
+    position: relative;
+    width: 10%;
+    .option-group {
+      width: 100%;
+    }
+    .search {
+      position: relative;
+    }
+  }
+  .header-center {
+    width: 30%;
+    .nav-link {
+      color: map-get($map: $color, $key: nav-h);
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  .cart {
+    position: relative;
+    &::after {
+      @include pxRem(right, -8);
+      @include pxRem(top, -6);
+      @include pxRem(padding, 0 5);
+      @include pxRem(font-size, 10);
+      color: map-get($map: $color, $key: white-a);
+      content: attr(data-cart);
+      position: absolute;
+      font-weight: bold;
+      background-color: red;
+      border-radius: 50%;
+    }
+  }
+}
+
+.header-cart {
+  background-color: map-get($map: $color, $key: nav-h);
+  position: static;
+  .header-center {
+    .nav-link {
+      color: map-get($map: $color, $key: white-a);
+    }
+  }
+}
+
+.header-mb {
+  display: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .header-pc {
+    display: none;
+  }
+  .header-mb {
+    @include pxRem(padding, 20 0);
+    @include pxRem(height, 72);
+    display: flex;
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    .header-body {
+      width: 100%;
+    }
+    .header-right {
+      width: max-content;
+      .option-sm {
+        display: flex;
+      }
+      .option-item {
+        @include pxRem(margin-left, 24);
+      }
+    }
+  }
+}
