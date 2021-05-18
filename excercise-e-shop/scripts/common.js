@@ -19,8 +19,8 @@ export function setListItem(listItem) {
  */
 
 export function updateNumberCart() {
-  var numberCart = getItem();
-  var countNumberCart = 0;
+  let numberCart = getItem();
+  let countNumberCart = 0;
   numberCart === null ? countNumberCart = 0 : countNumberCart = numberCart.reduce((total, quantity) => total + quantity.amount, 0);
   updateCartIcon(countNumberCart);
 }
