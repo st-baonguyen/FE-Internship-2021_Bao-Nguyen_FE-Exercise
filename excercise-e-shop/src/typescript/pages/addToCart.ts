@@ -1,16 +1,17 @@
-import {updateNumberCart, getItem} from './common.js';
-import '../style/style.scss';
+import { updateNumberCart, getItem } from '../common/index.js';
+import Product from '../interface/product.js';
+import '../../style/style.scss';
 
 /**
  * Array products
  */
-const products = [
+const products: Array<Product> = [
   {
     id: 1,
     name: 'T-Shirt Summer Vibes',
     price: '119.99',
     amount: 1,
-    percent: 30,
+    discount: 30,
     image: './asset/sample/product4.png',
   },
   {
@@ -18,7 +19,7 @@ const products = [
     name: 'Loose Knit 3/4 Sleeve',
     price: '119.99',
     amount: 1,
-    percent: 0,
+    discount: 0,
     image: './asset/sample/product5.png',
   },
   {
@@ -26,7 +27,7 @@ const products = [
     name: 'Basic Slim Fit T-Shirt',
     price: '79.99',
     amount: 1,
-    percent: 0,
+    discount: 0,
     image: './asset/sample/product7.png',
   },
   {
@@ -34,16 +35,15 @@ const products = [
     name: 'Loose Textured T-Shirt',
     price: '119.99',
     amount: 1,
-    percent: 0,
+    discount: 0,
     image: './asset/sample/product8.png',
   },
   {
     id: 1,
     name: 'T-Shirt Summer Vibes',
-    price: '$89.99',
-    realPrice: '$119.99',
+    price: '$119.99',
     amount: 1,
-    percent: 30,
+    discount: 30,
     image: './asset/sample/product4.png',
   },
   {
@@ -51,7 +51,7 @@ const products = [
     name: 'Loose Knit 3/4 Sleeve',
     price: '$119.99',
     amount: 1,
-    percent: 0,
+    discount: 0,
     image: './asset/sample/product5.png',
   },
   {
@@ -59,7 +59,7 @@ const products = [
     name: 'Basic Slim Fit T-Shirt',
     price: '$79.99',
     amount: 1,
-    percent: 0,
+    discount: 0,
     image: './asset/sample/product7.png',
   },
   {
@@ -67,20 +67,22 @@ const products = [
     name: 'Loose Textured T-Shirt',
     price: '$119.99',
     amount: 1,
-    percent: 0,
+    discount: 0,
     image: './asset/sample/product8.png',
   },
 ];
 
-/**
- * @let {carts} find all button has class 'btn-add-cart' and add to cart with array product
- */
-let carts = document.querySelectorAll('.btn-add-cart');
+function addCart(): void {
+  /**
+  * @let {carts} find all button has class 'btn-add-cart' and add to cart with array product
+  */
+  let carts: any = document.querySelectorAll('.btn-add-cart');
 
-for (let i = 0; i < carts.length; i++) {
-  carts[i].addEventListener('click', () => {
-    setItem(products[i]);
-  });
+  for (let i = 0; i < carts.length; i++) {
+    carts[i].addEventListener('click', () => {
+      setItem(products[i]);
+    });
+  }
 }
 
 /**
@@ -90,8 +92,8 @@ for (let i = 0; i < carts.length; i++) {
  * @let {arr} check if have data in localstorage, set arr = prd else arr = empty arr
  * @let {count} to check if exist product in local, increase quality, else push prd to local
  */
-function setItem(product) {
-  let prd = getItem();
+function setItem(product: Product): void {
+  let prd: any = getItem();
   let arrPrd = prd || [];
   if (arrPrd.length === 0) {
     arrPrd.push(product);
@@ -112,3 +114,5 @@ function setItem(product) {
   //update numbert at cart icon when add 1 product
   updateNumberCart();
 }
+
+addCart();

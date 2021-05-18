@@ -5,8 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    home: './src/javascript/addToCart.js',
-    cart: './src/javascript/cart.js',
+    home: './src/javascript/pages/addToCart.js',
+    cart: './src/javascript/pages/cart.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
