@@ -1,4 +1,6 @@
 import {updateNumberCart, getItem} from './common.js';
+import '../style/style.scss';
+
 /**
  * @param {item} is information of 1 product: {image, name, price, discount percent }
  * @returns 1 product 
@@ -140,19 +142,6 @@ function changeQuantityBtn(action) {
       updateQuantity(i, newQuantity);
     }); 
   }
-}
-
-/**
- * Change quantity of product when change value at input tag
- * @param {target} is input tag
- * @param {id} is id of product
- * @function updateQuantiy update quantity of product
- */
-function changeQuantityInput(target, id) {
-  +target.value < valueDisable ? target.value = valueDisable : +target.value;
-  var newQuantity = +target.value < valueDisable ? valueDisable : +target.value;
-  var index = findIndexPrd(id);
-  updateQuantity(index, newQuantity);
 }
 
 /**
