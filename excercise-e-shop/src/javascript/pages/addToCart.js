@@ -1,4 +1,4 @@
-import { updateNumberCart, getItem } from '../common/index.js';
+import { updateNumberCart, getItem } from '../common/index';
 import '../../style/style.scss';
 const products = [
     {

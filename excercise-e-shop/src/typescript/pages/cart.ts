@@ -1,6 +1,6 @@
-import { updateNumberCart, getItem } from '../common/index.js';
+import { updateNumberCart, getItem } from '../common/index';
 import Product from '../interface/product';
-import valueDisable from '../constant/index.js';
+import valueDisable from '../constant/index';
 import '../../style/style.scss';
 
 /**

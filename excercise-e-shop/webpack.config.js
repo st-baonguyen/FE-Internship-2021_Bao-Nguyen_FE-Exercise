@@ -5,8 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    home: './src/javascript/pages/addToCart.js',
-    cart: './src/javascript/pages/cart.js',
+    home: './src/typescript/pages/addToCart.ts',
+    cart: './src/typescript/pages/cart.ts',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -22,6 +22,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
   ],
   output: {
+    // publicPath: 'src',
     filename: '[name].js',
     path: path.resolve(__dirname),
     clean: true,
