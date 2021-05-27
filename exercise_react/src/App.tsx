@@ -1,30 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import Blog from './components/index';
-import IBlog from './interface/IBlog';
+import Blog from './screens/Blog';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './style/style.scss'
+import PostDetail from './components/PostDetail';
 
 const App = () => {
-  const [data, setData] = useState<any>(undefined);
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios('https://6088e20da6f4a300174271e7.mockapi.io/articles');
-      setData(result.data);
-    }
-    fetchData();
-  }, []);
-
   return (
     <>
-      <ul className="blog-group">
-        {
-          data && data.map((blog: IBlog, i: number) => (
-            <li className="blog-item" key={i}>
-              <Blog  {...blog} />
-            </li>
-          ))
-        }
-      </ul>
+      <Router>
+        {/* <Blog /> */}
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/article">Article</Link>
+          </li>
+        </ul>
+        <Switch>
+          <Route exact path="/">
+            <Blog />
+          </Route>
+          <Route path="/article">
+            <PostDetail />
+          </Route>
+        </Switch>
+      </Router>
     </>
   )
 }
