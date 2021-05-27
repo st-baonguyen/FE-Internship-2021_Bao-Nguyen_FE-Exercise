@@ -4,7 +4,7 @@ import IBlog from '../interface/IBlog';
 import '../style/style.scss';
 
 const Blog = ({ image, title, category, desc, author, createdAt, minsRead }: IBlog) => (
-  <div className="blog">
+  <article className="blog">
     <img className="blog-img" src={image} alt={title} />
     <div className="blog-content">
       <p className="blog-category">{category}</p>
@@ -22,7 +22,7 @@ const Blog = ({ image, title, category, desc, author, createdAt, minsRead }: IBl
         </span>
       </div>
     </div>
-  </div>
+  </article>
 )
 
 export default Blog;
