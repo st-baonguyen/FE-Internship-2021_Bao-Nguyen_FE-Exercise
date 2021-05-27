@@ -5,7 +5,7 @@ import '../style/style.scss';
 import { useParams } from 'react-router';
 
 const PostDetail = () => {
-  const { id }: any = useParams();
+  const { id } = useParams<{ id: string }>();
   const [data, setData] = useState(undefined);
 
   useEffect(() => {
