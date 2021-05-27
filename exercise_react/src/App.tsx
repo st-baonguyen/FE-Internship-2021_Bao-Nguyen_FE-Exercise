@@ -19,8 +19,8 @@ const App = () => {
       <ul className="blog-group">
         {
           data && data.map((blog: IBlog, i: number) => (
-            <li className="blog-item">
-              <Blog key={i} {...blog} />
+            <li className="blog-item" key={i}>
+              <Blog  {...blog} />
             </li>
           ))
         }
