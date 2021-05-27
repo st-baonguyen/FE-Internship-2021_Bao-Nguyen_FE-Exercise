@@ -1,4 +1,5 @@
 interface IBlog {
+  id: number,
   image: string,
   category: string,
   title: string,

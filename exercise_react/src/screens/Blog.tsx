@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Post from '../components/post';
+import Post from '../components/Post';
 import IBlog from '../interface/IBlog';
 import '../style/style.scss'
-import { Link } from 'react-router-dom';
+import { Link, Route, Router, Switch } from 'react-router-dom';
 
 const Blog = () => {
   const [data, setData] = useState<any>(undefined);
@@ -20,9 +20,9 @@ const Blog = () => {
       <ul className="blog-group">
         {
           data && data.map((blog: IBlog, i: number) => (
-            <li className="blog-item" key={i}>
-              <Link to="/">
-                <Post  {...blog} />
+            <li className="blog-item" key={blog.id}>
+              <Link to={`/${blog.id}`}>
+                <Post {...blog} />
               </Link>
             </li>
           ))

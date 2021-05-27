@@ -13,20 +13,11 @@ const App = () => {
   return (
     <>
       <Router>
-        {/* <Blog /> */}
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/article">Article</Link>
-          </li>
-        </ul>
         <Switch>
           <Route exact path="/">
             <Blog />
           </Route>
-          <Route path="/article">
+          <Route path="/:id">
             <PostDetail />
           </Route>
         </Switch>

@@ -1,14 +1,14 @@
 .blog-group {
+  color: map-get($map: $color, $key: grey-bg);
   max-width: 690px;
   margin: auto;
   padding: 10px;
-  background-color: #eee;
 
   .blog-item {
+    color: map-get($map: $color, $key: white-f);
     padding: 5px;
     margin: 10px 0;
     border-radius: 6px;
-    background-color: #fff;
   }
   
   .blog {
@@ -28,9 +28,9 @@
     }
   
     .blog-category {
+      color: map-get($map: $color, $key: secondary);
       font-size: 11px;
       font-weight: bold;
-      color: #0f87d1;
     }
   
     .blog-title {
@@ -40,8 +40,8 @@
     }
   
     .blog-description {
+      color: map-get($map: $color, $key: primary);
       font-size: 14px;
-      color: #bac2cf;
     }
   
     .blog-info {
@@ -50,13 +50,13 @@
     }
   
     .info {
+      color: map-get($map: $color, $key: primary);
       font-size: 11px;
       padding-right: 16px;
-      color: #bac2cf;
     }
   
     .hight-light {
-      color: #111;
+      color: map-get($map: $color, $key: black-b);
       font-weight: bold;
     }
   }  
