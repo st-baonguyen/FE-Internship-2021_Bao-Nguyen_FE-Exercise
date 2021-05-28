@@ -3,10 +3,13 @@ import axios from 'axios';
 import Blog from './Blog';
 import IBlog from '../interface/IBlog';
 import { urlAPI } from '../constants/api'
+import Loading from './Loading';
+
 import '../style/style.scss'
 
 const BlogList = () => {
   const [data, setData] = useState<any>(undefined);
+  const [loading, setLoading] = useState<any>(true);
   useEffect(() => {
     axios({
       method: 'GET',
@@ -14,6 +17,7 @@ const BlogList = () => {
     })
       .then((res) => {
         setData(res.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -21,15 +25,24 @@ const BlogList = () => {
   }, []);
 
   return (
-    <ul className="blog-group">
+    <>
       {
-        data && data.map((blog: IBlog) => (
-          <li className="blog-item" key={blog.id}>
-            <Blog  {...blog} />
-          </li>
-        ))
+        !loading ? (
+          <ul className="blog-group">
+            {
+              data && data.map((blog: IBlog) => (
+                <li className="blog-item" key={blog.id}>
+                  <Blog  {...blog} />
+                </li>
+              ))
+            }
+          </ul>
+        ) :
+          (
+            <Loading />
+          )
       }
-    </ul>
+    </>
   )
 }
 
