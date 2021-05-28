@@ -14,14 +14,16 @@ const BlogList = () => {
   useEffect(() => {
     axios({
       method: 'GET',
-      url: urlAPI,
+      url: `${urlAPI}/articles`,
     })
       .then((res) => {
         setData(res.data);
-        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
       })
   }, []);
 

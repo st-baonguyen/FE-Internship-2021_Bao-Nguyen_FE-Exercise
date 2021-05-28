@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import moment from 'moment';
 import '../style/style.scss';
 import { urlAPI } from '../constants/api';
 import { useParams } from 'react-router';
 import Loading from './Loading';
+import { formatDate } from '../utils/formatDate';
 
 const BlogDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -13,14 +13,16 @@ const BlogDetail = () => {
   useEffect(() => {
     axios({
       method: 'GET',
-      url: `${urlAPI}/${id}`,
+      url: `${urlAPI}/articles/${id}`,
     })
       .then((res) => {
         setData(res.data);
-        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
       })
   }, []);
 
@@ -38,7 +40,7 @@ const BlogDetail = () => {
                   BY <span className="highlight">{data.author}</span>
                 </p>
                 <span className="blog-time info">
-                  {moment(data.createdAt).format('dddd, MMMM Do YYYY')}
+                  {formatDate(data.createdAt)}
                 </span>
                 <span className="blog-mins-read info">
                   {data.minsRead} mins read
