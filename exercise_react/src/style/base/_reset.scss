@@ -8,7 +8,7 @@
   font-size: 16;
   font-style: normal;
   font-weight: normal;
-  color: black;
+  color: map-get($map: $color, $key: black-b);
 }
 
 html {

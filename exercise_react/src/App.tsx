@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Blog from './screens/Blog';
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,7 +6,8 @@ import {
   Link
 } from "react-router-dom";
 import './style/style.scss'
-import PostDetail from './components/PostDetail';
+import BlogList from './components/BlogList';
+import BlogDetail from './components/BlogDetail';
 
 const App = () => {
   return (
@@ -15,10 +15,10 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Blog />
+            <BlogList />
           </Route>
           <Route path="/:id">
-            <PostDetail />
+            <BlogDetail />
           </Route>
         </Switch>
       </Router>

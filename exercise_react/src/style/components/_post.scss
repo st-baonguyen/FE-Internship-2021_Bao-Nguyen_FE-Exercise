@@ -9,10 +9,7 @@
     padding: 5px;
     margin: 10px 0;
     border-radius: 6px;
-  }
-  
-  .blog {
-    display: flex;
+
     .blog-img {
       width: 180px;
       height: 180px;
@@ -21,10 +18,10 @@
     }
   
     .blog-content {
-      padding: 10px 0 20px 0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      padding: 10px 0 20px 0;
     }
   
     .blog-category {
@@ -44,21 +41,16 @@
       font-size: 14px;
     }
   
-    .blog-info {
-      display: flex;
-      justify-content: flex-start;
-    }
-  
     .info {
       color: map-get($map: $color, $key: primary);
       font-size: 11px;
       padding-right: 16px;
     }
   
-    .hight-light {
+    .highlight {
       color: map-get($map: $color, $key: black-b);
       font-weight: bold;
     }
-  }  
+  }
 }
 
