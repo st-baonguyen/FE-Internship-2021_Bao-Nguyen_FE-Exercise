@@ -8,7 +8,7 @@
   font-size: 16;
   font-style: normal;
   font-weight: normal;
-  color: black;
+  color: map-get($map: $color, $key: black-b);
 }
 
 html {
@@ -18,6 +18,10 @@ html {
 ul,
 li {
   list-style: none;
+}
+
+a {
+  text-decoration:  none;
 }
 
 select {
