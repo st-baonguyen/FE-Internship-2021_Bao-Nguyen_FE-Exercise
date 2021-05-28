@@ -17,11 +17,12 @@ const BlogList = () => {
     })
       .then((res) => {
         setData(res.data);
-        setLoading(false);
       })
       .catch((err) => {
-        setLoading(false);
         console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
       })
   }, []);
 

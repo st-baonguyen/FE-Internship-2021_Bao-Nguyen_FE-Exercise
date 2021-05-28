@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import IBlog from '../interface/IBlog';
+import { formatDate } from '../utils/formatDate';
 import '../style/style.scss';
 
 const Blog = ({ image, title, category, desc, author, createdAt, minsRead }: IBlog) => (
@@ -15,7 +16,7 @@ const Blog = ({ image, title, category, desc, author, createdAt, minsRead }: IBl
           BY <span className="highlight">{author}</span>
         </p>
         <span className="blog-time info">
-          {moment(createdAt).format('dddd, MMMM Do YYYY')}
+          {formatDate(createdAt)}
         </span>
         <span className="blog-mins-read info">
           {minsRead} MINS READ
