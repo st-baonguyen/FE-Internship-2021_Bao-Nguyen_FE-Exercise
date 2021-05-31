@@ -12,10 +12,8 @@ const App = () => {
   return (
       <Router>
         <Switch>
-          <Route exact path="/" component={BlogList}>
-          </Route>
-          <Route path="/:id" component={BlogDetail}>
-          </Route>
+          <Route exact path="/" component={BlogList} />
+          <Route path="/:id" component={BlogDetail} />
         </Switch>
       </Router>
   )
