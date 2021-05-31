@@ -3,8 +3,8 @@ import axios from 'axios';
 import Blog from './Blog';
 import IBlog from '../interface/IBlog';
 import { urlAPI } from '../constants/api'
-import Loading from './Loading';
 import { Link } from 'react-router-dom';
+import Loading from '../common/Loading';
 
 const BlogList = () => {
   const [data, setData] = useState<any>(undefined);
@@ -24,7 +24,6 @@ const BlogList = () => {
         setLoading(false);
       })
   }, []);
-
   return (
     <>
       {
@@ -50,3 +49,4 @@ const BlogList = () => {
 }
 
 export default BlogList;
+

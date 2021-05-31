@@ -17,7 +17,7 @@ const Blog = ({ image, title, category, desc, author, createdAt, minsRead }: IBl
           {formatDateJs(createdAt)}
         </span>
         <span className="blog-mins-read info">
-          {minsRead} MINS READ
+          {minsRead} mins read
         </span>
       </div>
     </div>

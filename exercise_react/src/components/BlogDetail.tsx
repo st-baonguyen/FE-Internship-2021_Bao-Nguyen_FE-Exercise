@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { urlAPI } from '../constants/api';
 import { useParams } from 'react-router';
-import Loading from './Loading';
+import Loading from '../common/Loading';
 import { formatDate, formatDateJs } from '../utils/formatDate';
 
 const BlogDetail = () => {
   const { id } = useParams<{ id: string }>();
-  const [data, setData] = useState(undefined);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState<any>(undefined);
+  const [loading, setLoading] = useState<any>(true);
   useEffect(() => {
     axios({
       method: 'GET',
