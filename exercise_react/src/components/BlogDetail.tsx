@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../style/style.scss';
 import { urlAPI } from '../constants/api';
 import { useParams } from 'react-router';
 import Loading from './Loading';
-import { formatDate } from '../utils/formatDate';
+import { formatDate, formatDateJs } from '../utils/formatDate';
 
 const BlogDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -40,7 +39,7 @@ const BlogDetail = () => {
                   BY <span className="highlight">{data.author}</span>
                 </p>
                 <span className="blog-time info">
-                  {formatDate(data.createdAt)}
+                  {formatDateJs(data.createdAt)}
                 </span>
                 <span className="blog-mins-read info">
                   {data.minsRead} mins read

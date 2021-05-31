@@ -3,26 +3,21 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
-} from "react-router-dom";
-import './style/style.scss'
+} from 'react-router-dom';
 import BlogList from './components/BlogList';
 import BlogDetail from './components/BlogDetail';
+import './style/style.scss'
 
 const App = () => {
   return (
-    <>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <BlogList />
+          <Route exact path="/" component={BlogList}>
           </Route>
-          <Route path="/:id">
-            <BlogDetail />
+          <Route path="/:id" component={BlogDetail}>
           </Route>
         </Switch>
       </Router>
-    </>
   )
 }
 export default App;

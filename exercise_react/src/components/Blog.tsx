@@ -1,7 +1,6 @@
 import React from 'react';
 import IBlog from '../interface/IBlog';
-import '../style/style.scss';
-import { formatDate } from '../utils/formatDate';
+import { formatDate, formatDateJs } from '../utils/formatDate';
 
 const Blog = ({ image, title, category, desc, author, createdAt, minsRead }: IBlog) => (
   <article className="blog flex-center-x">
@@ -15,7 +14,7 @@ const Blog = ({ image, title, category, desc, author, createdAt, minsRead }: IBl
           BY <span className="highlight">{author}</span>
         </p>
         <span className="blog-time info">
-          {formatDate(createdAt)}
+          {formatDateJs(createdAt)}
         </span>
         <span className="blog-mins-read info">
           {minsRead} MINS READ

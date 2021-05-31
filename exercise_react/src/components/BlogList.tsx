@@ -4,8 +4,6 @@ import Blog from './Blog';
 import IBlog from '../interface/IBlog';
 import { urlAPI } from '../constants/api'
 import Loading from './Loading';
-
-import '../style/style.scss'
 import { Link } from 'react-router-dom';
 
 const BlogList = () => {

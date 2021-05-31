@@ -15,7 +15,7 @@
     }
 
     .blog-category {
-      color: map-get($map: $color, $key: secondary);
+      color: map-get($color, secondary);
       width: 100%;
       padding-bottom: 10px;
       text-align: left;
@@ -29,29 +29,29 @@
       justify-content: flex-start;
 
       .info {
-        color: map-get($map: $color, $key: grey-d);
+        color: map-get($color, grey-d);
         font-size: 14px;
         padding-right: 16px;
       }
-      
+
       .highlight {
         font-weight: bold;
       }
-    }    
+    }
 
-    .blog-img{ 
+    .blog-img {
       width: 100%;
       height: auto;
       padding: 20px 0;
-    }   
+    }
 
     .blog-content {
-      color: map-get($map: $color, $key: white-f);
+      color: map-get($color, white-f);
       padding: 20px;
-    }    
-    
+    }
+
     .blog-description {
       font-size: 18px;
-    }    
-  }  
+    }
+  }
 }

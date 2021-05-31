@@ -4,11 +4,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 16;
   font-style: normal;
   font-weight: normal;
-  color: map-get($map: $color, $key: black-b);
+  color: map-get($color, black-b);
 }
 
 html {
@@ -21,7 +21,7 @@ li {
 }
 
 a {
-  text-decoration:  none;
+  text-decoration: none;
 }
 
 select {
