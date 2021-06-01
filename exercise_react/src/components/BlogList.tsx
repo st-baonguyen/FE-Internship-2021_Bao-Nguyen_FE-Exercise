@@ -1,14 +1,14 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Blog from './Blog';
 import IBlog from '../interface/IBlog';
 import { urlAPI } from '../constants/api'
 import { Link } from 'react-router-dom';
-import Loading from '../common/Loading';
+import LoadData from '../common/LoadData';
 
 const BlogList = () => {
   const [data, setData] = useState<any>(undefined);
-  const [loading, setLoading] = useState<any>(true);
   useEffect(() => {
     axios({
       method: 'GET',
@@ -20,33 +20,28 @@ const BlogList = () => {
       .catch((err) => {
         console.log(err);
       })
-      .finally(() => {
-        setLoading(false);
-      })
   }, []);
-  return (
-    <>
-      {
-        !loading ? (
-          <ul className="blog-group">
-            {
-              data && data.map((blog: IBlog) => (
-                <li className="blog-item" key={blog.id}>
-                  <Link to={`/${blog.id}`}>
-                    <Blog {...blog} />
-                  </Link>
-                </li>
-              ))
-            }
-          </ul>
-        ) :
-          (
-            <Loading />
-          )
-      }
-    </>
-  )
+
+  console.log('data list', data)
+  const BlogListRender = (props: any) => {
+    return (
+      <ul className="blog-group">
+        {
+          props?.data && props.data.map((blog: IBlog) => (
+            <li className="blog-item" key={blog.id}>
+              <Link to={`/${blog.id}`}>
+                <Blog {...blog} />
+              </Link>
+            </li>
+          ))
+        }
+      </ul>
+    )
+  };
+
+  const LoadBlogList = LoadData(BlogListRender);
+
+  return <LoadBlogList data={data} />
 }
 
 export default BlogList;
-
