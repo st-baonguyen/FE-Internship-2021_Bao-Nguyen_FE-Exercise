@@ -7,6 +7,6 @@
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "outDir": "src/javascript"
+    "outDir": "./src/javascript",
   },
 }

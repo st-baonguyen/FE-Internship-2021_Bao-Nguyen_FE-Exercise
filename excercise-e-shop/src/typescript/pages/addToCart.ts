@@ -1,5 +1,5 @@
-import { updateNumberCart, getItem } from '../common/index.js';
-import Product from '../interface/product.js';
+import { updateNumberCart, getItem } from '../common/index';
+import Product from '../interface/product';
 import '../../style/style.scss';
 
 /**
